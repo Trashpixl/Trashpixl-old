@@ -1,0 +1,4 @@
+name: Zero
+version: '${project.version}'
+main: zero.zero.Zero
+api-version: 1.19
