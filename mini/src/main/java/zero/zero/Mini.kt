@@ -2,7 +2,7 @@ package zero.zero
 
 import org.bukkit.plugin.java.JavaPlugin
 
-class Zero : JavaPlugin() {
+class Mini : JavaPlugin() {
     override fun onEnable() {
         // Plugin startup logic
         logger.info("starting")
