@@ -20,7 +20,7 @@ class PlateHandler (plugin: Mini?) : Listener {
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
             if (ev.clickedBlock!!.type == Material.STONE_PRESSURE_PLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 val p = ev.player //create the local player id
-                val name = p.name
+                val name = p.name//test cccalebbbooooubbbouuu
                 p.sendMessage(name + "won the race")
                 Thread.sleep(10000)
                 Bukkit.dispatchCommand(p, "/server lobby")
