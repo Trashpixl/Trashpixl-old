@@ -1,4 +1,4 @@
-package zero.zero//the package for this project
+package zero.zero //the package for this project
 
 
 import org.bukkit.Bukkit
