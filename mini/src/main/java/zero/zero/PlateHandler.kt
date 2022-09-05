@@ -22,7 +22,7 @@ class PlateHandler (plugin: Mini?) : Listener {
                 val p = ev.player //create the local player id
                 val name = p.name//test cccalebbbooooubbbouuu
                 p.sendMessage(name + "won the race")
-                Thread.sleep(10000)
+                Thread.sleep(10000)//waiting 10 sec before sending 
                 Bukkit.dispatchCommand(p, "/server lobby")
 
 
