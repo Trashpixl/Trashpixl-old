@@ -1,1 +1,1 @@
-# minigame
+this is the code for the mini game server
