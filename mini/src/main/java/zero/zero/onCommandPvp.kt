@@ -8,12 +8,12 @@ import org.bukkit.event.Listener //importing the handler
 import org.bukkit.event.entity.PlayerDeathEvent //importing the player death event
 
 
-class onCommand (plugin: Mini?) : CommandExecutor {// creating the class death and impplementing the listener 
+class onCommandPvp (plugin: Mini?) : CommandExecutor {// creating the class death and impplementing the listener 
     
 
 
     @Override
-    fun boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    fun boolean onCommandPvp(CommandSender sender, Command command, String label, String[] args) {
 
         return false;
     }
