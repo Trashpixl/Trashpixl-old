@@ -8,14 +8,13 @@ import org.bukkit.event.Listener //importing the handler
 import org.bukkit.event.entity.PlayerDeathEvent //importing the player death event
 
 
-class pvp_bow (plugin: Mini?) : CommandExecutor {// creating the class death and impplementing the listener 
-    // the implements for the listener
-    init { //the constructor of this handler 
-        Bukkit.getPluginManager().registerEvents(this, plugin!!)//says that they need to import and register event
-    }
+class onCommand (plugin: Mini?) : CommandExecutor {// creating the class death and impplementing the listener 
+    
 
-    @EventHandler //says that this is an event handler
-    fun onPvpBowStartup(e: PlayerDeathEvent) {//creating the on player death event function and importing the death class
-        
+
+    @Override
+    fun boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+
+        return false;
     }
 }
