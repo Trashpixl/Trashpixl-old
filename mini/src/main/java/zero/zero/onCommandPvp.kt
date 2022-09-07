@@ -8,7 +8,7 @@ class onCommandPvp (plugin: Mini?) : CommandExecutor {// creating the class deat
 
     @Override
     fun boolean onCommandPvp(CommandSender sender, Command command, String label, String[] args) {
-        location pvp = p.getLocation()
+        Location pvp = p.getLocation()
         pvp.setWorld("overworld")
         pvp.setX(0)
         pvp.setY(0)
