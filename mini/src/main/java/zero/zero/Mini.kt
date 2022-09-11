@@ -6,7 +6,7 @@ class Mini : JavaPlugin() {
     override fun onEnable() {
         // Plugin startup logic
         logger.info("starting")
-        this.getCommand("bow").setExecutor(new onCommandPvp());
+       // this.getCommand("bow").setExecutor(new OnCommandPvp());
         PlateHandler(this) //create the plate handler
         Death(this) //create the plate handler
     }
