@@ -1,15 +1,17 @@
 package zero.zero
 
 import org.bukkit.Location
+import org.bukkit.World
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
+import org.bukkit.event.player.PlayerTeleportEvent
 
 //the package for this project
 
 
 
-class OnCommandPvp (plugin: Mini?) : CommandExecutor {// creating the class death and impplementing the listener 
+class OnCommandPvp (plugin: Mini?) : CommandExecutor {// creating the class death and implementing the listener
     
 
 
@@ -18,15 +20,19 @@ class OnCommandPvp (plugin: Mini?) : CommandExecutor {// creating the class deat
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
 
-
+        val p =
         val x = 0.0
         val y = 0.0
         val z = 0.0
+        var w:World = p.getWorld
 
 
-        var to = Location(w, x, y, z)
-        //PlayerTeleportEvent(Player , Location 0, Location to)
 
+        val to = Location(w, x, y, z)
+        var from:Location = p.getLocation()
+        PlayerTeleportEvent(p, from, to)
+
+        return true
 
     }
 }
