@@ -35,9 +35,6 @@ class OnCommandPvp (plugin: Mini?) : CommandExecutor {// creating the class deat
             
         }
 
-
-       
-
         return true
 
     }
