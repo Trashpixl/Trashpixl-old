@@ -19,8 +19,8 @@ class OnCommandPvp (plugin: Mini?) : CommandExecutor {// creating the class deat
 
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
-
-        val p =
+        var listplayer = new ArrayList<>(Bukkit.getOnlinePlayers());
+        val p = 
         val x = 0.0
         val y = 0.0
         val z = 0.0
