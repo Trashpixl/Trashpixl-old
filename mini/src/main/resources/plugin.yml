@@ -2,3 +2,8 @@ name: Zero
 version: '${project.version}'
 main: zero.zero.Zero
 api-version: 1.19
+commands:
+  onCommandPvp:
+    description: command for pvp
+    usage: /<command>
+    #permission: yourplugin.yourcommandpermission
