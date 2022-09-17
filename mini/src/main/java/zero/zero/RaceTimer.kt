@@ -9,7 +9,7 @@ import org.bukkit.event.block.Action//import the action related to the block
 import org.bukkit.event.player.PlayerInteractEvent//import the action related to the player
 
 
-class raceTimer (plugin: Mini?) : Listener {
+class RaceTimer (plugin: Mini?) : Listener {
     // the implements for the listener
     init { //the constructor of this handler 
         Bukkit.getPluginManager().registerEvents(this, plugin!!)

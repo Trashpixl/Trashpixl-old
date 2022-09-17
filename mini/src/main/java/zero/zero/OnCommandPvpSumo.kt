@@ -12,7 +12,7 @@ import org.bukkit.event.player.PlayerTeleportEvent
 
 
 
-class OnCommandPvpSumo() : CommandExecutor {// creating the class death and implementing the listener
+class OnCommandPvpSumo : CommandExecutor {// creating the class death and implementing the listener
     
 
 
