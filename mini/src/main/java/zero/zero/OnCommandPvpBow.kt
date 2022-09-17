@@ -12,7 +12,7 @@ import org.bukkit.event.player.PlayerTeleportEvent
 
 
 
-class OnCommandPvpBow (plugin: Mini?) : CommandExecutor {// creating the class death and implementing the listener
+class OnCommandPvpBow() : CommandExecutor {// creating the class death and implementing the listener
     
 
 
