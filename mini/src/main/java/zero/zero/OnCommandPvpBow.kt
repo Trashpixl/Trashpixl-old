@@ -35,7 +35,7 @@ class OnCommandPvpBow : CommandExecutor {// creating the class death and impleme
             
         }
 
-        return true
+        return false
 
     }
 }

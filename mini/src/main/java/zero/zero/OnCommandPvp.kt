@@ -35,7 +35,7 @@ class OnCommandPvp : CommandExecutor {// creating the class death and implementi
             
         }
 
-        return true
+        return false
 
     }
 }
