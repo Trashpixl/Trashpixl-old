@@ -20,16 +20,18 @@ class OnCommandPvp : CommandExecutor {// creating the class death and implementi
 
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
-
+        println("allo")
         val x = 0.0
         val y = 0.0
         val z = 0.0
 
         for (p in getServer().onlinePlayers) {
+            println(p.name)
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
             val from: Location = p.location//move 1
             PlayerTeleportEvent(p, from, to)//move2
+            p.teleport(to)
 
 
             

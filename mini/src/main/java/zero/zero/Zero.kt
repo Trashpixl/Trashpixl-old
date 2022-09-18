@@ -6,9 +6,9 @@ class Zero : JavaPlugin() {
     override fun onEnable() {
         // Plugin startup logic
         logger.info("starting")
-        this.getCommand("pvp")?.setExecutor(OnCommandPvp())
-        this.getCommand("pvp")?.setExecutor(OnCommandPvpBow())
-        this.getCommand("pvp")?.setExecutor(OnCommandPvpSumo())
+        this.getCommand("onCommandPvp")?.setExecutor(OnCommandPvp())
+        //this.getCommand("pvp")?.setExecutor(OnCommandPvpBow())
+       // this.getCommand("pvp")?.setExecutor(OnCommandPvpSumo())
         
     }
 
