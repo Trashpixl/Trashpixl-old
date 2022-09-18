@@ -8,7 +8,7 @@ import org.bukkit.event.Listener //importing the handler
 import org.bukkit.event.entity.PlayerDeathEvent //importing the player death event
 
 
-class Death (plugin: Mini?) : Listener {// creating the class death and impplementing the listener 
+class Death (plugin: Zero?) : Listener {// creating the class death and impplementing the listener
     // the implements for the listener
     init { //the constructor of this handler 
         Bukkit.getPluginManager().registerEvents(this, plugin!!)//says that they need to import and register event
