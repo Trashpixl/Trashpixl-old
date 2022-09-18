@@ -6,4 +6,7 @@ commands:
   onCommandPvp:
     description: command for pvp
     usage: /<command>
+  Tnt:
+    description: command for tnt
+    usage: /<command>
     #permission: yourplugin.yourcommandpermission
