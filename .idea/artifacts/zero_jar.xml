@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="zero:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/zero_jar</output-path>
+    <root id="archive" name="zero.jar">
+      <element id="module-output" name="zero" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib/1.7.10/kotlin-stdlib-1.7.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-common/1.7.10/kotlin-stdlib-common-1.7.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/annotations/23.0.0/annotations-23.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.7.10/kotlin-stdlib-jdk7-1.7.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.7.10/kotlin-stdlib-jdk8-1.7.10.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
