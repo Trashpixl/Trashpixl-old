@@ -6,6 +6,7 @@ import org.bukkit.World
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
+import java.lang.Thread.sleep
 
 //the package for this project
 
@@ -29,10 +30,17 @@ class Tnt : CommandExecutor {// creating the class death and implementing the li
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
             p.teleport(to)
+            p.sendMessage("3")
+            sleep(1000)
+            p.sendMessage("2")
+            sleep(1000)
+            p.sendMessage("1")
 
 
             
         }
+
+
 
         return false
 
