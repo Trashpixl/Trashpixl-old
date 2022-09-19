@@ -8,8 +8,8 @@ class Zero : JavaPlugin() {
         logger.info("starting")
         this.getCommand("onCommandPvp")?.setExecutor(OnCommandPvp())
         this.getCommand("Tnt")?.setExecutor(Tnt())
-        //this.getCommand("pvp")?.setExecutor(OnCommandPvpBow())
-       // this.getCommand("pvp")?.setExecutor(OnCommandPvpSumo())
+        //this.getCommand("onCommandPvpBow")?.setExecutor(OnCommandPvpBow())
+       // this.getCommand("onCommandPvpSumo")?.setExecutor(OnCommandPvpSumo())
         
     }
 

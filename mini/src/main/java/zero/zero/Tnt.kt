@@ -20,7 +20,7 @@ class Tnt : CommandExecutor {// creating the class death and implementing the li
 
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
-        println("allo")
+        //println("allo")
         val x = 247.0
         val y = -58.0
         val z = 250.0
@@ -29,8 +29,6 @@ class Tnt : CommandExecutor {// creating the class death and implementing the li
             println(p.name)
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
-            val from: Location = p.location//move 1
-            PlayerTeleportEvent(p, from, to)//move2
             p.teleport(to)
 
 
