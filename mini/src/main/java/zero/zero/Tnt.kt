@@ -6,7 +6,6 @@ import org.bukkit.World
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
-import org.bukkit.event.player.PlayerTeleportEvent
 
 //the package for this project
 
@@ -20,7 +19,7 @@ class Tnt : CommandExecutor {// creating the class death and implementing the li
 
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
-        //println("allo")
+
         val x = 247.0
         val y = -58.0
         val z = 250.0
