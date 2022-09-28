@@ -3,6 +3,12 @@ version: '${project.version}'
 main: zero.zero.Zero
 api-version: 1.19
 commands:
+  onCommandPvpBow:
+    description: command for pvpbow
+    usage: /<command>
+  onCommandPvpSumo:
+    description: command for pvp Sumo
+    usage: /<command>
   onCommandPvp:
     description: command for pvp
     usage: /<command>
