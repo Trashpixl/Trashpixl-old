@@ -1,3 +1,4 @@
+
 package zero.zero
 
 import org.bukkit.Bukkit.getServer
