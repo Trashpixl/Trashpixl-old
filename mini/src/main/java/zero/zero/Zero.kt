@@ -11,7 +11,7 @@ class Zero : JavaPlugin() {
         this.getCommand("Tnt")?.setExecutor(Tnt())
         this.getCommand("onCommandPvpBow")?.setExecutor(OnCommandPvpBow())
         this.getCommand("onCommandPvpSumo")?.setExecutor(OnCommandPvpSumo())
-        
+        //add more here
     }
 
     override fun onDisable() {
