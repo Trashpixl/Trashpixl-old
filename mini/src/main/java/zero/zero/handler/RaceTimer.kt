@@ -25,7 +25,7 @@ class RaceTimer (plugin: Zero?) : Listener {
                 val p = ev.player //create the local player id
                 val name = p.name//test cccalebbbooooubbbouuu
                 
-                p.sendMessage(name + "won the race")
+                p.sendMessage(name + "won the race")//bob
                 for (player in getServer().onlinePlayers) {
                 val w: World = player.world
                 val to = Location(w, x, y, z)//move before for
