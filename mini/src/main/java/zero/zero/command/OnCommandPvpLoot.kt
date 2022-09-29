@@ -27,7 +27,7 @@ class OnCommandPvpLoot : CommandExecutor {// creating the class death and implem
         for (p in getServer().onlinePlayers) {
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
-            p.teleport(to)
+            p.teleport(to)//bob
             var random = (0..10).random()
 
             
