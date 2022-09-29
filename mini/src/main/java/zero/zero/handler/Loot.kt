@@ -21,6 +21,29 @@ class Loot (plugin: Zero?) : Listener {
             if (ev.clickedBlock!!.type == Material.STONE_BUTTON) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 val p = ev.getName()
 //here boby bob bob
+                var kit = (1..4).random()
+                if(kit == 1){
+                    kit1()
+                }
+                else{
+                    if(kit == 2){
+                        kit2()
+                    }
+                    else{
+                        if(kit == 3){
+                            kit3()
+                        }
+                        else{
+                            if(kit == 4){
+                                kit4()
+                            }
+                            else{
+                                print("something went wrong")
+                            }
+                        }
+                    }
+                }
+
 
             
         }

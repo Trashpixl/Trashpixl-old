@@ -28,7 +28,7 @@ class OnCommandPvp : CommandExecutor {// creating the class death and implementi
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
             p.teleport(to)
-
+            p.inventory.clear()
 
             
         }
