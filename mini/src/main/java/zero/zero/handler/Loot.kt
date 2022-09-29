@@ -18,27 +18,12 @@ class Loot (plugin: Zero?) : Listener {
     @EventHandler
     fun ButtonHandler(ev: PlayerInteractEvent) { //describes what the event is
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
-            if (ev.clickedBlock!!.type == Material.STONE_PRESSURE_PLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
-                val x = 0.0
-                val y = 0.0
-                val z = 0.0
-                val p = ev.player //create the local player id
-                val name = p.name//test cccalebbbooooubbbouuu
-                
-                p.sendMessage(name + "won the race")//bob
-                for (player in getServer().onlinePlayers) {
-                val w: World = player.world
-                val to = Location(w, x, y, z)//move before for
-                player.teleport(to)
-
-
+            if (ev.clickedBlock!!.type == Material.STONE_BUTTON_PLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
+                val p = ev.getName()
+//here boby
             
         }
-                
-
-
-
-            }
+                }
         }
     }
 }
