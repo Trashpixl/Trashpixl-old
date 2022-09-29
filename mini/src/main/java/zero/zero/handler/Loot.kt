@@ -20,7 +20,7 @@ class Loot (plugin: Zero?) : Listener {
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
             if (ev.clickedBlock!!.type == Material.STONE_BUTTON_PLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 val p = ev.getName()
-//here boby
+//here boby bob
             
         }
                 }
