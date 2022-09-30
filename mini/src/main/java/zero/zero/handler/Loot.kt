@@ -1,4 +1,4 @@
-package zero.zero//the package for this project
+package zero.zero.handler//the package for this project
 
 
 import org.bukkit.Bukkit//import all the other class
@@ -7,6 +7,7 @@ import org.bukkit.event.EventHandler//import the event handler
 import org.bukkit.event.Listener//import all the listener
 import org.bukkit.event.block.Action//import the action related to the block
 import org.bukkit.event.player.PlayerInteractEvent//import the action related to the player
+import zero.zero.Zero
 
 
 class Loot (plugin: Zero?) : Listener {
@@ -16,12 +17,12 @@ class Loot (plugin: Zero?) : Listener {
     }
 
     @EventHandler
-    fun ButtonHandler(ev: PlayerInteractEvent) { //describes what the event is
+    fun buttonHandler(ev: PlayerInteractEvent) { //describes what the event is
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
             if (ev.clickedBlock!!.type == Material.STONE_BUTTON) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 val p = ev.player
 
-                var kit = (1..4).random()
+                val kit = (1..4).random()
                 if(kit == 1){
                     kit1()
                 }
@@ -49,19 +50,19 @@ class Loot (plugin: Zero?) : Listener {
         }
                 }
         }
-        fun kit1(){
+        private fun kit1(){
 
 
         }
-        fun kit2(){
+        private fun kit2(){
 
 
         }
-        fun kit3(){
+        private fun kit3(){
 
 
         }
-        fun kit4(){
+        private fun kit4(){
 
 
         }

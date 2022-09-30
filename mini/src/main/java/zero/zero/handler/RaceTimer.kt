@@ -1,4 +1,4 @@
-package zero.zero//the package for this project
+package zero.zero.handler//the package for this project
 
 
 import org.bukkit.Bukkit//import all the other class
@@ -10,6 +10,7 @@ import org.bukkit.event.EventHandler//import the event handler
 import org.bukkit.event.Listener//import all the listener
 import org.bukkit.event.block.Action//import the action related to the block
 import org.bukkit.event.player.PlayerInteractEvent//import the action related to the player
+import zero.zero.Zero
 
 
 class RaceTimer (plugin: Zero?) : Listener {

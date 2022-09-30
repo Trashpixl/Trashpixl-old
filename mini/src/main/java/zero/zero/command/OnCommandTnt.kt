@@ -1,5 +1,5 @@
 
-package zero.zero
+package zero.zero.command
 
 import org.bukkit.Bukkit.getServer
 import org.bukkit.Location
@@ -14,7 +14,7 @@ import java.lang.Thread.sleep
 
 
 
-class onCommandTnt : CommandExecutor {// creating the class death and implementing the listener
+class OnCommandTnt : CommandExecutor {// creating the class death and implementing the listener
     
 
 

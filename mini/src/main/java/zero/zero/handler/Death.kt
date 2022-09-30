@@ -1,4 +1,4 @@
-package zero.zero //the package for this project
+package zero.zero.handler //the package for this project
 
 
 import org.bukkit.Bukkit
@@ -6,6 +6,7 @@ import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.entity.PlayerDeathEvent
+import zero.zero.Zero
 
 
 class Death (plugin: Zero?): Listener {// creating the class death and implementing the listener

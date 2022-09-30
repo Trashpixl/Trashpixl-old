@@ -1,4 +1,4 @@
-package zero.zero
+package zero.zero.command
 
 import org.bukkit.Bukkit.getServer
 import org.bukkit.Location
