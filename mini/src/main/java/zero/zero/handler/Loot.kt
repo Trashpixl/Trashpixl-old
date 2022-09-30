@@ -19,8 +19,8 @@ class Loot (plugin: Zero?) : Listener {
     fun ButtonHandler(ev: PlayerInteractEvent) { //describes what the event is
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
             if (ev.clickedBlock!!.type == Material.STONE_BUTTON) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
-                val p = ev.getName()
-//here boby bob bob
+                val p = ev.player
+
                 var kit = (1..4).random()
                 if(kit == 1){
                     kit1()
@@ -66,4 +66,3 @@ class Loot (plugin: Zero?) : Listener {
 
         }
     }
-}

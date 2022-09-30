@@ -2,7 +2,10 @@ package zero.zero//the package for this project
 
 
 import org.bukkit.Bukkit//import all the other class
+import org.bukkit.Bukkit.getServer
+import org.bukkit.Location
 import org.bukkit.Material//import all the material
+import org.bukkit.World
 import org.bukkit.event.EventHandler//import the event handler
 import org.bukkit.event.Listener//import all the listener
 import org.bukkit.event.block.Action//import the action related to the block
