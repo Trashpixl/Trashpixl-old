@@ -1,10 +1,7 @@
 package zero.zero
 
 import org.bukkit.plugin.java.JavaPlugin
-import zero.zero.command.OnCommandPvp
-import zero.zero.command.OnCommandPvpBow
-import zero.zero.command.OnCommandPvpSumo
-import zero.zero.command.OnCommandTnt
+import zero.zero.command.*
 import zero.zero.handler.Death
 import zero.zero.handler.RaceTimer
 
@@ -15,8 +12,12 @@ class Zero : JavaPlugin() {
         RaceTimer(this)
         logger.info("starting")
         this.getCommand("onCommandPvp")?.setExecutor(OnCommandPvp())
-        this.getCommand("Tnt")?.setExecutor(OnCommandTnt())
+        this.getCommand("onCommandTnt")?.setExecutor(OnCommandTnt())
         this.getCommand("onCommandPvpBow")?.setExecutor(OnCommandPvpBow())
+        this.getCommand("onCommandPvpSumo")?.setExecutor(OnCommandPvpSumo())
+        this.getCommand("onCommandDontDie")?.setExecutor(OnCommandDontDie())
+        this.getCommand("onCommandPvpKnockBack")?.setExecutor(OnCommandPvpKnockBack())
+        this.getCommand("onCommandPvpLoot")?.setExecutor(OnCommandPvpLoot())
         this.getCommand("onCommandPvpSumo")?.setExecutor(OnCommandPvpSumo())
         //add more here
     }
