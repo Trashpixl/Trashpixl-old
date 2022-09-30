@@ -31,8 +31,12 @@ class OnCommandPvpKnockBack : CommandExecutor {// creating the class death and i
             p.inventory.clear()
 
 
+
+
             
         }
+
+
 
         return false
 
