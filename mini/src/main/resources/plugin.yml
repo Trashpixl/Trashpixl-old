@@ -21,3 +21,6 @@ commands:
   onCommandPvpKnockBack:
     description: command for pvp knock back
     usage: /<command>
+  onCommandPvpLoot:
+    description: command for pvp loot
+    usage: /<command>
