@@ -20,9 +20,9 @@ class OnCommandDontDie : CommandExecutor {// creating the class death and implem
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
 
-        val x = 0.0
-        val y = 0.0
-        val z = 0.0
+        val x = 189.0
+        val y = -58.0
+        val z = 278.0
 
         for (p in getServer().onlinePlayers) {
             val w: World = p.world

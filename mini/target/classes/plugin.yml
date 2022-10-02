@@ -24,3 +24,6 @@ commands:
   onCommandPvpLoot:
     description: command for pvp loot
     usage: /<command>
+  onCommandBridge:
+    description: command for bridge race
+    usage: /<command>
