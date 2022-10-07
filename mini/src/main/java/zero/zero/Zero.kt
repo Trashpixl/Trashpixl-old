@@ -3,6 +3,7 @@ package zero.zero
 import org.bukkit.plugin.java.JavaPlugin
 import zero.zero.command.*
 import zero.zero.handler.Death
+import zero.zero.handler.Loot
 import zero.zero.handler.RaceTimer
 
 class Zero : JavaPlugin() {
@@ -10,6 +11,7 @@ class Zero : JavaPlugin() {
         // Plugin startup logic
         Death(this)
         RaceTimer(this)
+        Loot(this)
         logger.info("starting")
         this.getCommand("onCommandPvp")?.setExecutor(OnCommandPvp())
         this.getCommand("onCommandTnt")?.setExecutor(OnCommandTnt())
