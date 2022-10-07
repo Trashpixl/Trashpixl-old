@@ -8,7 +8,6 @@ import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
-import java.lang.Thread.sleep
 
 //the package for this project
 
@@ -27,13 +26,13 @@ class OnCommandTnt : CommandExecutor {// creating the class death and implementi
         val y = -58.0
         val z = 250.0
 
-        var playerName: Player? = null
+        var p: Player?
 
 
-        for (p in getServer().onlinePlayers) {
+        for (playerName in getServer().onlinePlayers) {
             //println(p.name)
 
-            playerName = p
+            p = playerName
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
             p.teleport(to)
@@ -41,11 +40,7 @@ class OnCommandTnt : CommandExecutor {// creating the class death and implementi
 
         }
 
-        playerName!!.sendMessage("3")
-        sleep(1000)
-        playerName.sendMessage("2")
-        sleep(1000)
-        playerName.sendMessage("1")
+
 
 
         return false
