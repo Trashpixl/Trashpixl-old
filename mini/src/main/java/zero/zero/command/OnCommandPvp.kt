@@ -2,10 +2,12 @@ package zero.zero.command
 
 import org.bukkit.Bukkit.getServer
 import org.bukkit.Location
+import org.bukkit.Material
 import org.bukkit.World
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
+import org.bukkit.inventory.ItemStack
 
 //the package for this project
 
@@ -27,8 +29,10 @@ class OnCommandPvp : CommandExecutor {// creating the class death and implementi
         for (p in getServer().onlinePlayers) {
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
+            val item = ItemStack(Material.IRON_SWORD, 1)
             p.teleport(to)
             p.inventory.clear()
+            p.inventory.setItemInMainHand(item)
 
             
         }
