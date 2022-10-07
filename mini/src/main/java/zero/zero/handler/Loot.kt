@@ -8,6 +8,7 @@ import org.bukkit.event.EventHandler//import the event handler
 import org.bukkit.event.Listener//import all the listener
 import org.bukkit.event.block.Action//import the action related to the block
 import org.bukkit.event.player.PlayerInteractEvent//import the action related to the player
+import org.bukkit.inventory.ItemStack
 import zero.zero.Zero
 
 
@@ -52,7 +53,7 @@ var p: Player? = null
                 }
         }
         private fun kit1(){
-
+        val item1 = ItemStack(Material.IRON_SWORD, 1)
 
         }
         private fun kit2(){
