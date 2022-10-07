@@ -18,6 +18,7 @@ class Loot (plugin: Zero?) : Listener {
         Bukkit.getPluginManager().registerEvents(this, plugin!!)
     }
 var p: Player? = null
+
     @EventHandler
     fun buttonHandler(ev: PlayerInteractEvent) { //describes what the event is
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
@@ -53,16 +54,25 @@ var p: Player? = null
                 }
         }
         private fun kit1(){
-        val item1 = ItemStack(Material.IRON_SWORD, 1)
+            val item1 = ItemStack(Material.IRON_SWORD, 1)
+            val item2 = ItemStack(Material.GOLDEN_APPLE, (1..64).random())
+            p!!.inventory.setItem((1..36).random(), item1)
+            p!!.inventory.setItem((1..36).random(), item2)
+
 
         }
         private fun kit2(){
-
+            val item1 = ItemStack(Material.DIAMOND_CHESTPLATE, 1)
+            val item2 = ItemStack(Material.BREAD, (1..64).random())
+            p!!.inventory.setItem((1..36).random(), item1)
+            p!!.inventory.setItem((1..36).random(), item2)
 
         }
         private fun kit3(){
-
-
+            val item1 = ItemStack(Material.WOODEN_AXE)
+            val item2 = ItemStack(Material.LEATHER_BOOTS)
+            p!!.inventory.setItem((1..36).random(), item1)
+            p!!.inventory.setItem((1..36).random(), item2)
         }
         private fun kit4(){
 
