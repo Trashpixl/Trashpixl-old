@@ -31,12 +31,12 @@ init { //the constructor of this handler
             //Bukkit.dispatchCommand(e.player, "/server lobby")//sending the player to the lobby
 
         }
-        for (p in Bukkit.getServer().onlinePlayers) {
+        //for (p in Bukkit.getServer().onlinePlayers) {
             //println(p.name)
 
 
 
 
-        }
+       // }
     }
 }
