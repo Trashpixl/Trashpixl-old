@@ -21,7 +21,7 @@ class Zero : JavaPlugin() {
         this.getCommand("onCommandPvpKnockBack")?.setExecutor(OnCommandPvpKnockBack())
         this.getCommand("onCommandPvpLoot")?.setExecutor(OnCommandPvpLoot())
         this.getCommand("onCommandPvpSumo")?.setExecutor(OnCommandPvpSumo())
-        this.getCommand("onCommandBridge")?.setExecutor(OnCommandBridge())
+        this.getCommand("onCommandParkour")?.setExecutor(OnCommandParkour())
         //add more here
     }
 
