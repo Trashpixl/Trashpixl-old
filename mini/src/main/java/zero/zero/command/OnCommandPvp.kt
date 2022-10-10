@@ -27,7 +27,7 @@ class OnCommandPvp : CommandExecutor {// creating the class death and implementi
         val z = 279.0
 
         for (p in getServer().onlinePlayers) {
-            p.location.world.setPvp(true)
+
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
             val item = ItemStack(Material.IRON_SWORD, 1)
