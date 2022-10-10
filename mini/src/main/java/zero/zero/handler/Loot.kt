@@ -27,27 +27,46 @@ var p: Player? = null
 
                 val kit = (1..6).random()
                 if(kit == 1){
-                    kit1()
+                    val item1 = ItemStack(Material.IRON_SWORD, 1)
+                    val item2 = ItemStack(Material.GOLDEN_APPLE, (1..64).random())
+                    p!!.inventory.setItem((1..36).random(), item1)
+                    p!!.inventory.setItem((1..36).random(), item2)
                 }
                 else{
                     if(kit == 2){
-                        kit2()
+                        val item1 = ItemStack(Material.DIAMOND_CHESTPLATE, 1)
+                        val item2 = ItemStack(Material.BREAD, (1..64).random())
+                        p!!.inventory.setItem((1..36).random(), item1)
+                        p!!.inventory.setItem((1..36).random(), item2)
+
                     }
                     else{
                         if(kit == 3){
-                            kit3()
+                            val item1 = ItemStack(Material.WOODEN_AXE)
+                            val item2 = ItemStack(Material.LEATHER_BOOTS)
+                            p!!.inventory.setItem((1..36).random(), item1)
+                            p!!.inventory.setItem((1..36).random(), item2)
                         }
                         else{
                             if(kit == 4){
-                                kit4()
+                                val item1 = ItemStack(Material.GOLDEN_CHESTPLATE)
+                                val item2 = ItemStack(Material.WOODEN_SWORD)
+                                p!!.inventory.setItem((1..36).random(), item1)
+                                p!!.inventory.setItem((1..36).random(), item2)
                             }
                             else{
                                 if(kit == 5){
-                                    kit5()
+                                    val item1 = ItemStack(Material.IRON_BOOTS)
+                                    val item2 = ItemStack(Material.LEATHER_HELMET)
+                                    p!!.inventory.setItem((1..36).random(), item1)
+                                    p!!.inventory.setItem((1..36).random(), item2)
                                 }
                                 else{
                                 if(kit == 6){
-                                    kit6()
+                                    val item1 = ItemStack(Material.CHAINMAIL_LEGGINGS)
+                                    val item2 = ItemStack(Material.STICK)
+                                    p!!.inventory.setItem((1..36).random(), item1)
+                                    p!!.inventory.setItem((1..36).random(), item2)
                                 }
                                     else{
                                     print("ew")
@@ -63,44 +82,9 @@ var p: Player? = null
         }
                 }
         }
-        private fun kit1(){
-            val item1 = ItemStack(Material.IRON_SWORD, 1)
-            val item2 = ItemStack(Material.GOLDEN_APPLE, (1..64).random())
-            p!!.inventory.setItem((1..36).random(), item1)
-            p!!.inventory.setItem((1..36).random(), item2)
 
 
-        }
-        private fun kit2(){
-            val item1 = ItemStack(Material.DIAMOND_CHESTPLATE, 1)
-            val item2 = ItemStack(Material.BREAD, (1..64).random())
-            p!!.inventory.setItem((1..36).random(), item1)
-            p!!.inventory.setItem((1..36).random(), item2)
 
-        }
-        private fun kit3(){
-            val item1 = ItemStack(Material.WOODEN_AXE)
-            val item2 = ItemStack(Material.LEATHER_BOOTS)
-            p!!.inventory.setItem((1..36).random(), item1)
-            p!!.inventory.setItem((1..36).random(), item2)
-        }
-        private fun kit4(){
-            val item1 = ItemStack(Material.GOLDEN_CHESTPLATE)
-            val item2 = ItemStack(Material.WOODEN_SWORD)
-            p!!.inventory.setItem((1..36).random(), item1)
-            p!!.inventory.setItem((1..36).random(), item2)
 
-        }
-        private fun kit5(){
-            val item1 = ItemStack(Material.IRON_BOOTS)
-            val item2 = ItemStack(Material.LEATHER_HELMET)
-            p!!.inventory.setItem((1..36).random(), item1)
-            p!!.inventory.setItem((1..36).random(), item2)
-        }
-        private fun kit6(){
-            val item1 = ItemStack(Material.CHAINMAIL_LEGGINGS)
-            val item2 = ItemStack(Material.STICK)
-            p!!.inventory.setItem((1..36).random(), item1)
-            p!!.inventory.setItem((1..36).random(), item2)
-        }
+
     }
