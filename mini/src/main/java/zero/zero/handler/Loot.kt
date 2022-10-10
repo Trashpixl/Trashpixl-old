@@ -24,6 +24,8 @@ var p: Player? = null
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
             if (ev.clickedBlock!!.type == Material.STONE_BUTTON) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 p = ev.player
+                val itemtest = ItemStack(Material.LEATHER_HELMET, 1)
+                p!!.inventory.setItem((1..36).random(), itemtest)
 
                 val kit = (1..6).random()
                 if(kit == 1){
@@ -31,6 +33,7 @@ var p: Player? = null
                     val item2 = ItemStack(Material.GOLDEN_APPLE, (1..64).random())
                     p!!.inventory.setItem((1..36).random(), item1)
                     p!!.inventory.setItem((1..36).random(), item2)
+
                 }
                 else{
                     if(kit == 2){
