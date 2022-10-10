@@ -42,7 +42,12 @@ var p: Player? = null
                                 kit4()
                             }
                             else{
-                                print("something went wrong")
+                                if(kit == 5){
+                                    kit5()
+                                }
+                                else{
+                                print("ew")
+                                }
                             }
                         }
                     }
@@ -75,7 +80,16 @@ var p: Player? = null
             p!!.inventory.setItem((1..36).random(), item2)
         }
         private fun kit4(){
-
+            val item1 = ItemStack(Material.GOLDEN_CHESTPLATE)
+            val item2 = ItemStack(Material.WOODEN_SWORD)
+            p!!.inventory.setItem((1..36).random(), item1)
+            p!!.inventory.setItem((1..36).random(), item2)
 
         }
+    private fun kit5(){
+        val item1 = ItemStack(Material.IRON_BOOTS)
+        val item2 = ItemStack(Material.LEATHER_HELMET)
+        p!!.inventory.setItem((1..36).random(), item1)
+        p!!.inventory.setItem((1..36).random(), item2)
+    }
     }
