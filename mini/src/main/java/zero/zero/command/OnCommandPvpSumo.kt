@@ -1,5 +1,6 @@
 package zero.zero.command
 
+import org.bukkit.Bukkit
 import org.bukkit.Bukkit.getServer
 import org.bukkit.Location
 import org.bukkit.World
@@ -25,6 +26,7 @@ class OnCommandPvpSumo : CommandExecutor {// creating the class death and implem
         val z = 279.0
 
         for (p in getServer().onlinePlayers) {
+            p.location.world.setPvp(false)
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
             p.teleport(to)
@@ -36,4 +38,8 @@ class OnCommandPvpSumo : CommandExecutor {// creating the class death and implem
         return true
 
     }
+}
+
+fun World.setPvp(b: Boolean) {
+
 }

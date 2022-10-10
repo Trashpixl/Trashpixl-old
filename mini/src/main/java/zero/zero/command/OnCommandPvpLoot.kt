@@ -25,6 +25,7 @@ class OnCommandPvpLoot : CommandExecutor {// creating the class death and implem
         val z = 0.0
 
         for (p in getServer().onlinePlayers) {
+            p.location.world.setPvp(true)
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
             p.teleport(to)//bob

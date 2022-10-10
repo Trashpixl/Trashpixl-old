@@ -25,7 +25,7 @@ var p: Player? = null
             if (ev.clickedBlock!!.type == Material.STONE_BUTTON) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 p = ev.player
 
-                val kit = (1..4).random()
+                val kit = (1..6).random()
                 if(kit == 1){
                     kit1()
                 }
@@ -46,7 +46,12 @@ var p: Player? = null
                                     kit5()
                                 }
                                 else{
-                                print("ew")
+                                if(kit == 6){
+                                    kit6()
+                                }
+                                    else{
+                                    print("ew")
+                                }
                                 }
                             }
                         }
@@ -86,10 +91,16 @@ var p: Player? = null
             p!!.inventory.setItem((1..36).random(), item2)
 
         }
-    private fun kit5(){
-        val item1 = ItemStack(Material.IRON_BOOTS)
-        val item2 = ItemStack(Material.LEATHER_HELMET)
-        p!!.inventory.setItem((1..36).random(), item1)
-        p!!.inventory.setItem((1..36).random(), item2)
-    }
+        private fun kit5(){
+            val item1 = ItemStack(Material.IRON_BOOTS)
+            val item2 = ItemStack(Material.LEATHER_HELMET)
+            p!!.inventory.setItem((1..36).random(), item1)
+            p!!.inventory.setItem((1..36).random(), item2)
+        }
+        private fun kit6(){
+            val item1 = ItemStack(Material.CHAINMAIL_LEGGINGS)
+            val item2 = ItemStack(Material.STICK)
+            p!!.inventory.setItem((1..36).random(), item1)
+            p!!.inventory.setItem((1..36).random(), item2)
+        }
     }
