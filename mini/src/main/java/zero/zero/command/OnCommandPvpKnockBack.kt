@@ -25,7 +25,7 @@ class OnCommandPvpKnockBack : CommandExecutor {// creating the class death and i
         val z = 279.0
 
         for (p in getServer().onlinePlayers) {
-
+            p.health = 20.0
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
             p.teleport(to)

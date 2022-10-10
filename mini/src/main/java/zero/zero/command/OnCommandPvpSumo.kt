@@ -25,13 +25,19 @@ class OnCommandPvpSumo : CommandExecutor {// creating the class death and implem
         val z = 279.0
 
         for (p in getServer().onlinePlayers) {
-
+            p.health = 20.0
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
             p.teleport(to)
             p.inventory.clear()
+            while (true) {
+                p.health = 20.0
+                if (p.height == 5.0) {
+                    return true
 
-            
+
+                }
+            }
         }
 
         return true

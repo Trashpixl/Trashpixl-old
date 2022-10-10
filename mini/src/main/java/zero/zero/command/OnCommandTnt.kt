@@ -33,7 +33,7 @@ class OnCommandTnt : CommandExecutor {// creating the class death and implementi
             //println(p.name)
 
             p = playerName
-
+            p.health = 20.0
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
             p.teleport(to)

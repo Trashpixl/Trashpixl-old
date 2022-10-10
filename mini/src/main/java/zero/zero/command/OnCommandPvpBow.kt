@@ -27,7 +27,8 @@ class OnCommandPvpBow : CommandExecutor {// creating the class death and impleme
         val z = 279.0
 
         for (p in getServer().onlinePlayers) {
-            p.health
+            p.health = 20.0
+
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
             val item1 = ItemStack(Material.BOW, 1)
