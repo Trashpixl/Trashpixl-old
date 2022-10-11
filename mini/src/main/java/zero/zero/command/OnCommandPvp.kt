@@ -11,7 +11,7 @@ import org.bukkit.inventory.ItemStack
 
 //the package for this project
 
-//test
+
 
 class OnCommandPvp : CommandExecutor {// creating the class death and implementing the listener
     
