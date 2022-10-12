@@ -25,7 +25,7 @@ class OnCommandPvpKnockBack : CommandExecutor {// creating the class death and i
         val z = 279.0
         val defaultW: World 
         for (p in getServer().onlinePlayers) {
-            if(p.name == sender.name){
+            if (p.name == sender.name){
                     defaultW = p.world
                  }
 

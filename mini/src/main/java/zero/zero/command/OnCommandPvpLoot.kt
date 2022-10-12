@@ -25,14 +25,16 @@ class OnCommandPvpLoot : CommandExecutor {// creating the class death and implem
         val z = 0.0
         val defaultW: World 
         for (p in getServer().onlinePlayers) {
-            if(p.name == sender.name){
+
+            if (p.name == sender.name){
                     defaultW = p.world
                  }
 
             }
 
         for (p in getServer().onlinePlayers) {
-            if(p.world == defaultW){
+
+            if (p.world == defaultW){
             
             p.health = 20.0
             val w: World = p.world
