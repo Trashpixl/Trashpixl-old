@@ -23,6 +23,13 @@ class OnCommandDontDie : CommandExecutor {// creating the class death and implem
         val x = 189.0
         val y = -58.0
         val z = 278.0
+        val defaultW: World 
+        for (p in getServer().onlinePlayers) {
+            if(p.name == sender.name){
+                    defaultW = p.world
+                 }
+
+            }
 
         for (p in getServer().onlinePlayers) {
             p.health = 20.0

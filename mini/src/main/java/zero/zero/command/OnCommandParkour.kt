@@ -23,6 +23,13 @@ class OnCommandParkour : CommandExecutor {// creating the class death and implem
         val x = 191.0
         val y = -59.0
         val z = 300.0
+        val defaultW: World 
+        for (p in getServer().onlinePlayers) {
+            if(p.name == sender.name){
+                    defaultW = p.world
+                 }
+
+            }
 
         for (p in getServer().onlinePlayers) {
             p.health = 20.0
