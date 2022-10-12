@@ -34,7 +34,7 @@ class OnCommandPvpLoot : CommandExecutor {// creating the class death and implem
 
         for (p in getServer().onlinePlayers) {
 
-            if (p.world == defaultW){
+            if (p.world is defaultW){
             
             p.health = 20.0
             val w: World = p.world

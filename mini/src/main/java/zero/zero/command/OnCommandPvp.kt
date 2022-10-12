@@ -34,6 +34,7 @@ class OnCommandPvp : CommandExecutor {// creating the class death and implementi
             }
 
         for (p in getServer().onlinePlayers) {
+            if(p.world is defaultW){
             p.health = 20.0
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
@@ -41,7 +42,7 @@ class OnCommandPvp : CommandExecutor {// creating the class death and implementi
             p.teleport(to)
             p.inventory.clear()
             p.inventory.setItemInMainHand(item)
-
+            }
             
         }
 

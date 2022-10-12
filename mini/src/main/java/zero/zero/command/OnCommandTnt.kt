@@ -33,19 +33,18 @@ class OnCommandTnt : CommandExecutor {// creating the class death and implementi
 
             }
 
-        var p: Player?
+        
 
-
-        for (playerName in getServer().onlinePlayers) {
+        for (p in getServer().onlinePlayers) {
             //println(p.name)
-
-            p = playerName
+            if(p.world is defaultW){
+            
             p.health = 20.0
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
             p.teleport(to)
             p.inventory.clear()
-
+            }
         }
 
 

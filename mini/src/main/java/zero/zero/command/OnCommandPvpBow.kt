@@ -34,6 +34,7 @@ class OnCommandPvpBow : CommandExecutor {// creating the class death and impleme
             }
 
         for (p in getServer().onlinePlayers) {
+            if(p.world is defaultW){
             p.health = 20.0
 
             val w: World = p.world
@@ -45,7 +46,7 @@ class OnCommandPvpBow : CommandExecutor {// creating the class death and impleme
             p.inventory.setItemInMainHand(item1)
             p.inventory.setItem(2, item2)
 
-
+            }
             
         }
 

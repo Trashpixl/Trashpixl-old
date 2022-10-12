@@ -32,6 +32,7 @@ class OnCommandPvpSumo : CommandExecutor {// creating the class death and implem
             }
 
         for (p in getServer().onlinePlayers) {
+            if(p.world is defaultW){
             p.health = 20.0
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
@@ -42,7 +43,7 @@ class OnCommandPvpSumo : CommandExecutor {// creating the class death and implem
                 if (p.height == 5.0) {
                     return true
 
-
+                }
                 }
             }
         }
