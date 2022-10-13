@@ -27,7 +27,7 @@ class RaceTimer (plugin: Zero?) : Listener {
                 val y = 0.0
                 val z = 0.0
                 val p = ev.player //create the local player id
-                if(p.world is minecraft:overworld){
+                if(p.world.environment == World.Environment.NORMAL){
                 val name = p.name//test cccalebbbooooubbbouuu
                 
                 p.sendMessage(name + "won the race")//bob

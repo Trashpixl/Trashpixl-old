@@ -25,16 +25,10 @@ class OnCommandPvpBow : CommandExecutor {// creating the class death and impleme
         val x = 239.0
         val y = -58.0
         val z = 279.0
-        val defaultW: World 
-        for (p in getServer().onlinePlayers) {
-            if (p.name == sender.name){
-                    defaultW = p.world
-                 }
 
-            }
 
         for (p in getServer().onlinePlayers) {
-            if(p.world is defaultW){
+            if(p.world.environment == World.Environment.NORMAL){
             p.health = 20.0
 
             val w: World = p.world

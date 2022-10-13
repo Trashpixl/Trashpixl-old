@@ -3,6 +3,7 @@ package zero.zero.handler//the package for this project
 
 import org.bukkit.Bukkit//import all the other class
 import org.bukkit.Material//import all the material
+import org.bukkit.World
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler//import the event handler
 import org.bukkit.event.Listener//import all the listener
@@ -23,9 +24,9 @@ class Loot (plugin: Zero?) : Listener {
     fun buttonHandler(ev: PlayerInteractEvent) { //describes what the event is
         if (ev.action == Action.LEFT_CLICK_BLOCK) { //check if the action is physical
             if (ev.clickedBlock!!.type == Material.STONE_BUTTON) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
-             val p = ev.p
+             val p = ev.player
              
-              if(p.world is minecraft:overworld){
+              if(p.world.environment == World.Environment.NETHER){
                 
 
 
