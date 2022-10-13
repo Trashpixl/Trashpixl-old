@@ -9,6 +9,7 @@ import zero.zero.handler.RaceTimer
 class Zero : JavaPlugin() {
     override fun onEnable() {
         // Plugin startup logic
+        plugin.saveDefaultConfig()
         Config.load("config.yml")
         Death(this)
         RaceTimer(this)
@@ -24,6 +25,13 @@ class Zero : JavaPlugin() {
         this.getCommand("onCommandPvpSumo")?.setExecutor(OnCommandPvpSumo())
         this.getCommand("onCommandParkour")?.setExecutor(OnCommandParkour())
         //add more here
+    }
+   public fun write(val write:string, val where:string){
+        plugin.getConfig().set(where, write)
+    }
+   public fun read(val toRead:string){
+        val content:string = plugin.getConfig().getString(toRead)
+        return content
     }
 
     override fun onDisable() {
