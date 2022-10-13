@@ -9,6 +9,7 @@ import zero.zero.handler.RaceTimer
 class Zero : JavaPlugin() {
     override fun onEnable() {
         // Plugin startup logic
+        Config.load("config.yml")
         Death(this)
         RaceTimer(this)
         Loot(this)
