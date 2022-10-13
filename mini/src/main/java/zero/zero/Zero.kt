@@ -11,6 +11,7 @@ class Zero : JavaPlugin() {
         // Plugin startup logic
         //plugin.saveDefaultConfig()
         //Config.load("config.yml")
+        this.getCommand("OnCommandParkour")?.setExecutor(onCommandParkour())
         Death(this)
         RaceTimer(this)
         Loot(this)
