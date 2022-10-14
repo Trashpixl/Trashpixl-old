@@ -5,14 +5,14 @@ import org.bukkit.Bukkit// importing bukkit
 import org.bukkit.entity.Player// importing the player entity
 import org.bukkit.event.EventHandler// importing the event handler
 import org.bukkit.event.Listener// importing the event listener
-import org.bukkit.event.entity.PlayerDeathEvent// importing the player death event 
+import org.bukkit.event.entity.PlayerDeathEvent// importing the player death event
 import zero.zero.Zero// importing the main program
 
 
 class Death (plugin: Zero?): Listener {// creating the class death and implementing the listener
     // the implements for the listener
 init { //the constructor of this handler
-    Bukkit.getPluginManager().registerEvents(this, plugin!!)
+    Bukkit.getPluginManager().registerEvents(this, plugin!!)//linking it to the main code
 }
 
     @EventHandler //says that this is an event handler
@@ -31,12 +31,6 @@ init { //the constructor of this handler
             //Bukkit.dispatchCommand(e.player, "/server lobby")//sending the player to the lobby
 
         }
-        //for (p in Bukkit.getServer().onlinePlayers) {
-            //println(p.name)
 
-
-
-
-       // }
     }
 }

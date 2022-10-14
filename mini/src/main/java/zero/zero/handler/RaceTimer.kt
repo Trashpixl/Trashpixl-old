@@ -15,32 +15,32 @@ import zero.zero.Zero
 
 class RaceTimer (plugin: Zero?) : Listener {
     // the implements for the listener
-    init { //the constructor of this handler 
-        Bukkit.getPluginManager().registerEvents(this, plugin!!)
+    init { //the constructor of this event
+        Bukkit.getPluginManager().registerEvents(this, plugin!!)// linking it t the main code
     }
 
     @EventHandler
     fun pressurePlateHandler(ev: PlayerInteractEvent) { //describes what the event is
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
             if (ev.clickedBlock!!.type == Material.STONE_PRESSURE_PLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
-                val x = 0.0
-                val y = 0.0
-                val z = 0.0
+                val x = 0.0// creating the x variable for player tp
+                val y = 0.0// creating the y variable for player tp
+                val z = 0.0// creating the z variable for player tp
                 val p = ev.player //create the local player id
-                if(p.world.environment == World.Environment.NORMAL){
+                if(p.world.environment == World.Environment.NORMAL){//checking in wich environment the player is
                 val name = p.name//test cccalebbbooooubbbouuu
-                
+
                 p.sendMessage(name + "won the race")//bob
-                for (player in getServer().onlinePlayers) {
+                for (player in getServer().onlinePlayers) {// listing all the player in the server 
                     val w: World = player.world
                     val to = Location(w, x, y, z)//move before for
                     player.teleport(to)
 
 
-            
+
         }
                 }
-                
+
 
 
 
