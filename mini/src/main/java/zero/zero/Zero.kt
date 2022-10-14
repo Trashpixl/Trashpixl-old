@@ -15,7 +15,7 @@ class Zero : JavaPlugin() {
         Death(this)
         RaceTimer(this)
         Loot(this)
-        logger.info("starting")
+        logger.info("starting")//say that its starting the plugin
         this.getCommand("onCommandPvp")?.setExecutor(OnCommandPvp())
         this.getCommand("onCommandTnt")?.setExecutor(OnCommandCaptureFlag())
         this.getCommand("onCommandPvpBow")?.setExecutor(OnCommandPvpBow())
