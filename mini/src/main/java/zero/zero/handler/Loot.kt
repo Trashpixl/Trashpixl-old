@@ -25,7 +25,7 @@ class Loot (plugin: Zero?) : Listener {
             if (ev.clickedBlock!!.type == Material.STONE_BUTTON) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
              val p = ev.player
 
-              if(p.world.environment == World.Environment.NETHER){
+              if(p.world.environment == World.Environment.NORMAL){
 
 
 
