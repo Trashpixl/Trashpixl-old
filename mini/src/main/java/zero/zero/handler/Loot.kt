@@ -1,14 +1,13 @@
 package zero.zero.handler//the package for this project
 
 
-import org.bukkit.Bukkit//import all the other class
-import org.bukkit.Material//import all the material
+import org.bukkit.Bukkit
+import org.bukkit.Material
 import org.bukkit.World
-import org.bukkit.entity.Player
-import org.bukkit.event.EventHandler//import the event handler
-import org.bukkit.event.Listener//import all the listener
-import org.bukkit.event.block.Action//import the action related to the block
-import org.bukkit.event.player.PlayerInteractEvent//import the action related to the player
+import org.bukkit.event.EventHandler
+import org.bukkit.event.Listener
+import org.bukkit.event.block.Action
+import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.inventory.ItemStack
 import zero.zero.Zero
 
