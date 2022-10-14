@@ -1,12 +1,12 @@
 package zero.zero.handler //the package for this project
 
 
-import org.bukkit.Bukkit
-import org.bukkit.entity.Player
-import org.bukkit.event.EventHandler
-import org.bukkit.event.Listener
-import org.bukkit.event.entity.PlayerDeathEvent
-import zero.zero.Zero
+import org.bukkit.Bukkit// importing bukkit
+import org.bukkit.entity.Player// importing the player entity
+import org.bukkit.event.EventHandler// importing the event handler
+import org.bukkit.event.Listener// importing the event listener
+import org.bukkit.event.entity.PlayerDeathEvent// importing the player death event 
+import zero.zero.Zero// importing the main program
 
 
 class Death (plugin: Zero?): Listener {// creating the class death and implementing the listener
@@ -26,7 +26,7 @@ init { //the constructor of this handler
         if (e.player.killer is Player) {//checking if the entity killer is player
             //some code here
             val nameKiller:String = e.player.name//name killer saving the name of the killer to display it in the chat
-            e.player.sendMessage(nameKiller + "kill is team mate")// says who kill who 
+            e.player.sendMessage(nameKiller + "kill is team mate")// says who kill who
             //Thread.sleep(10000)//waiting 10 sec before sending it
             //Bukkit.dispatchCommand(e.player, "/server lobby")//sending the player to the lobby
 

@@ -1,22 +1,22 @@
-package zero.zero
+package zero.zero// the package of this project
 
 import org.bukkit.plugin.java.JavaPlugin
-import zero.zero.command.*
-import zero.zero.handler.Death
+import zero.zero.command.*// importing all the command
+import zero.zero.handler.Death// importing all the handler
 import zero.zero.handler.Loot
 import zero.zero.handler.RaceTimer
-import java.io.ObjectInputFilter
 
-class Zero : JavaPlugin() {
-    override fun onEnable() {
-        // Plugin startup logic
+
+class Zero : JavaPlugin() {// creating the main class
+    override fun onEnable() {// plugin startup logic
+
         //plugin.saveDefaultConfig()
         //Config.load("config.yml")
-        Death(this)
-        RaceTimer(this)
-        Loot(this)
+        Death(this)// init the death handler
+        RaceTimer(this)// init the race timer handler
+        Loot(this)// init the loot handler
         logger.info("starting")//say that its starting the plugin
-        this.getCommand("onCommandPvp")?.setExecutor(OnCommandPvp())// init the commanf for the pvp game 
+        this.getCommand("onCommandPvp")?.setExecutor(OnCommandPvp())// init the commanf for the pvp game
         this.getCommand("onCommandTnt")?.setExecutor(OnCommandCaptureFlag())// init the command for capture the flag
         this.getCommand("onCommandPvpBow")?.setExecutor(OnCommandPvpBow())// init the command for pvp bow
         this.getCommand("onCommandPvpSumo")?.setExecutor(OnCommandPvpSumo())// init the command for pvp sumo
