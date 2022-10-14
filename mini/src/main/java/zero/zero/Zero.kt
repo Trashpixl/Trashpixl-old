@@ -11,7 +11,7 @@ class Zero : JavaPlugin() {
         // Plugin startup logic
         //plugin.saveDefaultConfig()
         //Config.load("config.yml")
-        this.getCommand("OnCommandParkour")?.setExecutor(onCommandParkour())
+
         Death(this)
         RaceTimer(this)
         Loot(this)
@@ -24,6 +24,7 @@ class Zero : JavaPlugin() {
         this.getCommand("onCommandPvpKnockBack")?.setExecutor(OnCommandPvpKnockBack())
         this.getCommand("onCommandPvpLoot")?.setExecutor(OnCommandPvpLoot())
         this.getCommand("onCommandPvpSumo")?.setExecutor(OnCommandPvpSumo())
+        this.getCommand("onCommandParkour")?.setExecutor(OnCommandParkour())
         this.getCommand("onCommandParkour")?.setExecutor(OnCommandParkour())
         //add more here
     }
