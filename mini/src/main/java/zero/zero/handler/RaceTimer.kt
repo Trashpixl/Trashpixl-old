@@ -3,14 +3,14 @@ package zero.zero.handler//the package for this project
 
 import org.bukkit.Bukkit//import all the other class
 import org.bukkit.Bukkit.getServer
-import org.bukkit.Location
+import org.bukkit.Location// importing everyting in the location
 import org.bukkit.Material//import all the material
-import org.bukkit.World
+import org.bukkit.World// importing everything about world
 import org.bukkit.event.EventHandler//import the event handler
 import org.bukkit.event.Listener//import all the listener
 import org.bukkit.event.block.Action//import the action related to the block
 import org.bukkit.event.player.PlayerInteractEvent//import the action related to the player
-import zero.zero.Zero
+import zero.zero.Zero// importing the main class
 
 
 class RaceTimer (plugin: Zero?) : Listener {
@@ -31,10 +31,10 @@ class RaceTimer (plugin: Zero?) : Listener {
                 val name = p.name//test cccalebbbooooubbbouuu
 
                 p.sendMessage(name + "won the race")//bob
-                for (player in getServer().onlinePlayers) {// listing all the player in the server 
-                    val w: World = player.world
+                for (player in getServer().onlinePlayers) {// listing all the player in the server
+                    val w: World = player.world// creating a variable to store the player world
                     val to = Location(w, x, y, z)//move before for
-                    player.teleport(to)
+                    player.teleport(to)// teleporting the palyer
 
 
 
