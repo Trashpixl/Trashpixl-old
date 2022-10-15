@@ -2,9 +2,8 @@ package zero.zero// the package of this project
 
 import org.bukkit.plugin.java.JavaPlugin
 import zero.zero.command.*// importing all the command
-import zero.zero.handler.Death// importing all the handler
-import zero.zero.handler.Loot
-import zero.zero.handler.RaceTimer
+import zero.zero.handler.*
+import java.io.File
 
 
 class Zero : JavaPlugin() {// creating the main class
@@ -15,6 +14,9 @@ class Zero : JavaPlugin() {// creating the main class
         Death(this)// init the death handler
         RaceTimer(this)// init the race timer handler
         Loot(this)// init the loot handler
+        SellHandlerInventory(this)
+        PlateHandler(this)
+        WoodPlateHandler(this)
         logger.info("starting")//say that its starting the plugin
         this.getCommand("onCommandPvp")?.setExecutor(OnCommandPvp())// init the commanf for the pvp game
         this.getCommand("onCommandTnt")?.setExecutor(OnCommandCaptureFlag())// init the command for capture the flag
@@ -41,14 +43,20 @@ class Zero : JavaPlugin() {// creating the main class
         this.getCommand("onCommandSkywars")?.setExecutor(OnCommandSkywars())// init the commad for skywars
         this.getCommand("onCommandSwimFast")?.setExecutor(OnCommandSwimFast())// init the command for swimming race
         this.getCommand("onCommandTag")?.setExecutor(OnCommandTag())// init the command for the tag
+        val fileName = "game.txt"
+        val actualFile = File(fileName)
+    if (actualFile.exists() && actualFile.isFile) {
+        print("file is already present")
+    }
+    else{
+        if (actualFile.createNewFile()) {
+            print("file created!")
+        }
+        else{
+            print("fail to create the file")
+        }
+    }
         //add more here
-    }
-   public fun write(write:String, where:String){
-       //plugin.getConfig().set(where, write)
-    }
-   public fun read(toRead:String){
-        //val content:String = plugin.getConfig().getString(toRead)
-        //return content
     }
 
     override fun onDisable() {
