@@ -20,7 +20,10 @@ class PlateHandler (plugin: Zero?) : Listener { // the implements for the listen
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
             if (ev.clickedBlock!!.type == Material.STONE_PRESSURE_PLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 val p = ev.player //create the local player id
-                Bukkit.dispatchCommand(p, "function server_main") //dispatch the command to the player so he tp itself
+                if(p.location.world.name.endsWith("main_server")){
+                    
+                    Bukkit.dispatchCommand(p, "function server_main") //dispatch the command to the player so he tp itself
+                }
             }
         }
     }

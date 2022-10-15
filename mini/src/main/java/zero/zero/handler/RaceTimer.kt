@@ -27,7 +27,7 @@ class RaceTimer (plugin: Zero?) : Listener {
                 val y = 0.0// creating the y variable for player tp
                 val z = 0.0// creating the z variable for player tp
                 val p = ev.player //create the local player id
-                if(p.world.environment == World.Environment.NORMAL){//checking in wich environment the player is
+                if(p.location.world.name.endsWith("overworld")){//checking in wich environment the player is
                 val name = p.name//test cccalebbbooooubbbouuu
 
                 p.sendMessage(name + "won the race")//bob

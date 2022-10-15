@@ -21,10 +21,12 @@ class WoodPlateHandler(plugin: Zero?) : Listener {//create the class and impleme
         if (ev.action == Action.PHYSICAL) { //check if the action is physical like step on or software like open the inventory
             if (ev.clickedBlock!!.type   == Material.OAK_PRESSURE_PLATE) { //compare the event to an oak pressure plate
                 val p = ev.player //create the local variable player
-                //cacacacacaclelelelelellelelebobobobobobo put it here
-                var to: Location = p.bedSpawnLocation!!
+                if(p.location.world.name.endsWith("main_server")){
+                    //cacacacacaclelelelelellelelebobobobobobo put it here
+                    var to: Location = p.bedSpawnLocation!!
 
-                p.teleport(to)
+                    p.teleport(to)
+                }
             }
         }
     }
