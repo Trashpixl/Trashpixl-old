@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" build-on-make="true" name="mini:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/mini_jar</output-path>
+    <output-path>$PROJECT_DIR$/../../../out</output-path>
     <root id="archive" name="mini.jar">
       <element id="module-output" name="zero" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.7.10/kotlin-stdlib-jdk8-1.7.10.jar" path-in-jar="/" />
