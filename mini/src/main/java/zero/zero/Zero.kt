@@ -18,7 +18,8 @@ class Zero : JavaPlugin() {// creating the main class
         PlateHandler(this)
         WoodPlateHandler(this)
         Laucher(this)
-        logger.info("starting")//say that its starting the plugin
+        logger.info("starting bob")//say that its starting the plugin
+        
         this.getCommand("onCommandPvp")?.setExecutor(OnCommandPvp())// init the commanf for the pvp game
         this.getCommand("onCommandTnt")?.setExecutor(OnCommandCaptureFlag())// init the command for capture the flag
         this.getCommand("onCommandPvpBow")?.setExecutor(OnCommandPvpBow())// init the command for pvp bow
