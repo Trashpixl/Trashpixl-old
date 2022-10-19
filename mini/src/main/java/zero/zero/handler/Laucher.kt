@@ -55,6 +55,11 @@ class Laucher (plugin: Zero?) : Listener {
                    p.sendCommand("onCommandParkour")
                }
            }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandPvpBow")
+               }
+           }
         }
     }
 }
