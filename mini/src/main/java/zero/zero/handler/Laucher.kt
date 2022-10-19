@@ -57,7 +57,37 @@ class Laucher (plugin: Zero?) : Listener {
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandPvpBow")
+                   p.sendCommand("onCommandCaptureFlag")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandDontDie")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandPvpKnockBack")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandChaiseMusical")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandClimbFast")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandCpsTest")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandDodgeBall")
                }
            }
         }
