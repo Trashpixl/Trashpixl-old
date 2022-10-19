@@ -1,4 +1,4 @@
-package zero.zero// the package of this project
+package zero.zero// the package of this project bob
 
 import org.bukkit.plugin.java.JavaPlugin
 import zero.zero.command.*// importing all the command
