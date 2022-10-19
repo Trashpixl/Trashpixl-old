@@ -90,6 +90,61 @@ class Laucher (plugin: Zero?) : Listener {
                    p.sendCommand("onCommandDodgeBall")
                }
            }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandElytraRace")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandFallTrap")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandFindMe")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandFireTrap")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandHideAndSeek")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandHorseRace")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandMlg")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandRockPaperCisor")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandSkywars")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandSwimFast")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandDodgeTag")
+               }
+           }
         }
     }
 }
