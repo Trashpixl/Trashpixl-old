@@ -24,16 +24,27 @@ class Laucher (plugin: Zero?) : Listener {
     fun buttonHandler(ev: PlayerInteractEvent) { //describes what the event is
         print("bob")
         if (ev.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
+          val p = ev.player
         if (ev.clickedBlock!!.type == Material.WHITE_TERRACOTTA) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
-                val p = ev.player
-                p.sendMessage("bob")
+              
+                if(p.location.world.name.endsWith("lobby_server")){
 
-                if(p.world.environment == World.Environment.NORMAL){
-
+                  p.sendCommand("onCommandPvp")
 
 
                 }
             }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+               p.sendCommand("onCommandPvpSumo")
+                   
+               }
+           } 
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandPvpBow")
+               }
+           }
         }
     }
 }
