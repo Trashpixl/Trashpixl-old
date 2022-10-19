@@ -57,7 +57,7 @@ class OnCommandTnt : CommandExecutor {// creating the class death and implementi
 
 
 
-        return false
+        return true
 
     }
 }
