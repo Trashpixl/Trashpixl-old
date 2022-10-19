@@ -47,15 +47,15 @@ class Zero : JavaPlugin() {// creating the main class
         this.getCommand("onCommandTag")?.setExecutor(OnCommandTag())// init the command for the tag
         val fileName = "game.txt"// creating the file name 
         val actualFile = File(fileName)
-    if (actualFile.exists() && actualFile.isFile) {
-        print("file is already present")
+    if (actualFile.exists() && actualFile.isFile) {//chacking if the file exists
+        
     }
     else{
-        if (actualFile.createNewFile()) {
-            print("file created!")
+        if (actualFile.createNewFile()) {//creating the new file
+            
         }
         else{
-            print("fail to create the file")
+    
         }
     }
         //add more here
