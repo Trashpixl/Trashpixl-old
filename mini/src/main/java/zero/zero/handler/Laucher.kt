@@ -52,97 +52,97 @@ class Laucher (plugin: Zero?) : Listener {
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandParkour")
+                  Bukkit.dispatchCommand(p, "onCommandParkour")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandCaptureFlag")
+                   Bukkit.dispatchCommand(p, "onCommandCaptureFlag")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandDontDie")
+                   Bukkit.dispatchCommand(p, "onCommandDontDie")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandPvpKnockBack")
+                   Bukkit.dispatchCommand(p, "onCommandPvpKnockBack")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandChaiseMusical")
+                   Bukkit.dispatchCommand(p, "onCommandChaiseMusical")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandClimbFast")
+                   Bukkit.dispatchCommand(p, "onCommandClimbFast")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandCpsTest")
+                 Bukkit.dispatchCommand(p, "onCommandCpsTest")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandDodgeBall")
+                   Bukkit.dispatchCommand(p, "onCommandDodgeBall")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandElytraRace")
+                  Bukkit.dispatchCommand(p, "onCommandElytraRace")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandFallTrap")
+                   Bukkit.dispatchCommand(p, "onCommandFallTrap")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandFindMe")
+                   Bukkit.dispatchCommand(p, "onCommandFindMe")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandFireTrap")
+                   Bukkit.dispatchCommand(p, "onCommandFireTrap")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandHideAndSeek")
+                   Bukkit.dispatchCommand(p, "onCommandHideAndSeek")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandHorseRace")
+                   Bukkit.dispatchCommand(p, "onCommandHorseRace")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandMlg")
+                   Bukkit.dispatchCommand(p, "onCommandMlg")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandRockPaperCisor")
+                   Bukkit.dispatchCommand(p, "onCommandRockPaperCisor")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandSkywars")
+                  Bukkit.dispatchCommand(p, "onCommandSkywars")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandSwimFast")
+                  Bukkit.dispatchCommand(p, "onCommandSwimFast")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandDodgeTag")
+                   Bukkit.dispatchCommand(p, "onCommandDodgeTag")
                }
            }
         }
