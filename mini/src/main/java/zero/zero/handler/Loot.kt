@@ -74,7 +74,7 @@ class Loot (plugin: Zero?) : Listener {
                                     p.inventory.setItem((1..36).random(), item2)
                                 }
                                     else{
-                                    print("ew")
+                                    
                                 }
                                 }
                             }
