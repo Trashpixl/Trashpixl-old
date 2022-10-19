@@ -27,27 +27,27 @@ class Laucher (plugin: Zero?) : Listener {
           val p = ev.player
         if (ev.clickedBlock!!.type == Material.WHITE_TERRACOTTA) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
            if(p.location.world.name.endsWith("lobby_server")){
-                  p.sendCommand("onCommandPvp")
+                  Bukkit.dispatchCommand(p, "onCommandPvp")
                 }
             }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-               p.sendCommand("onCommandPvpSumo")
+               Bukkit.dispatchCommand(p, "onCommandPvpSumo")
                 }
            } 
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandPvpBow")
+                  Bukkit.dispatchCommand(p, "onCommandPvpBow")
                 }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandPvpLoot")
+                 Bukkit.dispatchCommand(p, "onCommandPvpLoot")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   p.sendCommand("onCommandBridge")
+                  Bukkit.dispatchCommand(p, "onCommandBridge")
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
