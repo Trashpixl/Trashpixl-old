@@ -27,7 +27,6 @@ class Zero : JavaPlugin() {// creating the main class
         this.getCommand("onCommandDontDie")?.setExecutor(OnCommandDontDie())// init the command for pvp dont die
         this.getCommand("onCommandPvpKnockBack")?.setExecutor(OnCommandPvpKnockBack())// init the command for pvp knock back
         this.getCommand("onCommandPvpLoot")?.setExecutor(OnCommandPvpLoot())// init the command for pvp loot
-        this.getCommand("onCommandPvpSumo")?.setExecutor(OnCommandPvpSumo())// init the command the command for pvp sumo
         this.getCommand("onCommandParkour")?.setExecutor(OnCommandParkour())// init the command for the parkour
         this.getCommand("onCommandCaptureFlag")?.setExecutor(OnCommandCaptureFlag())// init the command for capture the flag
         this.getCommand("onCommandChaiseMusical")?.setExecutor(OnCommandChaiseMusical())// init the command for chaise musical
