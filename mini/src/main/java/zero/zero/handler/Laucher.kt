@@ -26,20 +26,25 @@ class Laucher (plugin: Zero?) : Listener {
         if (ev.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
           val p = ev.player
         if (ev.clickedBlock!!.type == Material.WHITE_TERRACOTTA) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
-              
-                if(p.location.world.name.endsWith("lobby_server")){
-
+           if(p.location.world.name.endsWith("lobby_server")){
                   p.sendCommand("onCommandPvp")
-
-
                 }
             }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                p.sendCommand("onCommandPvpSumo")
-                   
-               }
+                }
            } 
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandPvpBow")
+                }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   p.sendCommand("onCommandPvpLoot")
+               }
+           }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                    p.sendCommand("onCommandPvpBow")
