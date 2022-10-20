@@ -85,27 +85,27 @@ class Laucher (plugin: Zero?) : Listener {
                  Bukkit.dispatchCommand(p, "onCommandCpsTest")
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.BROWN_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandDodgeBall")
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.GREEN_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                   Bukkit.dispatchCommand(p, "onCommandElytraRace")
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.RED_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandFallTrap")
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.BLACK_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandFindMe")
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandFireTrap")
                }
