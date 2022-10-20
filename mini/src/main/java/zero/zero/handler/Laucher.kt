@@ -45,27 +45,27 @@ class Laucher (plugin: Zero?) : Listener {
                  Bukkit.dispatchCommand(p, "onCommandPvpLoot")
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.YELLOW_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                   Bukkit.dispatchCommand(p, "onCommandBridge")
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.LIME_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                   Bukkit.dispatchCommand(p, "onCommandParkour")
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.PINK_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandCaptureFlag")
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.GREY_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandDontDie")
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.LIGHT_GREY_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandPvpKnockBack")
                }
