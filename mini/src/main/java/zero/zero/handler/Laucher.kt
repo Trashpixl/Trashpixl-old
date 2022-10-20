@@ -30,17 +30,17 @@ class Laucher (plugin: Zero?) : Listener {
                   Bukkit.dispatchCommand(p, "onCommandPvp")
                 }
             }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.ORANGE_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                Bukkit.dispatchCommand(p, "onCommandPvpSumo")
                 }
            } 
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.MAGENTA_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                   Bukkit.dispatchCommand(p, "onCommandPvpBow")
                 }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.LIGHT_BLUE_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                  Bukkit.dispatchCommand(p, "onCommandPvpLoot")
                }
@@ -143,6 +143,11 @@ class Laucher (plugin: Zero?) : Listener {
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandDodgeTag")
+               }
+           }
+           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+               if(p.location.world.name.endsWith("lobby_server")){
+                   Bukkit.dispatchCommand(p, "onCommandTnt")
                }
            }
         }
