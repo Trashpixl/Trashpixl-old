@@ -70,17 +70,17 @@ class Laucher (plugin: Zero?) : Listener {
                    Bukkit.dispatchCommand(p, "onCommandPvpKnockBack")
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.CYAN_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandChaiseMusical")
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.PURPLE_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandClimbFast")
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.BLUE_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                  Bukkit.dispatchCommand(p, "onCommandCpsTest")
                }
