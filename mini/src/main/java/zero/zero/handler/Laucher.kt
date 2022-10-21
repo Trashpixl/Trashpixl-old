@@ -34,7 +34,7 @@ class Laucher (plugin: Zero?) : Listener {
                if(p.location.world.name.endsWith("lobby_server")){
                Bukkit.dispatchCommand(p, "onCommandPvpSumo")//dispatchCommand for pvp sumo
                 }
-           } 
+           }
            if(ev.clickedBlock!!.type == Material.MAGENTA_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                   Bukkit.dispatchCommand(p, "onCommandPvpBow")//dispatchCommand pvp bow
@@ -52,20 +52,20 @@ class Laucher (plugin: Zero?) : Listener {
            }
            if(ev.clickedBlock!!.type == Material.LIME_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                  Bukkit.dispatchCommand(p, "onCommandParkour")//dispatchCommand for parkour race 
+                  Bukkit.dispatchCommand(p, "onCommandParkour")//dispatchCommand for parkour race
                }
            }
            if(ev.clickedBlock!!.type == Material.PINK_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   Bukkit.dispatchCommand(p, "onCommandCaptureFlag")//dispatchCommand for capture flag 
+                   Bukkit.dispatchCommand(p, "onCommandCaptureFlag")//dispatchCommand for capture flag
                }
            }
-           if(ev.clickedBlock!!.type == Material.GREY_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.GRAY_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   Bukkit.dispatchCommand(p, "onCommandDontDie")//dispatchCommand for dont die 
+                   Bukkit.dispatchCommand(p, "onCommandDontDie")//dispatchCommand for dont die
                }
            }
-           if(ev.clickedBlock!!.type == Material.LIGHT_GREY_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.LIGHT_GRAY_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandPvpKnockBack")//dispatch command for pvp knock back
                }
@@ -77,7 +77,7 @@ class Laucher (plugin: Zero?) : Listener {
            }
            if(ev.clickedBlock!!.type == Material.PURPLE_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   Bukkit.dispatchCommand(p, "onCommandClimbFast")// dispatchCommand for climb fast 
+                   Bukkit.dispatchCommand(p, "onCommandClimbFast")// dispatchCommand for climb fast
                }
            }
            if(ev.clickedBlock!!.type == Material.BLUE_TERRACOTTA){
@@ -92,7 +92,7 @@ class Laucher (plugin: Zero?) : Listener {
            }
            if(ev.clickedBlock!!.type == Material.GREEN_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                  Bukkit.dispatchCommand(p, "onCommandElytraRace")//dispatchCommand for elytra race 
+                  Bukkit.dispatchCommand(p, "onCommandElytraRace")//dispatchCommand for elytra race
                }
            }
            if(ev.clickedBlock!!.type == Material.RED_TERRACOTTA){
@@ -122,12 +122,12 @@ class Laucher (plugin: Zero?) : Listener {
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   Bukkit.dispatchCommand(p, "onCommandMlg")//dispatchCommand for mlg 
+                   Bukkit.dispatchCommand(p, "onCommandMlg")//dispatchCommand for mlg
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   Bukkit.dispatchCommand(p, "onCommandRockPaperCisor")//dispatchCommand fro rock paper cisor 
+                   Bukkit.dispatchCommand(p, "onCommandRockPaperCisor")//dispatchCommand fro rock paper cisor
                }
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
@@ -147,7 +147,7 @@ class Laucher (plugin: Zero?) : Listener {
            }
            if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   Bukkit.dispatchCommand(p, "onCommandTnt")//dispatchCommand for tnt race 
+                   Bukkit.dispatchCommand(p, "onCommandTnt")//dispatchCommand for tnt race
                }
            }
         }
