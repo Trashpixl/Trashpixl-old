@@ -7,6 +7,8 @@ import org.bukkit.event.EventHandler// importing the event handler
 import org.bukkit.event.Listener// importing the event listener
 import org.bukkit.event.entity.PlayerDeathEvent// importing the player death event
 import zero.zero.Zero// importing the main program
+import java.io.File
+import java.util.*
 
 
 class Death (plugin: Zero?): Listener {// creating the class death and implementing the listener
@@ -19,13 +21,13 @@ init { //the constructor of this handler
     fun onPlayerDead(e: PlayerDeathEvent) {//creating the on player death event function and importing the death class
     val fileName = "game.txt"// creating the file name 
     val actualFile = File(fileName)
-    if(actualFile.exist() && actualFile.isFile){
+    if(actualFile.exists() && actualFile.isFile){
         val reader = Scanner(actualFile)
         val data = reader.nextLine()
         val dataInt = data.toInt()
         val name:String = e.player.name//name variable to store the player name
         if(dataInt == 0){
-        if(p.location.world.name.endsWith("overworld")){
+        if(e.player.location.world.name.endsWith("overworld")){
         
             e.player.sendMessage("$name died an you all won this match")//send the message of who won the match
         //Thread.sleep(10000)//waiting 10sec before tp the player

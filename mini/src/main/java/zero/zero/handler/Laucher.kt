@@ -110,42 +110,42 @@ class Laucher (plugin: Zero?) : Listener {
                    Bukkit.dispatchCommand(p, "onCommandFireTrap")//dispatchCommand for fire trap
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+           if(ev.clickedBlock!!.type == Material.STONE_STAIRS){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandHideAndSeek")//dispatchCommand for hide and seek
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+            if(ev.clickedBlock!!.type == Material.STONE_STAIRS){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandHorseRace")//dispatchCommand for horse race
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+            if(ev.clickedBlock!!.type == Material.STONE_STAIRS){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandMlg")//dispatchCommand for mlg
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+            if(ev.clickedBlock!!.type == Material.STONE_STAIRS){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandRockPaperCisor")//dispatchCommand fro rock paper cisor
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+            if(ev.clickedBlock!!.type == Material.STONE_STAIRS){
                if(p.location.world.name.endsWith("lobby_server")){
                   Bukkit.dispatchCommand(p, "onCommandSkywars")//dispatchCommand for skywars
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+            if(ev.clickedBlock!!.type == Material.STONE_STAIRS){
                if(p.location.world.name.endsWith("lobby_server")){
                   Bukkit.dispatchCommand(p, "onCommandSwimFast")//dispatchCommand for swim fast
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+            if(ev.clickedBlock!!.type == Material.STONE_STAIRS){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandTag")//dispatchCommand for tag
                }
            }
-           if(ev.clickedBlock!!.type == Material.X_TERRACOTTA){
+            if(ev.clickedBlock!!.type == Material.STONE_STAIRS){
                if(p.location.world.name.endsWith("lobby_server")){
                    Bukkit.dispatchCommand(p, "onCommandTnt")//dispatchCommand for tnt race
                }
