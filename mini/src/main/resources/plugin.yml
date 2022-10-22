@@ -6,24 +6,95 @@ commands:
   onCommandPvpBow:
     description: command for pvpbow
     usage: /<command>
+
   onCommandPvpSumo:
     description: command for pvp Sumo
     usage: /<command>
+
   onCommandPvp:
     description: command for pvp
     usage: /<command>
+
   onCommandTnt:
     description: command for tnt
     usage: /<command>
+
   onCommandDontDie:
     description: command for tower of hell
     usage: /<command>
+
   onCommandPvpKnockBack:
     description: command for pvp knock back
     usage: /<command>
+
   onCommandPvpLoot:
     description: command for pvp loot
     usage: /<command>
+
   onCommandParkour:
     description: command for Parkour race
+    usage: /<command>
+
+  onCommandCapturFlag:
+      description: command for capture the flag
+      usage: /<command>
+
+  onCommandChaiseMusical:
+      description: command for chaise musical
+      usage: /<command>
+
+  onCommandClimbFast:
+      description: command for
+      usage: /<command>
+
+  onCommandCpsTest:
+    description: command for
+    usage: /<command>
+
+  onCommandDodgeBall:
+    description: command for
+    usage: /<command>
+
+  onCommandElytraRace:
+    description: command for
+    usage: /<command>
+
+  onCommandFallTrap:
+    description: command for
+    usage: /<command>
+
+  onCommandFindMe:
+    description: command for
+    usage: /<command>
+
+  onCommandFireTrap:
+    description: command for
+    usage: /<command>
+
+  onCommandHideAndSeek:
+    description: command for
+    usage: /<command>
+
+  onCommandHorseRace:
+    description: command for
+    usage: /<command>
+
+  onCommandMlg:
+    description: command for
+    usage: /<command>
+
+  onCommandRockPaperCisor:
+    description: command for
+    usage: /<command>
+
+  onCommandSkywars:
+    description: command for
+    usage: /<command>
+
+  onCommandSwimFast:
+    description: command for
+    usage: /<command>
+
+  onCommandTag:
+    description: command for
     usage: /<command>

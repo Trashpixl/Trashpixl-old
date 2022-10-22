@@ -30,7 +30,7 @@ class OnCommandTnt : CommandExecutor {// creating the class death and implementi
         val z = 250.0
         val fileName = "game.txt"
         val actualFile = File(fileName)
-        val toWrite = "0"
+        val toWrite = "1"
 
 
 

@@ -8,6 +8,8 @@ import org.bukkit.event.Listener// importing the event listener
 import org.bukkit.event.entity.PlayerDeathEvent// importing the player death event
 import zero.zero.Zero// importing the main program
 import java.io.File
+import java.io.FileWriter
+import java.io.IOException
 import java.util.*
 
 
@@ -19,16 +21,17 @@ init { //the constructor of this handler
 
     @EventHandler //says that this is an event handler
     fun onPlayerDead(e: PlayerDeathEvent) {//creating the on player death event function and importing the death class
-    val fileName = "game.txt"// creating the file name 
+    val fileName = "game.txt"// creating the file name
+        val toWrite = "0"
     val actualFile = File(fileName)
     if(actualFile.exists() && actualFile.isFile){
         val reader = Scanner(actualFile)
         val data = reader.nextLine()
         val dataInt = data.toInt()
         val name:String = e.player.name//name variable to store the player name
-        if(dataInt == 0){
-        if(e.player.location.world.name.endsWith("overworld")){
-        
+        if(dataInt == 1){
+        if(e.player.location.world.name.endsWith("lobby")){
+
             e.player.sendMessage("$name died an you all won this match")//send the message of who won the match
         //Thread.sleep(10000)//waiting 10sec before tp the player
             Bukkit.dispatchCommand(e.player, "/server lobby")//sending the player to the lobby
@@ -42,7 +45,14 @@ init { //the constructor of this handler
             //Bukkit.dispatchCommand(e.player, "/server lobby")//sending the player to the lobby
 
         }
-
+            try{
+                val myWriter = FileWriter(actualFile)//pointing the writer to the actual file
+                myWriter.write(toWrite)//writing the data to the file
+                myWriter.close()//closing the writer
+            }
+            catch(e: IOException){
+                throw RuntimeException(e)
+            }
     }
 }
 }
