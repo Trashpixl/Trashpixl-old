@@ -3,7 +3,7 @@ package zero.zero// the package of this project bob
 import org.bukkit.plugin.java.JavaPlugin
 import zero.zero.command.*// importing all the command
 import zero.zero.handler.*
-import java.io.File
+
 
 
 class Zero : JavaPlugin() {
@@ -20,7 +20,7 @@ class Zero : JavaPlugin() {
         PlateHandler(this)
         WoodPlateHandler(this)
         Laucher(this)
-        Respawn(this)
+
         logger.info("starting bob")//say that its starting the plugin
 
         this.getCommand("onCommandPvp")?.setExecutor(OnCommandPvp())// init the commanf for the pvp game
