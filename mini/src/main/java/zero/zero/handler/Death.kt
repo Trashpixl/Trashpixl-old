@@ -1,65 +1,44 @@
 package zero.zero.handler //the package for this project
 
 
-import org.bukkit.Bukkit// importing bukkit
+import org.bukkit.Bukkit
 import org.bukkit.World
-import org.bukkit.entity.Player// importing the player entity
-import org.bukkit.event.EventHandler// importing the event handler
-import org.bukkit.event.Listener// importing the event listener
-import org.bukkit.event.entity.PlayerDeathEvent// importing the player death event
-import zero.zero.Zero// importing the main program
-import java.io.File
-import java.io.FileWriter
-import java.io.IOException
-import java.util.*
+import org.bukkit.entity.Player
+import org.bukkit.event.EventHandler
+import org.bukkit.event.Listener
+import org.bukkit.event.entity.PlayerDeathEvent
+import zero.zero.Zero
 
 
-class Death (plugin: Zero?): Listener {// creating the class death and implementing the listener
-    // the implements for the listener
+class Death(plugin: Zero?) : Listener {// creating the class death and implementing the listener
+// the implements for the listener
 init { //the constructor of this handler
     Bukkit.getPluginManager().registerEvents(this, plugin!!)//linking it to the main code
 }
 
     @EventHandler //says that this is an event handler
     fun onPlayerDead(e: PlayerDeathEvent) {//creating the on player death event function and importing the death class
-    val fileName = "game.txt"// creating the file name
-        val toWrite = "0"
-        e.player.sendMessage("bob")
-    val actualFile = File(fileName)
-    if(actualFile.exists() && actualFile.isFile){
-        val reader = Scanner(actualFile)
-        val data = reader.nextLine()
-        val dataInt = data.toInt()
-        val name:String = e.player.name//name variable to store the player name
         e.player.sendMessage("bob2")
-        e.player.sendMessage(dataInt.toString())
-        if(dataInt == 1){
+        if (Zero().game == 1) {
+            val name: String = e.player.name//name variable to store the player name
             e.player.sendMessage("bob3")
-            if(e.player.world.environment == World.Environment.NORMAL && !e.player.location.world.name.endsWith("server:lobby_server")){
+            if (e.player.world.environment == World.Environment.NORMAL && !e.player.location.world.name.endsWith("server:lobby_server")) {
                 e.player.sendMessage("bob4")
-            e.player.sendMessage("$name died an you all won this match")//send the message of who won the match
-        //Thread.sleep(10000)//waiting 10sec before tp the player
-            Bukkit.dispatchCommand(e.player, "/server lobby")//sending the player to the lobby
-            //some code here
+                e.player.sendMessage("$name died an you all won this match")//send the message of who won the match
+                //Thread.sleep(10000)//waiting 10sec before tp the player
+                Bukkit.dispatchCommand(e.player, "/server lobby")//sending the player to the lobby
+                //some code here
 
-            if (e.player.killer is Player) {//checking if the entity killer is player
-            //some code here
-                val nameKiller:String = e.player.name//name killer saving the name of the killer to display it in the chat
-                e.player.sendMessage(nameKiller + "kill is team mate")// says who kill who
-            //Thread.sleep(10000)//waiting 10 sec before sending it
-            //Bukkit.dispatchCommand(e.player, "/server lobby")//sending the player to the lobby
+                if (e.player.killer is Player) {//checking if the entity killer is player
+                    //some code here
+                    val nameKiller: String = e.player.name//name killer saving the name of the killer to display it in the chat
+                    e.player.sendMessage(nameKiller + "kill is team mate")// says who kill who
+                    //Thread.sleep(10000)//waiting 10 sec before sending it
+                    //Bukkit.dispatchCommand(e.player, "/server lobby")//sending the player to the lobby
 
+                }
+                Zero().game = 0
+            }
         }
-            try{
-                val myWriter = FileWriter(actualFile)//pointing the writer to the actual file
-                myWriter.write(toWrite)//writing the data to the file
-                myWriter.close()//closing the writer
-            }
-            catch(e: IOException){
-                throw RuntimeException(e)
-            }
     }
-}
-}
-}
 }

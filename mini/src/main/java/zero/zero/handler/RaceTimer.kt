@@ -28,7 +28,7 @@ class RaceTimer (plugin: Zero?) : Listener {
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
             if (ev.clickedBlock!!.type == Material.STONE_PRESSURE_PLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 val fileName = "game.txt"// creating the file name
-                val toWrite = "0"
+                val toWrite = "5"
                 val actualFile = File(fileName)
                 if(actualFile.exists() && actualFile.isFile){
                     val reader = Scanner(actualFile)

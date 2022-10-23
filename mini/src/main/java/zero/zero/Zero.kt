@@ -6,7 +6,9 @@ import zero.zero.handler.*
 import java.io.File
 
 
-class Zero : JavaPlugin() {// creating the main class
+class Zero : JavaPlugin() {
+    // creating the main class
+    var game = 0
     override fun onEnable() {// plugin startup logic
 
         //plugin.saveDefaultConfig()
@@ -19,7 +21,7 @@ class Zero : JavaPlugin() {// creating the main class
         WoodPlateHandler(this)
         Laucher(this)
         logger.info("starting bob")//say that its starting the plugin
-        
+
         this.getCommand("onCommandPvp")?.setExecutor(OnCommandPvp())// init the commanf for the pvp game
         this.getCommand("onCommandTnt")?.setExecutor(OnCommandCaptureFlag())// init the command for capture the flag
         this.getCommand("onCommandPvpBow")?.setExecutor(OnCommandPvpBow())// init the command for pvp bow
@@ -43,19 +45,17 @@ class Zero : JavaPlugin() {// creating the main class
         this.getCommand("onCommandSkywars")?.setExecutor(OnCommandSkywars())// init the commad for skywars
         this.getCommand("onCommandSwimFast")?.setExecutor(OnCommandSwimFast())// init the command for swimming race
         this.getCommand("onCommandTag")?.setExecutor(OnCommandTag())// init the command for the tag
-        val fileName = "game.txt"// creating the file name 
+        val fileName = "game.txt"// creating the file name
         val actualFile = File(fileName)
-    if (actualFile.exists() && actualFile.isFile) {//chacking if the file exists
-        
-    }
-    else{
-        if (actualFile.createNewFile()) {//creating the new file
-            
+        if (actualFile.exists() && actualFile.isFile) {//chacking if the file exists
+
+        } else {
+            if (actualFile.createNewFile()) {//creating the new file
+
+            } else {
+
+            }
         }
-        else{
-    
-        }
-    }
         //add more here
     }
 
