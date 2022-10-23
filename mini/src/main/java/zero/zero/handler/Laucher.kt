@@ -22,7 +22,7 @@ class Laucher (plugin: Zero?) : Listener {
 
     @EventHandler
     fun buttonHandler(ev: PlayerInteractEvent) { //describes what the event is
-        print("bob")
+       
         if (ev.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
           val p = ev.player
         if (ev.clickedBlock!!.type == Material.WHITE_TERRACOTTA) { //compare what the player sept on to a stone pressure plate and is required a non-nullable

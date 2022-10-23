@@ -36,7 +36,7 @@ class OnCommandTnt : CommandExecutor {// creating the class death and implementi
 
         for (p in getServer().onlinePlayers) {
             //println(p.name)
-            if(p.location.world.name.endsWith("overworld")){
+            if(p.location.world.name.endsWith("lobby")){
 
                 p.health = 20.0
                 val w: World = p.world
