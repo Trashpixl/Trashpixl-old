@@ -22,7 +22,7 @@ class Laucher (plugin: Zero?) : Listener {
 
     @EventHandler
     fun buttonHandler(ev: PlayerInteractEvent) { //describes what the event is
-       
+
         if (ev.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
           val p = ev.player
         if (ev.clickedBlock!!.type == Material.WHITE_TERRACOTTA) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
@@ -145,9 +145,10 @@ class Laucher (plugin: Zero?) : Listener {
                    Bukkit.dispatchCommand(p, "onCommandTag")//dispatchCommand for tag
                }
            }
-            if(ev.clickedBlock!!.type == Material.STONE_STAIRS){
+            if(ev.clickedBlock!!.type == Material.BLACK_CONCRETE){
                if(p.location.world.name.endsWith("lobby_server")){
-                   Bukkit.dispatchCommand(p, "onCommandTnt")//dispatchCommand for tnt race
+                   Bukkit.dispatchCommand(p, "function server:tp_world_server")
+                   Bukkit.dispatchCommand(p, "oncommandtnt")//dispatchCommand for tnt race
                }
            }
         }

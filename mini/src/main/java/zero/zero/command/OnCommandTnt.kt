@@ -31,13 +31,16 @@ class OnCommandTnt : CommandExecutor {// creating the class death and implementi
         val fileName = "game.txt"
         val actualFile = File(fileName)
         val toWrite = "1"
-
+        if(sender is Player){
+            sender.sendMessage("hi")
+        }
 
 
         for (p in getServer().onlinePlayers) {
-            //println(p.name)
-            if(p.location.world.name.endsWith("lobby")){
-
+            if(p.location.world.name.endsWith("lobby_server")){
+                if(sender is Player){
+                    sender.sendMessage("hi2")
+                }
                 p.health = 20.0
                 val w: World = p.world
                 val to = Location(w, x, y, z)//move before for
@@ -57,7 +60,7 @@ class OnCommandTnt : CommandExecutor {// creating the class death and implementi
 
 
 
-        return true
+        return false
 
     }
 }
