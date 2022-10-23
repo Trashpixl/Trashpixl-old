@@ -20,6 +20,7 @@ class Zero : JavaPlugin() {
         PlateHandler(this)
         WoodPlateHandler(this)
         Laucher(this)
+        Respawn(this)
         logger.info("starting bob")//say that its starting the plugin
 
         this.getCommand("onCommandPvp")?.setExecutor(OnCommandPvp())// init the commanf for the pvp game
@@ -45,17 +46,7 @@ class Zero : JavaPlugin() {
         this.getCommand("onCommandSkywars")?.setExecutor(OnCommandSkywars())// init the commad for skywars
         this.getCommand("onCommandSwimFast")?.setExecutor(OnCommandSwimFast())// init the command for swimming race
         this.getCommand("onCommandTag")?.setExecutor(OnCommandTag())// init the command for the tag
-        val fileName = "game.txt"// creating the file name
-        val actualFile = File(fileName)
-        if (actualFile.exists() && actualFile.isFile) {//chacking if the file exists
 
-        } else {
-            if (actualFile.createNewFile()) {//creating the new file
-
-            } else {
-
-            }
-        }
         //add more here
     }
 

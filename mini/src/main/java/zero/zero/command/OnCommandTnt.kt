@@ -6,7 +6,7 @@ import org.bukkit.World
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
-import zero.zero.Zero
+
 
 //the package for this project
 
@@ -29,7 +29,8 @@ class OnCommandTnt : CommandExecutor {// creating the class death and implementi
                 val to = Location(w, x, y, z)//move before for
                 p.teleport(to)
                 p.inventory.clear()
-                Zero().game = 1
+                //VarStorage().handler += 1
+
             }
 
         }

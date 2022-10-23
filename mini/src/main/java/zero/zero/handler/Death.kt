@@ -10,6 +10,7 @@ import org.bukkit.event.entity.PlayerDeathEvent
 import zero.zero.Zero
 
 
+
 class Death(plugin: Zero?) : Listener {// creating the class death and implementing the listener
 // the implements for the listener
 init { //the constructor of this handler
@@ -18,15 +19,19 @@ init { //the constructor of this handler
 
     @EventHandler //says that this is an event handler
     fun onPlayerDead(e: PlayerDeathEvent) {//creating the on player death event function and importing the death class
-        e.player.sendMessage("bob2")
-        if (Zero().game == 1) {
+        //e.player.sendMessage("bob2")
+
+       // if (VarStorage().handler == 1) {
+
             val name: String = e.player.name//name variable to store the player name
-            e.player.sendMessage("bob3")
+
             if (e.player.world.environment == World.Environment.NORMAL && !e.player.location.world.name.endsWith("server:lobby_server")) {
-                e.player.sendMessage("bob4")
+                //VarStorage().handler = 0
+
+
                 e.player.sendMessage("$name died an you all won this match")//send the message of who won the match
                 //Thread.sleep(10000)//waiting 10sec before tp the player
-                Bukkit.dispatchCommand(e.player, "/server lobby")//sending the player to the lobby
+
                 //some code here
 
                 if (e.player.killer is Player) {//checking if the entity killer is player
@@ -37,8 +42,8 @@ init { //the constructor of this handler
                     //Bukkit.dispatchCommand(e.player, "/server lobby")//sending the player to the lobby
 
                 }
-                Zero().game = 0
+
             }
         }
     }
-}
+//}
