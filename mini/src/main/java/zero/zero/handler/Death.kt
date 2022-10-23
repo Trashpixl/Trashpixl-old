@@ -2,6 +2,7 @@ package zero.zero.handler //the package for this project
 
 
 import org.bukkit.Bukkit// importing bukkit
+import org.bukkit.World
 import org.bukkit.entity.Player// importing the player entity
 import org.bukkit.event.EventHandler// importing the event handler
 import org.bukkit.event.Listener// importing the event listener
@@ -29,8 +30,10 @@ init { //the constructor of this handler
         val data = reader.nextLine()
         val dataInt = data.toInt()
         val name:String = e.player.name//name variable to store the player name
+
         if(dataInt == 1){
-        if(e.player.location.world.name.endsWith("overworld")){
+            e.player.sendMessage("im not sure")
+            if(e.player.world.environment == World.Environment.NORMAL && !e.player.location.world.name.endsWith("server:lobby_server")){
 
             e.player.sendMessage("$name died an you all won this match")//send the message of who won the match
         //Thread.sleep(10000)//waiting 10sec before tp the player
