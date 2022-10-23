@@ -24,17 +24,19 @@ init { //the constructor of this handler
     fun onPlayerDead(e: PlayerDeathEvent) {//creating the on player death event function and importing the death class
     val fileName = "game.txt"// creating the file name
         val toWrite = "0"
+        e.player.sendMessage("bob")
     val actualFile = File(fileName)
     if(actualFile.exists() && actualFile.isFile){
         val reader = Scanner(actualFile)
         val data = reader.nextLine()
         val dataInt = data.toInt()
         val name:String = e.player.name//name variable to store the player name
-
+        e.player.sendMessage("bob2")
+        e.player.sendMessage(dataInt.toString())
         if(dataInt == 1){
-            e.player.sendMessage("im not sure")
+            e.player.sendMessage("bob3")
             if(e.player.world.environment == World.Environment.NORMAL && !e.player.location.world.name.endsWith("server:lobby_server")){
-
+                e.player.sendMessage("bob4")
             e.player.sendMessage("$name died an you all won this match")//send the message of who won the match
         //Thread.sleep(10000)//waiting 10sec before tp the player
             Bukkit.dispatchCommand(e.player, "/server lobby")//sending the player to the lobby
