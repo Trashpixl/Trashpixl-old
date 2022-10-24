@@ -27,47 +27,47 @@ class Laucher (plugin: Zero?) : Listener {
           val p = ev.player
         if (ev.clickedBlock!!.type == Material.WHITE_TERRACOTTA) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
            if(p.location.world.name.endsWith("lobby_server")){
-                  Bukkit.dispatchCommand(p, "onCommandPvp")//dispatchCommand for pvp
+                  Bukkit.dispatchCommand(p, "oncommandpvp")//dispatchCommand for pvp
                 }
             }
            if(ev.clickedBlock!!.type == Material.ORANGE_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-               Bukkit.dispatchCommand(p, "onCommandPvpSumo")//dispatchCommand for pvp sumo
+               Bukkit.dispatchCommand(p, "oncommandpvpsumo")//dispatchCommand for pvp sumo
                 }
            }
            if(ev.clickedBlock!!.type == Material.MAGENTA_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                  Bukkit.dispatchCommand(p, "onCommandPvpBow")//dispatchCommand pvp bow
+                  Bukkit.dispatchCommand(p, "oncommandpvpbow")//dispatchCommand pvp bow
                 }
            }
            if(ev.clickedBlock!!.type == Material.LIGHT_BLUE_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                 Bukkit.dispatchCommand(p, "onCommandPvpLoot")//dispatchCommand for pvp loot
+                 Bukkit.dispatchCommand(p, "oncommandpvploot")//dispatchCommand for pvp loot
                }
            }
            if(ev.clickedBlock!!.type == Material.YELLOW_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                  Bukkit.dispatchCommand(p, "onCommandBridge")//dispatchCommand for bridge race
+                  Bukkit.dispatchCommand(p, "oncommandbridge")//dispatchCommand for bridge race
                }
            }
            if(ev.clickedBlock!!.type == Material.LIME_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                  Bukkit.dispatchCommand(p, "onCommandParkour")//dispatchCommand for parkour race
+                  Bukkit.dispatchCommand(p, "oncommandparkour")//dispatchCommand for parkour race
                }
            }
            if(ev.clickedBlock!!.type == Material.PINK_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   Bukkit.dispatchCommand(p, "onCommandCaptureFlag")//dispatchCommand for capture flag
+                   Bukkit.dispatchCommand(p, "oncommandcaptureflag")//dispatchCommand for capture flag
                }
            }
            if(ev.clickedBlock!!.type == Material.GRAY_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   Bukkit.dispatchCommand(p, "onCommandDontDie")//dispatchCommand for dont die
+                   Bukkit.dispatchCommand(p, "oncommanddontdie")//dispatchCommand for dont die
                }
            }
            if(ev.clickedBlock!!.type == Material.LIGHT_GRAY_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   Bukkit.dispatchCommand(p, "onCommandPvpKnockBack")//dispatch command for pvp knock back
+                   Bukkit.dispatchCommand(p, "oncommandpvpKnockback")//dispatch command for pvp knock back
                }
            }
            if(ev.clickedBlock!!.type == Material.CYAN_TERRACOTTA){
