@@ -72,12 +72,12 @@ class Laucher (plugin: Zero?) : Listener {
            }
            if(ev.clickedBlock!!.type == Material.CYAN_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   Bukkit.dispatchCommand(p, "onCommandChaiseMusical")//dispatchCommand for chaise musical
+                   Bukkit.dispatchCommand(p, "oncommandchaismMusical")//dispatchCommand for chaise musical
                }
            }
            if(ev.clickedBlock!!.type == Material.PURPLE_TERRACOTTA){
                if(p.location.world.name.endsWith("lobby_server")){
-                   Bukkit.dispatchCommand(p, "onCommandClimbFast")// dispatchCommand for climb fast
+                   Bukkit.dispatchCommand(p, "oncommandclimbfast")// dispatchCommand for climb fast
                }
            }
            if(ev.clickedBlock!!.type == Material.BLUE_TERRACOTTA){
