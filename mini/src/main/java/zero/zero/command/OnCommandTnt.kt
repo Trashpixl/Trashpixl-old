@@ -29,7 +29,7 @@ class OnCommandTnt : CommandExecutor {// creating the class death and implementi
                 val to = Location(w, x, y, z)//move before for
                 p.teleport(to)
                 p.inventory.clear()
-                //VarStorage().handler += 1
+
 
             }
 

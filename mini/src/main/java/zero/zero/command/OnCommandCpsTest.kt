@@ -21,14 +21,14 @@ class OnCommandCpsTest : CommandExecutor {// creating the class death and implem
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
 
-        val x = 247.0
-        val y = -58.0
-        val z = 250.0
+        val x = 0.0
+        val y = 0.0
+        val z = 0.0
 
 
         for (p in getServer().onlinePlayers) {
             //println(p.name)
-            if(p.world.environment == World.Environment.NORMAL){
+            if(p.location.world.name.endsWith("lobby")){
             
             p.health = 20.0
             val w: World = p.world

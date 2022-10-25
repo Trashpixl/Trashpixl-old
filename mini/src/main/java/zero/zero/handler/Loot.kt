@@ -3,17 +3,12 @@ package zero.zero.handler//the package for this project
 
 import org.bukkit.Bukkit
 import org.bukkit.Material
-import org.bukkit.World
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.block.Action
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.inventory.ItemStack
 import zero.zero.Zero
-import java.io.File
-import java.io.FileWriter
-import java.io.IOException
-import java.util.*
 
 
 class Loot (plugin: Zero?) : Listener {
@@ -27,14 +22,9 @@ class Loot (plugin: Zero?) : Listener {
     fun buttonHandler(ev: PlayerInteractEvent) { //describes what the event is
         if (ev.action == Action.LEFT_CLICK_BLOCK) { //check if the action is physical
             if (ev.clickedBlock!!.type == Material.STONE_BUTTON) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
-                val fileName = "game.txt"// creating the file name
-                val toWrite = "6"
-                val actualFile = File(fileName)
-                if(actualFile.exists() && actualFile.isFile){
-                    val reader = Scanner(actualFile)
-                    val data = reader.nextLine()
-                    val dataInt = data.toInt()
-                    if(dataInt == 2){
+
+
+
 
                         val p = ev.player
 
@@ -86,26 +76,15 @@ class Loot (plugin: Zero?) : Listener {
                                                     p.inventory.setItem((1..36).random(), item1)
                                                     p.inventory.setItem((1..36).random(), item2)
                                                 }
-                                                else{
 
-                                                }
                                             }
                                         }
                                     }
                                 }
                             }
                         }
-                        try{
-                            val myWriter = FileWriter(actualFile)//pointing the writer to the actual file
-                            myWriter.write(toWrite)//writing the data to the file
-                            myWriter.close()//closing the writer
-                        }
-                        catch(e: IOException){
-                            throw RuntimeException(e)
-                        }
+
                     }
                 }
             }
         }
-    }
-}

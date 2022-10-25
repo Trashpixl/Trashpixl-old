@@ -24,9 +24,7 @@ class OnCommandPvp : CommandExecutor {// creating the class death and implementi
 
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
-        val fileName = "game.txt"// creating the file name
-        val toWrite = "1"
-        val actualFile = File(fileName)
+
         val x = 239.0
         val y = -58.0
         val z = 279.0
@@ -42,14 +40,6 @@ class OnCommandPvp : CommandExecutor {// creating the class death and implementi
             p.inventory.setItemInMainHand(item)
             }
 
-        }
-        try{
-            val myWriter = FileWriter(actualFile)//pointing the writer to the actual file
-            myWriter.write(toWrite)//writing the data to the file
-            myWriter.close()//closing the writer
-        }
-        catch(e: IOException){
-            throw RuntimeException(e)
         }
 
         return false

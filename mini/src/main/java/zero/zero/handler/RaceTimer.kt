@@ -27,14 +27,7 @@ class RaceTimer (plugin: Zero?) : Listener {
     fun pressurePlateHandler(ev: PlayerInteractEvent) { //describes what the event is
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
             if (ev.clickedBlock!!.type == Material.STONE_PRESSURE_PLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
-                val fileName = "game.txt"// creating the file name
-                val toWrite = "5"
-                val actualFile = File(fileName)
-                if(actualFile.exists() && actualFile.isFile){
-                    val reader = Scanner(actualFile)
-                    val data = reader.nextLine()
-                    val dataInt = data.toInt()
-                    if(dataInt == 3){
+
                         val x = 0.0// creating the x variable for player tp
                         val y = 0.0// creating the y variable for player tp
                         val z = 0.0// creating the z variable for player tp
@@ -53,19 +46,11 @@ class RaceTimer (plugin: Zero?) : Listener {
                             }
                         }
 
-                        try{
-                            val myWriter = FileWriter(actualFile)//pointing the writer to the actual file
-                            myWriter.write(toWrite)//writing the data to the file
-                            myWriter.close()//closing the writer
-                        }
-                        catch(e: IOException){
-                            throw RuntimeException(e)
-                        }
+
 
 
                     }
                 }
             }
         }
-    }
-}
+
