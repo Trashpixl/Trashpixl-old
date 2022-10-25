@@ -18,7 +18,7 @@ class FirstToFinish (plugin: Zero?) : Listener { // the implements for the liste
     @EventHandler
     fun pressurePlateHandler(ev: PlayerInteractEvent) { //describes what the event is
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
-            if (ev.clickedBlock!!.type == Material.STONE_PRESSURE_PLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
+            if (ev.clickedBlock!!.type == Material.WARPED_PRESSURE_PLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 val p = ev.player //create the local player id
                 if(p.location.world.name.endsWith("overworld")){
 
