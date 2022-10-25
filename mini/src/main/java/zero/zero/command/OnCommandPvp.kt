@@ -8,9 +8,6 @@ import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.inventory.ItemStack
-import java.io.File
-import java.io.FileWriter
-import java.io.IOException
 
 //the package for this project
 
