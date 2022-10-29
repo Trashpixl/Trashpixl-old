@@ -1,5 +1,8 @@
+
+
 package zero.zero.command
 
+import org.bukkit.Bukkit
 import org.bukkit.Bukkit.getServer
 import org.bukkit.Location
 import org.bukkit.World
@@ -14,6 +17,7 @@ import org.bukkit.command.CommandSender
 class OnCommandTnt : CommandExecutor {// creating the class death and implementing the listener
 
 
+
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
 
         val x = 247.0
@@ -22,7 +26,8 @@ class OnCommandTnt : CommandExecutor {// creating the class death and implementi
 
 
         for (p in getServer().onlinePlayers) {
-            if (p.location.world.name.endsWith("lobby_server")) {
+
+            if (p.location.world.name.endsWith("overworld")) {
 
                 p.health = 20.0
                 val w: World = p.world
@@ -32,7 +37,6 @@ class OnCommandTnt : CommandExecutor {// creating the class death and implementi
 
 
             }
-
         }
 
 

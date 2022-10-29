@@ -30,7 +30,7 @@ init { //the constructor of this handler
 
 
                 e.player.sendMessage("$name died an you all won this match")//send the message of who won the match
-                //Thread.sleep(10000)//waiting 10sec before tp the player
+
 
                 //some code here
 
