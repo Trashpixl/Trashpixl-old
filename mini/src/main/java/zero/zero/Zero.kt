@@ -24,7 +24,7 @@ class Zero : JavaPlugin() {
         logger.info("starting bob")//say that it's starting the plugin
 
         this.getCommand("onCommandPvp")?.setExecutor(OnCommandPvp())// init the command for the pvp game
-        this.getCommand("onCommandTnt")?.setExecutor(OnCommandCaptureFlag())// init the command for capture the flag
+        this.getCommand("onCommandTnt")?.setExecutor(OnCommandTnt())// init the command for capture the flag
         this.getCommand("onCommandPvpBow")?.setExecutor(OnCommandPvpBow())// init the command for pvp bow
         this.getCommand("onCommandPvpSumo")?.setExecutor(OnCommandPvpSumo())// init the command for pvp sumo
         this.getCommand("onCommandDontDie")?.setExecutor(OnCommandDontDie())// init the command for pvp don't die

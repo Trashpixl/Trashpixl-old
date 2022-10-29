@@ -26,7 +26,7 @@ class OnCommandPvpSumo : CommandExecutor {// creating the class death and implem
 
 
         for (p in getServer().onlinePlayers) {
-            if(p.location.world.name.endsWith("lobby")){
+            if(p.location.world.name.endsWith("world")){
             p.health = 20.0
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for

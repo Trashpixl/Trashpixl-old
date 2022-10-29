@@ -28,7 +28,7 @@ class OnCommandCpsTest : CommandExecutor {// creating the class death and implem
 
         for (p in getServer().onlinePlayers) {
             //println(p.name)
-            if(p.location.world.name.endsWith("lobby")){
+            if(p.location.world.name.endsWith("world")){
             
             p.health = 20.0
             val w: World = p.world

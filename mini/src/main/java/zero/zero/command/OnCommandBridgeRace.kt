@@ -31,7 +31,7 @@ class OnCommandBridgeRace : CommandExecutor {// creating the class death and imp
 
         for (p in getServer().onlinePlayers) {
             //println(p.name)
-            if(p.location.world.name.endsWith("lobby")){
+            if(p.location.world.name.endsWith("world")){
                 val item1 = ItemStack(Material.BLACK_WOOL, 64)
                 p.health = 20.0
                 val w: World = p.world

@@ -26,7 +26,7 @@ class OnCommandParkour : CommandExecutor {// creating the class death and implem
 
 
         for (p in getServer().onlinePlayers) {
-            if(p.location.world.name.endsWith("overworld")){
+            if(p.location.world.name.endsWith("world")){
             p.health = 20.0
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
