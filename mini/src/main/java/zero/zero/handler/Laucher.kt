@@ -197,7 +197,7 @@ class Laucher(plugin: Zero?) : Listener {
                                                 for (p2 in Bukkit.getServer().onlinePlayers) {
                                                     if (p2.location.world.name.endsWith("lobby_server")) {
                                                         Bukkit.dispatchCommand(p2, "function server:tp_world_server")
-                                                        Bukkit.dispatchCommand(p, "oncommandtnt")//dispatchCommand for tnt race bob
+                                                        Bukkit.dispatchCommand(p, "oncommandtnt")//dispatchCommand for tnt race
                                                     }
                                                 }
                                             }
