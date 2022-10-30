@@ -29,7 +29,7 @@ init { //the constructor of this handler
                 //VarStorage().handler = 0
 
 
-                e.player.sendMessage("$name died an you all won this match")//send the message of who won the match
+                e.player.sendMessage("$name  died an you all won this match")//send the message of who won the match
 
 
                 //some code here

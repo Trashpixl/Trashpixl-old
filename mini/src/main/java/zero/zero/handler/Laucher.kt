@@ -32,6 +32,7 @@ class Laucher(plugin: Zero?) : Listener {
                         }
                     }
                 }
+            }
                 if (ev.clickedBlock!!.type == Material.ORANGE_TERRACOTTA) {
                     if (p.location.world.name.endsWith("lobby_server")) {
                         for (p2 in Bukkit.getServer().onlinePlayers) {
@@ -41,6 +42,7 @@ class Laucher(plugin: Zero?) : Listener {
                             }
                         }
                     }
+                }
                     if (ev.clickedBlock!!.type == Material.MAGENTA_TERRACOTTA) {
                         if (p.location.world.name.endsWith("lobby_server")) {
                             for (p2 in Bukkit.getServer().onlinePlayers) {
@@ -50,6 +52,7 @@ class Laucher(plugin: Zero?) : Listener {
                                 }
                             }
                         }
+                    }
                         if (ev.clickedBlock!!.type == Material.LIGHT_BLUE_TERRACOTTA) {
                             if (p.location.world.name.endsWith("lobby_server")) {
                                 for (p2 in Bukkit.getServer().onlinePlayers) {
@@ -59,6 +62,7 @@ class Laucher(plugin: Zero?) : Listener {
                                     }
                                 }
                             }
+                        }
                             if (ev.clickedBlock!!.type == Material.YELLOW_TERRACOTTA) {
                                 if (p.location.world.name.endsWith("lobby_server")) {
                                     for (p2 in Bukkit.getServer().onlinePlayers) {
@@ -68,6 +72,7 @@ class Laucher(plugin: Zero?) : Listener {
                                         }
                                     }
                                 }
+                            }
                                 if (ev.clickedBlock!!.type == Material.LIME_TERRACOTTA) {
                                     if (p.location.world.name.endsWith("lobby_server")) {
                                         for (p2 in Bukkit.getServer().onlinePlayers) {
@@ -99,6 +104,7 @@ class Laucher(plugin: Zero?) : Listener {
                                             }
                                         }
                                     }
+                                }
                                     if (ev.clickedBlock!!.type == Material.CYAN_TERRACOTTA) {
                                         if (p.location.world.name.endsWith("lobby_server")) {
                                             p.sendMessage("not available yet")
@@ -120,6 +126,7 @@ class Laucher(plugin: Zero?) : Listener {
                                                 }
                                             }
                                         }
+                                    }
                                         if (ev.clickedBlock!!.type == Material.BROWN_TERRACOTTA) {
                                             if (p.location.world.name.endsWith("lobby_server")) {
                                                 p.sendMessage("not available yet")
@@ -194,24 +201,20 @@ class Laucher(plugin: Zero?) : Listener {
                                         }
                                         if (ev.clickedBlock!!.type == Material.BLACK_CONCRETE) {
                                             if (p.location.world.name.endsWith("lobby_server")) {
+                                                Bukkit.dispatchCommand(p, "function server:tp_world_server")
                                                 for (p2 in Bukkit.getServer().onlinePlayers) {
                                                     if (p2.location.world.name.endsWith("lobby_server")) {
                                                         Bukkit.dispatchCommand(p2, "function server:tp_world_server")
-                                                        Bukkit.dispatchCommand(p, "oncommandtnt")//dispatchCommand for tnt race
+
                                                     }
                                                 }
+                                                Bukkit.dispatchCommand(p, "oncommandtnt")//dispatchCommand for tnt race
                                             }
                                         }
                                     }
                                 }
                             }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+
 
 
 
