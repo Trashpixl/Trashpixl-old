@@ -20,9 +20,9 @@ class FirstToFinish (plugin: Zero?) : Listener { // the implements for the liste
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
             if (ev.clickedBlock!!.type == Material.WARPED_PRESSURE_PLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 val p = ev.player //create the local player id
-                if(p.location.world.name.endsWith("overworld")){
-
-
+                if(p.location.world.name.endsWith("world")){
+                p.sendMessage(p.name + " won the race")
+                    Bukkit.dispatchCommand(p, "function server:tp_lobby")
                 }
             }
         }
