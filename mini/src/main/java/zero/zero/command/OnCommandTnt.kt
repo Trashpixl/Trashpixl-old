@@ -2,7 +2,6 @@
 
 package zero.zero.command
 
-import org.bukkit.Bukkit
 import org.bukkit.Bukkit.getServer
 import org.bukkit.Location
 import org.bukkit.World
