@@ -1,7 +1,6 @@
 package zero.zero.runnable
 
 class Register {
-
     fun Put(){
     //function to send packet to database
     }
@@ -11,5 +10,4 @@ class Register {
     fun Erase(){
     //erase somthing from the database
     }
-
 }
