@@ -23,9 +23,9 @@ class OnCommandBridgeRace : CommandExecutor {// creating the class death and imp
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
 
-        val x = 0.0
-        val y = 0.0
-        val z = 0.0
+        val x = 177.7
+        val y = -60.0
+        val z = 265.3
 
         
 
