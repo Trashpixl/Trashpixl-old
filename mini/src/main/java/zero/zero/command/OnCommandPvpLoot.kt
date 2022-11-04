@@ -14,10 +14,6 @@ import org.bukkit.command.CommandSender
 class OnCommandPvpLoot : CommandExecutor {// creating the class death and implementing the listener
     
 
-
-    
-
-
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
 
         val x = 122.0
