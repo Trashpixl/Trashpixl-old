@@ -1,13 +1,13 @@
 package zero.zero.runnable
 
 class Register {
-    fun Put(){
+    fun put(){
     //function to send packet to database
     }
-    fun Get(){
+    fun getFrom(){
     //function to get something from the database
     }
-    fun Erase(){
+    fun erase(){
     //erase somthing from the database
     }
 }
