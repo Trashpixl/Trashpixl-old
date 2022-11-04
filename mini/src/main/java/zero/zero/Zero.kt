@@ -7,16 +7,19 @@ import java.io.File
 import java.io.FileWriter
 import java.io.IOException
 
+//import java.io.File
+//import java.io.FileWriter
+//import java.io.IOException
+
 
 class Zero : JavaPlugin() {
     // creating the main class
-
+    var game = 0
     override fun onEnable() {// plugin startup logic
         val fileName = "Minigame.txt"
         val actualFile = File(fileName)
 
-        //plugin.saveDefaultConfig()
-        //Config.load("config.yml")
+
         Death(this)// init the death handler
         RaceTimer(this)// init the race timer handler
         Loot(this)// init the loot handler
@@ -83,4 +86,6 @@ class Zero : JavaPlugin() {
     override fun onDisable() {
         // Plugin shutdown logic
     }
+
+
 }

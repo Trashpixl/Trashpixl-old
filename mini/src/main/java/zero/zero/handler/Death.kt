@@ -8,7 +8,9 @@ import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.entity.PlayerDeathEvent
 import zero.zero.Zero
-
+import java.io.File
+import java.io.IOException
+import java.util.*
 
 
 class Death(plugin: Zero?) : Listener {// creating the class death and implementing the listener
@@ -19,14 +21,31 @@ init { //the constructor of this handler
 
     @EventHandler //says that this is an event handler
     fun onPlayerDead(e: PlayerDeathEvent) {//creating the on player death event function and importing the death class
-        //e.player.sendMessage("bob2")
+        val fileName = "Minigame.txt"
+        val actualFile = File(fileName)
+        var actualdata = 0
+        try {
+            if (actualFile.exists() && actualFile.isFile) {
+                try {
+                    val reader = Scanner(actualFile)
+                    val data = reader.nextLine()
+                    e.player.sendMessage(data)
+                    actualdata = data.toInt()
+                    //System.out.println(data_final_string);
+                    reader.close()
 
-       // if (VarStorage().handler == 1) {
+                } catch (e: IOException) {
+                    throw RuntimeException(e)
+                }
+            }
+        } catch (e: IOException) {
+            throw RuntimeException(e)
+        }
 
+        if (actualdata == 1) {
             val name: String = e.player.name//name variable to store the player name
 
             if (e.player.world.environment == World.Environment.NORMAL && !e.player.location.world.name.endsWith("server:lobby_server")) {
-                //VarStorage().handler = 0
 
 
                 e.player.sendMessage("$name  died an you all won this match")//send the message of who won the match
@@ -36,7 +55,8 @@ init { //the constructor of this handler
 
                 if (e.player.killer is Player) {//checking if the entity killer is player
                     //some code here
-                    val nameKiller: String = e.player.name//name killer saving the name of the killer to display it in the chat
+                    val nameKiller: String =
+                        e.player.name//name killer saving the name of the killer to display it in the chat
                     e.player.sendMessage(nameKiller + "kill is team mate")// says who kill who
                     //Thread.sleep(10000)//waiting 10 sec before sending it
                     //Bukkit.dispatchCommand(e.player, "/server lobby")//sending the player to the lobby
@@ -46,4 +66,4 @@ init { //the constructor of this handler
             }
         }
     }
-//}
+}
