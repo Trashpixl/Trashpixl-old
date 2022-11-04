@@ -1,7 +1,7 @@
 package zero.zero.runnable
 
-class CountdownTimer() {
-    fun CountdownTimer() {
+class CountdownTimer {
+    fun countdownTimer() {
 
     }
 }
