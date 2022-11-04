@@ -10,6 +10,7 @@ import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.inventory.ItemStack
 import zero.zero.Zero
 import java.io.File
+import java.io.FileWriter
 import java.io.IOException
 import java.util.*
 
@@ -33,7 +34,6 @@ class Loot (plugin: Zero?) : Listener {
                         try {
                             val reader = Scanner(actualFile)
                             val data = reader.nextLine()
-                            e.player.sendMessage(data)
                             actualdata = data.toInt()
                             //System.out.println(data_final_string);
                             reader.close()
@@ -99,6 +99,22 @@ class Loot (plugin: Zero?) : Listener {
                         }
                     }
 
+                    try{
+                        if(actualFile.exists() && actualFile.isFile){
+                            val dataToWrite = "0"
+                            val myWriter: FileWriter //create the file writer
+                            try {
+                                myWriter = FileWriter(actualFile)//pointing the writer to the actual file
+                                myWriter.write(dataToWrite)//writing the data to the file
+                                myWriter.close()//closing the writer
+                            } catch (e: IOException) {
+                                throw java.lang.RuntimeException(e)
+                            }
+                        }
+                    }
+                    catch(e: IOException){
+                        throw java.lang.RuntimeException(e)
+                    }
                 }
             }
         }
