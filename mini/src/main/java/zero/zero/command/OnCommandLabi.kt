@@ -47,7 +47,7 @@ class OnCommandLabi : CommandExecutor {// creating the class death and implement
 
         try{
             if(actualFile.exists() && actualFile.isFile){
-                val dataToWrite = "1"
+                val dataToWrite = "4"
                 val myWriter: FileWriter //create the file writer
                 try {
                     myWriter = FileWriter(actualFile)//pointing the writer to the actual file
