@@ -44,7 +44,7 @@ class FirstToFinish (plugin: Zero?) : Listener { // the implements for the liste
                     throw RuntimeException(e)
                 }
                 val p = e.player //create the local player id
-                if (actualdata == 4) {
+                if (actualdata == 4 || actualdata == 5) {
                     if (p.location.world.name.endsWith("world")) {
                         p.sendMessage(p.name + " won the race")
                         Bukkit.dispatchCommand(p, "function server:tp_lobby")

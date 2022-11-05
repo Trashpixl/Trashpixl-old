@@ -42,7 +42,7 @@ init { //the constructor of this handler
             throw RuntimeException(e)
         }
 
-        if (actualdata == 1) {
+        if (actualdata == 1 || actualdata == 5 || actualdata == 3) {
             val name: String = e.player.name//name variable to store the player name
 
             if (e.player.world.environment == World.Environment.NORMAL && !e.player.location.world.name.endsWith("server:lobby_server")) {
