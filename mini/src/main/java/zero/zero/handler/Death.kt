@@ -62,24 +62,24 @@ init { //the constructor of this handler
                     //Bukkit.dispatchCommand(e.player, "/server lobby")//sending the player to the lobby
 
                 }
-
-            }
-            try{
-                if(actualFile.exists() && actualFile.isFile){
-                    val dataToWrite = "0"
-                    val myWriter: FileWriter //create the file writer
-                    try {
-                        myWriter = FileWriter(actualFile)//pointing the writer to the actual file
-                        myWriter.write(dataToWrite)//writing the data to the file
-                        myWriter.close()//closing the writer
-                    } catch (e: IOException) {
-                        throw java.lang.RuntimeException(e)
+                try{
+                    if(actualFile.exists() && actualFile.isFile){
+                        val dataToWrite = "0"
+                        val myWriter: FileWriter //create the file writer
+                        try {
+                            myWriter = FileWriter(actualFile)//pointing the writer to the actual file
+                            myWriter.write(dataToWrite)//writing the data to the file
+                            myWriter.close()//closing the writer
+                        } catch (e: IOException) {
+                            throw java.lang.RuntimeException(e)
+                        }
                     }
                 }
+                catch(e: IOException){
+                    throw java.lang.RuntimeException(e)
+                }
             }
-            catch(e: IOException){
-                throw java.lang.RuntimeException(e)
             }
-        }
+
     }
 }

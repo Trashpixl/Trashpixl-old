@@ -22,7 +22,6 @@ class RaceTimer (plugin: Zero?) : Listener {
     init { //the constructor of this event
         Bukkit.getPluginManager().registerEvents(this, plugin!!)// linking it t the main code
     }
-
     @EventHandler
     fun pressurePlateHandler(e: PlayerInteractEvent) { //describes what the event is
         if (e.action == Action.PHYSICAL) { //check if the action is physical
@@ -50,7 +49,7 @@ class RaceTimer (plugin: Zero?) : Listener {
                 val z = 0.0// creating the z variable for player tp
                 val p = e.player //create the local player id
                 if (actualdata == 2) {
-                    if (p.location.world.name.endsWith("overworld")) {//checking in which environment the player is
+                    if (p.location.world.name.endsWith("world")) {//checking in which environment the player is
                         val name = p.name
 
                         p.sendMessage(name + "won the race")//bob
@@ -61,24 +60,23 @@ class RaceTimer (plugin: Zero?) : Listener {
 
 
                         }
-                    }
-                    try{
-                        if(actualFile.exists() && actualFile.isFile){
-                            val dataToWrite = "0"
-                            val myWriter: FileWriter //create the file writer
-                            try {
-                                myWriter = FileWriter(actualFile)//pointing the writer to the actual file
-                                myWriter.write(dataToWrite)//writing the data to the file
-                                myWriter.close()//closing the writer
-                            } catch (e: IOException) {
-                                throw java.lang.RuntimeException(e)
+                        try {
+                            if (actualFile.exists() && actualFile.isFile) {
+                                val dataToWrite = "0"
+                                val myWriter: FileWriter //create the file writer
+                                try {
+                                    myWriter = FileWriter(actualFile)//pointing the writer to the actual file
+                                    myWriter.write(dataToWrite)//writing the data to the file
+                                    myWriter.close()//closing the writer
+                                } catch (e: IOException) {
+                                    throw java.lang.RuntimeException(e)
+                                }
                             }
+                        } catch (e: IOException) {
+                            throw java.lang.RuntimeException(e)
                         }
-                    }
-                    catch(e: IOException){
-                        throw java.lang.RuntimeException(e)
-                    }
 
+                    }
                 }
             }
         }
