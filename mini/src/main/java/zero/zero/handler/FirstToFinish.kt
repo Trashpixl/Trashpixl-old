@@ -47,7 +47,11 @@ class FirstToFinish (plugin: Zero?) : Listener { // the implements for the liste
                 if (actualdata == 4 || actualdata == 5) {
                     if (p.location.world.name.endsWith("world")) {
                         p.sendMessage(p.name + " won the race")
-                        Bukkit.dispatchCommand(p, "function server:tp_lobby")
+                        for (p2 in Bukkit.getServer().onlinePlayers) {
+                            if (p2.location.world.name.endsWith("world")) {
+                                Bukkit.dispatchCommand(p2, "function server:tp_lobby")
+                            }
+                        }
                         try {
                             if (actualFile.exists() && actualFile.isFile) {
                                 val dataToWrite = "0"
