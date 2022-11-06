@@ -2,7 +2,7 @@ package zero.zero.handler //the package for this project
 
 
 import org.bukkit.Bukkit
-import org.bukkit.World
+import org.bukkit.Bukkit.getServer
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
@@ -45,7 +45,7 @@ init { //the constructor of this handler
         if (actualdata == 1 || actualdata == 5 || actualdata == 3) {
             val name: String = e.player.name//name variable to store the player name
 
-            if (e.player.world.environment == World.Environment.NORMAL && !e.player.location.world.name.endsWith("server:lobby_server")) {
+            if (e.player.location.world.name.endsWith("world")) {
 
 
                 e.player.sendMessage("$name  died an you all won this match")//send the message of who won the match
@@ -62,8 +62,8 @@ init { //the constructor of this handler
                     //Bukkit.dispatchCommand(e.player, "/server lobby")//sending the player to the lobby
 
                 }
-                try{
-                    if(actualFile.exists() && actualFile.isFile){
+                try {
+                    if (actualFile.exists() && actualFile.isFile) {
                         val dataToWrite = "0"
                         val myWriter: FileWriter //create the file writer
                         try {
@@ -74,12 +74,16 @@ init { //the constructor of this handler
                             throw java.lang.RuntimeException(e)
                         }
                     }
-                }
-                catch(e: IOException){
+                } catch (e: IOException) {
                     throw java.lang.RuntimeException(e)
                 }
-            }
-            }
+                for (p in getServer().onlinePlayers) {
+                    if (p.location.world.name.endsWith("world")) {
+                        Bukkit.dispatchCommand(p, "function server:tp_lobby")
+                    }
+                }
 
+            }
+        }
     }
 }
