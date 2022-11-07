@@ -40,7 +40,7 @@ class Punch (plugin: Zero?) : Listener { // the implements for the listener
             throw RuntimeException(e)
         }
 
-        if (actualdata == 4) {
+        if (actualdata == 6) {
             if (ev.entity is Player) {
                 if (ev.entity.location.world.name.endsWith("world")) {
                     if (ev.cause == EntityDamageEvent.DamageCause.ENTITY_ATTACK || ev.cause == EntityDamageEvent.DamageCause.ENTITY_SWEEP_ATTACK ) {
