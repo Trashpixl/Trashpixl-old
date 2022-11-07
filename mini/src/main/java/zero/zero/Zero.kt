@@ -28,6 +28,7 @@ class Zero : JavaPlugin() {
         WoodPlateHandler(this)
         Laucher(this)
         FirstToFinish(this)
+        Punch(this)
 
         logger.info("starting bob")//say that it's starting the plugin
 
