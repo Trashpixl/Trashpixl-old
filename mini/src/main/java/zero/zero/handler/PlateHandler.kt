@@ -22,7 +22,7 @@ class PlateHandler (plugin: Zero?) : Listener { // the implements for the listen
                 val p = ev.player //create the local player id
                 if(p.location.world.name.endsWith("main_server")){
                     
-                    Bukkit.dispatchCommand(p, "function server_main") //dispatch the command to the player so he tp itself
+                    Bukkit.dispatchCommand(p, "function server:tp_lobby") //dispatch the command to the player so he tp itself
                 }
             }
         }

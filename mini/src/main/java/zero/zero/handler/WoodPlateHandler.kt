@@ -22,8 +22,7 @@ class WoodPlateHandler(plugin: Zero?) : Listener {//create the class and impleme
             if (ev.clickedBlock!!.type   == Material.OAK_PRESSURE_PLATE) { //compare the event to an oak pressure plate
                 val p = ev.player //create the local variable player
                 if(p.location.world.name.endsWith("main_server")){
-                    //cacacacacaclelelelelellelelebobobobobobo put it here
-                    var to: Location = p.bedSpawnLocation!!
+                    val to: Location = p.bedSpawnLocation!!
 
                     p.teleport(to)
                 }
