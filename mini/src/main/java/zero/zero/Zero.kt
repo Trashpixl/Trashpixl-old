@@ -14,7 +14,7 @@ import java.io.IOException
 
 class Zero : JavaPlugin() {
     // creating the main class
-    var game = 0
+
     override fun onEnable() {// plugin startup logic
         val fileName = "Minigame.txt"
         val actualFile = File(fileName)
