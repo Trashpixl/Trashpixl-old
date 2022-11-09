@@ -19,7 +19,6 @@ class Zero : JavaPlugin() {
         val fileName = "Minigame.txt"
         val actualFile = File(fileName)
 
-
         Death(this)// init the death handler
         RaceTimer(this)// init the race timer handler
         Loot(this)// init the loot handler
