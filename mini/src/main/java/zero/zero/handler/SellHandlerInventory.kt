@@ -45,7 +45,6 @@ class SellHandlerInventory(plugin: Zero?) : Listener {
                                 howMany += item.amount*2 //save how many item there is in the item stack
                                         p.inventory.setItem(index, null) //reset the player inventory at a given slot
                             }
-
                             else{
                                 if(Objects.requireNonNull(item).type == Material.AIR ||//removing all air material
                                         Objects.requireNonNull(item).type == Material.CAVE_AIR ||//removing cave air material
@@ -127,7 +126,6 @@ class SellHandlerInventory(plugin: Zero?) : Listener {
                     p.updateInventory() //apply the change to the player inventory
                     try { //begin the try for the following code
                         if (actualFile.exists() && actualFile.isFile) {//check if the file exist and is a file
-                            //println("file already exist") //says that the fil is already present
                             try {
                                 val reader = Scanner(actualFile)
                                 val data = reader.nextLine()

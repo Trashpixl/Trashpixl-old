@@ -11,8 +11,7 @@ import java.io.IOException
 
 class Zero : JavaPlugin() {
     // creating the main class
-
-    override fun onEnable() {// plugin startup logic
+     override fun onEnable() {// plugin startup logic
         val fileName = "Minigame.txt"
         val actualFile = File(fileName)
 
@@ -51,8 +50,6 @@ class Zero : JavaPlugin() {
         this.getCommand("onCommandSkywars")?.setExecutor(OnCommandSkywars())// init the command for sky-wars
         this.getCommand("onCommandSwimFast")?.setExecutor(OnCommandSwimFast())// init the command for swimming race
         this.getCommand("onCommandTag")?.setExecutor(OnCommandTag())// init the command for the tag
-
-       
         try {
             if (actualFile.exists() && actualFile.isFile) {
             } else {
@@ -66,7 +63,6 @@ class Zero : JavaPlugin() {
                     } catch (e: IOException) {
                         throw RuntimeException(e)
                     }
-
                 } else {
                     println("something went wrong while creating the file") //says that something went from while creating the file
                 }
@@ -77,11 +73,7 @@ class Zero : JavaPlugin() {
             throw RuntimeException(e) //create the actual error message
         }
     }
-
-
-    override fun onDisable() {
+ override fun onDisable() {
         // Plugin shutdown logic
     }
-
-
 }
