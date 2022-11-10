@@ -7,9 +7,6 @@ import java.io.File
 import java.io.FileWriter
 import java.io.IOException
 
-//import java.io.File
-//import java.io.FileWriter
-//import java.io.IOException
 
 
 class Zero : JavaPlugin() {
@@ -29,7 +26,7 @@ class Zero : JavaPlugin() {
         FirstToFinish(this)
         Punch(this)
 
-        logger.info("starting bob")//say that it's starting the plugin
+        logger.info("starting the plugin")//say that it's starting the plugin
 
         this.getCommand("onCommandPvp")?.setExecutor(OnCommandPvp())// init the command for the pvp game
         this.getCommand("onCommandTnt")?.setExecutor(OnCommandTnt())// init the command for capture the flag
@@ -55,10 +52,9 @@ class Zero : JavaPlugin() {
         this.getCommand("onCommandSwimFast")?.setExecutor(OnCommandSwimFast())// init the command for swimming race
         this.getCommand("onCommandTag")?.setExecutor(OnCommandTag())// init the command for the tag
 
-        //add more here
+       
         try {
             if (actualFile.exists() && actualFile.isFile) {
-                //all good
             } else {
                 if (actualFile.createNewFile()) { //creating the new file
                     val dataToWrite = "0"
