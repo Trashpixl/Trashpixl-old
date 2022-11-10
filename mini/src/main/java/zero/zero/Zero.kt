@@ -2,28 +2,28 @@ package zero.zero// the package of this project bob
 
 import org.bukkit.plugin.java.JavaPlugin
 import zero.zero.command.*// importing all the command
-import zero.zero.handler.*
-import java.io.File
-import java.io.FileWriter
-import java.io.IOException
+import zero.zero.handler.*//importing all the handler 
+import java.io.File// importing java file class for writing the file
+import java.io.FileWriter// importing the file writer
+import java.io.IOException// importing the io exeption class
 
 
 
 class Zero : JavaPlugin() {
     // creating the main class
      override fun onEnable() {// plugin startup logic
-        val fileName = "Minigame.txt"
-        val actualFile = File(fileName)
+        val fileName = "Minigame.txt"// creating the file name variable
+        val actualFile = File(fileName)// creating the file variable
 
         Death(this)// init the death handler
         RaceTimer(this)// init the race timer handler
         Loot(this)// init the loot handler
-        SellHandlerInventory(this)
-        PlateHandler(this)
-        WoodPlateHandler(this)
-        Laucher(this)
-        FirstToFinish(this)
-        Punch(this)
+        SellHandlerInventory(this)//init the sell handler 
+        PlateHandler(this)// init the plate handler
+        WoodPlateHandler(this)// init the wood plate handler
+        Laucher(this)// init the laucher handler
+        FirstToFinish(this)// init the first to finish handler
+        Punch(this)// init the punch handler
 
         logger.info("starting the plugin")//say that it's starting the plugin
 
@@ -51,7 +51,7 @@ class Zero : JavaPlugin() {
         this.getCommand("onCommandSwimFast")?.setExecutor(OnCommandSwimFast())// init the command for swimming race
         this.getCommand("onCommandTag")?.setExecutor(OnCommandTag())// init the command for the tag
         try {
-            if (actualFile.exists() && actualFile.isFile) {
+            if (actualFile.exists() && actualFile.isFile) {// checking if the file exist
             } else {
                 if (actualFile.createNewFile()) { //creating the new file
                     val dataToWrite = "0"
@@ -60,8 +60,8 @@ class Zero : JavaPlugin() {
                         myWriter = FileWriter(actualFile)//pointing the writer to the actual file
                         myWriter.write(dataToWrite)//writing the data to the file
                         myWriter.close()//closing the writer
-                    } catch (e: IOException) {
-                        throw RuntimeException(e)
+                    } catch (e: IOException) {//catching the exeption 
+                        throw RuntimeException(e)// throwing it the hardest we can so it wont come back
                     }
                 } else {
                     println("something went wrong while creating the file") //says that something went from while creating the file
@@ -69,7 +69,6 @@ class Zero : JavaPlugin() {
             }
         }
         catch (e: IOException) { //catching the exception
-            println("something went wrong while creating the file from io") //says that something went from while creating the file but from io
             throw RuntimeException(e) //create the actual error message
         }
     }

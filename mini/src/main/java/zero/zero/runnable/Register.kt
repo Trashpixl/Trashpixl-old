@@ -1,6 +1,6 @@
-package zero.zero.runnable
+package zero.zero.runnable//defining the class package
 
-class Register {
+class Register {// creating the class
     fun put(){
     //function to send packet to database
     }

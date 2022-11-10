@@ -1,7 +1,7 @@
-package zero.zero.runnable
+package zero.zero.runnable// defining the class package
 
-class CountdownTimer {
-    fun countdownTimer() {
+class CountdownTimer {//creating the class
+    fun countdownTimer() {// creating the main function
 
     }
 }
