@@ -20,8 +20,6 @@ class Loot (plugin: Zero?) : Listener {
     init { //the constructor of this handler
         Bukkit.getPluginManager().registerEvents(this, plugin!!)
     }
-
-
     @EventHandler
     fun buttonHandler(e: PlayerInteractEvent) { //describes what the event is
         if (e.action == Action.LEFT_CLICK_BLOCK) { //check if the action is physical

@@ -14,16 +14,13 @@ import java.io.IOException
 import java.util.*
 
 class FirstToFinish (plugin: Zero?) : Listener { // the implements for the listener
-
     init { //the constructor of this handler
         Bukkit.getPluginManager().registerEvents(this, plugin!!)
     }
-
     @EventHandler
     fun pressurePlateHandler(e: PlayerInteractEvent) { //describes what the event is
-
         if (e.action == Action.PHYSICAL) { //check if the action is physical
-            if (e.clickedBlock!!.type == Material.WARPED_PRESSURE_PLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
+            if (e.clickedBlock!!.type == Material.WARPED_PRESSURE_PLATE) { //compare what the player step on to a stone pressure plate and is required a non-nullable
                 val fileName = "Minigame.txt"
                 val actualFile = File(fileName)
                 var actualdata = 0
