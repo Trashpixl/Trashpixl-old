@@ -27,6 +27,7 @@ class Zero : JavaPlugin() {
 
         logger.info("starting the plugin")//say that it's starting the plugin
 
+        this.getCommand("onCommandStore")?.setExecutor(OnCommandStore())// init the command for the Store 
         this.getCommand("onCommandPvp")?.setExecutor(OnCommandPvp())// init the command for the pvp game
         this.getCommand("onCommandTnt")?.setExecutor(OnCommandTnt())// init the command for capture the flag
         this.getCommand("onCommandPvpBow")?.setExecutor(OnCommandPvpBow())// init the command for pvp bow
@@ -50,13 +51,13 @@ class Zero : JavaPlugin() {
         this.getCommand("onCommandSkywars")?.setExecutor(OnCommandSkywars())// init the command for sky-wars
         this.getCommand("onCommandSwimFast")?.setExecutor(OnCommandSwimFast())// init the command for swimming race
         this.getCommand("onCommandTag")?.setExecutor(OnCommandTag())// init the command for the tag
-        try {
+        try {//trying the following code
             if (actualFile.exists() && actualFile.isFile) {// checking if the file exist
             } else {
                 if (actualFile.createNewFile()) { //creating the new file
                     val dataToWrite = "0"
                     val myWriter: FileWriter //create the file writer
-                    try {
+                    try {// trying the following code
                         myWriter = FileWriter(actualFile)//pointing the writer to the actual file
                         myWriter.write(dataToWrite)//writing the data to the file
                         myWriter.close()//closing the writer
