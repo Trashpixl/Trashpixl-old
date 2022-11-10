@@ -1,31 +1,31 @@
 package zero.zero.handler//the package for this project
 
 
-import org.bukkit.Bukkit
-import org.bukkit.Material
-import org.bukkit.event.EventHandler
-import org.bukkit.event.Listener
-import org.bukkit.event.block.Action
-import org.bukkit.event.player.PlayerInteractEvent
-import zero.zero.Zero
+import org.bukkit.Bukkit//importing bukkit
+import org.bukkit.Material//importing the material library
+import org.bukkit.event.EventHandler// importing the event handler class
+import org.bukkit.event.Listener// importing the event listenner class
+import org.bukkit.event.block.Action// importing the block action class to get if they set on a block
+import org.bukkit.event.player.PlayerInteractEvent// importing the player interacte event to get if they click on something
+import zero.zero.Zero// importing zero
 
 
-class Laucher(plugin: Zero?) : Listener {
+class Laucher(plugin: Zero?) : Listener {// creating the class and extending it with the main class and implement the listener
     // the implements for the listener
     init { //the constructor of this handler
-        Bukkit.getPluginManager().registerEvents(this, plugin!!)
+        Bukkit.getPluginManager().registerEvents(this, plugin!!)//init the handler
     }
-    @EventHandler
+    @EventHandler// define that it is an event handler
     fun buttonHandler(ev: PlayerInteractEvent) { //describes what the event is
         if (ev.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
-            val p = ev.player
-            if (ev.clickedBlock!!.type == Material.WHITE_TERRACOTTA) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
-                if (p.location.world.name.endsWith("lobby_server")) {
-                    for (p2 in Bukkit.getServer().onlinePlayers) {
-                        if (p2.location.world.name.endsWith("lobby_server")) {
-                            Bukkit.dispatchCommand(p2, "function server:tp_world_server")
-                            Bukkit.dispatchCommand(p, "oncommandpvp")//dispatchCommand for parkour
+            val p = ev.player// creating the p variable and assigne the player to it 
+            if (ev.clickedBlock!!.type == Material.WHITE_TERRACOTTA) { //compare what the player sept on to white terracotta and is required a non-nullable
+                if (p.location.world.name.endsWith("lobby_server")) {// checking if the player is in the lobby
+                    for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
+                        if (p2.location.world.name.endsWith("lobby_server")) {// checking if they are in the lobby
+                            Bukkit.dispatchCommand(p2, "function server:tp_world_server")// tp to the world server
                         }
+                        Bukkit.dispatchCommand(p, "oncommandpvp")//dispatchCommand for parkour
                     }
                 }
             }
@@ -34,8 +34,8 @@ class Laucher(plugin: Zero?) : Listener {
                         for (p2 in Bukkit.getServer().onlinePlayers) {
                             if (p2.location.world.name.endsWith("lobby_server")) {
                                 Bukkit.dispatchCommand(p2, "function server:tp_world_server")
-                                Bukkit.dispatchCommand(p, "oncommandpvpsumo")//dispatchCommand for parkour
                             }
+                            Bukkit.dispatchCommand(p, "oncommandpvpsumo")//dispatchCommand for parkour
                         }
                     }
                 }
@@ -44,8 +44,8 @@ class Laucher(plugin: Zero?) : Listener {
                             for (p2 in Bukkit.getServer().onlinePlayers) {
                                 if (p2.location.world.name.endsWith("lobby_server")) {
                                     Bukkit.dispatchCommand(p2, "function server:tp_world_server")
-                                    Bukkit.dispatchCommand(p, "oncommandpvpbow")//dispatchCommand for parkour
                                 }
+                                Bukkit.dispatchCommand(p, "oncommandpvpbow")//dispatchCommand for parkour
                             }
                         }
                     }
@@ -54,8 +54,8 @@ class Laucher(plugin: Zero?) : Listener {
                                 for (p2 in Bukkit.getServer().onlinePlayers) {
                                     if (p2.location.world.name.endsWith("lobby_server")) {
                                         Bukkit.dispatchCommand(p2, "function server:tp_world_server")
-                                        Bukkit.dispatchCommand(p, "oncommandpvploot")//dispatchCommand for parkour
                                     }
+                                    Bukkit.dispatchCommand(p, "oncommandpvploot")//dispatchCommand for parkour
                                 }
                             }
                         }
@@ -63,9 +63,9 @@ class Laucher(plugin: Zero?) : Listener {
                                 if (p.location.world.name.endsWith("lobby_server")) {
                                     for (p2 in Bukkit.getServer().onlinePlayers) {
                                         if (p2.location.world.name.endsWith("lobby_server")) {
-                                            Bukkit.dispatchCommand(p2, "function server:tp_world_server")
-                                            Bukkit.dispatchCommand(p, "oncommandbridge")//dispatchCommand for bridge
+                                            Bukkit.dispatchCommand(p2, "function server:tp_world_server")  
                                         }
+                                        Bukkit.dispatchCommand(p, "oncommandbridge")//dispatchCommand for bridge
                                     }
                                 }
                             }
@@ -74,8 +74,8 @@ class Laucher(plugin: Zero?) : Listener {
                                         for (p2 in Bukkit.getServer().onlinePlayers) {
                                             if (p2.location.world.name.endsWith("lobby_server")) {
                                                 Bukkit.dispatchCommand(p2, "function server:tp_world_server")
-                                                Bukkit.dispatchCommand(p, "oncommandparkour")//dispatchCommand for parkour
                                             }
+                                            Bukkit.dispatchCommand(p, "oncommandparkour")//dispatchCommand for parkour
                                         }
                                     }
                                 }
@@ -96,8 +96,8 @@ class Laucher(plugin: Zero?) : Listener {
                                         for (p2 in Bukkit.getServer().onlinePlayers) {
                                             if (p2.location.world.name.endsWith("lobby_server")) {
                                                 Bukkit.dispatchCommand(p2, "function server:tp_world_server")
-                                                Bukkit.dispatchCommand(p, "oncommandpvpknockback")//dispatchCommand for parkour
                                             }
+                                            Bukkit.dispatchCommand(p, "oncommandpvpknockback")//dispatchCommand for parkour
                                         }
                                     }
                                 }
@@ -118,8 +118,8 @@ class Laucher(plugin: Zero?) : Listener {
                                             for (p2 in Bukkit.getServer().onlinePlayers) {
                                                 if (p2.location.world.name.endsWith("lobby_server")) {
                                                     Bukkit.dispatchCommand(p2, "function server:tp_world_server")
-                                                    Bukkit.dispatchCommand(p, "oncommandcpstest")//dispatchCommand for parkour
                                                 }
+                                                Bukkit.dispatchCommand(p, "oncommandcpstest")//dispatchCommand for parkour
                                             }
                                         }
                                     }
@@ -201,7 +201,6 @@ class Laucher(plugin: Zero?) : Listener {
                                                 for (p2 in Bukkit.getServer().onlinePlayers) {
                                                     if (p2.location.world.name.endsWith("lobby_server")) {
                                                         Bukkit.dispatchCommand(p2, "function server:tp_world_server")
-
                                                     }
                                                 }
                                                 Bukkit.dispatchCommand(p, "oncommandtnt")//dispatchCommand for tnt race
