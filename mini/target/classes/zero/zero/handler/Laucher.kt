@@ -37,7 +37,6 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                                 Bukkit.dispatchCommand(p2, "function server:tp_world_server")
                             }
                             Bukkit.dispatchCommand(p, "oncommandpvpsumo")//dispatchCommand for parkour
-                            
                         }
                     }
                 }
