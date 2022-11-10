@@ -1,17 +1,17 @@
 package zero.zero.handler //the package for this project
 
 
-import org.bukkit.Bukkit
-import org.bukkit.Bukkit.getServer
-import org.bukkit.entity.Player
-import org.bukkit.event.EventHandler
-import org.bukkit.event.Listener
-import org.bukkit.event.entity.PlayerDeathEvent
-import zero.zero.Zero
-import java.io.File
-import java.io.FileWriter
-import java.io.IOException
-import java.util.*
+import org.bukkit.Bukkit// omprting bukkit
+import org.bukkit.Bukkit.getServer// importing the get server class
+import org.bukkit.entity.Player// importing the player enttity
+import org.bukkit.event.EventHandler// importing the event handler
+import org.bukkit.event.Listener// impoting the litsener
+import org.bukkit.event.entity.PlayerDeathEvent// importing the player death event
+import zero.zero.Zero// impoting the whole package
+import java.io.File// importing the java file var
+import java.io.FileWriter// importing the filewriter
+import java.io.IOException// imprting the io exeption
+import java.util.*// importing all the java util class
 
 
 class Death(plugin: Zero?) : Listener {// creating the class death and implementing the listener
@@ -21,9 +21,9 @@ init { //the constructor of this handler
 }
     @EventHandler //says that this is an event handler
     fun onPlayerDead(e: PlayerDeathEvent) {//creating the on player death event function and importing the death class
-        val fileName = "Minigame.txt"
-        val actualFile = File(fileName)
-        var actualdata = 0
+        val fileName = "Minigame.txt"// creating the file name var 
+        val actualFile = File(fileName)// creating the file 
+        var actualdata = 0// creating the actual data var
         try {
             if (actualFile.exists() && actualFile.isFile) {
                 try {
