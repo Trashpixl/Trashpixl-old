@@ -9,7 +9,7 @@ import java.io.IOException// importing the io exeption class
 
 
 
-class Zero : JavaPlugin() {
+class  Zero : JavaPlugin() {
     // creating the main class
      override fun onEnable() {// plugin startup logic
         val fileName = "Minigame.txt"// creating the file name variable
