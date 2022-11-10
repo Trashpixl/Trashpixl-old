@@ -55,7 +55,7 @@ class Zero : JavaPlugin() {
             if (actualFile.exists() && actualFile.isFile) {// checking if the file exist
             } else {
                 if (actualFile.createNewFile()) { //creating the new file
-                    val dataToWrite = "0"
+                    val dataToWrite = "0"// creating the data to write var
                     val myWriter: FileWriter //create the file writer
                     try {// trying the following code
                         myWriter = FileWriter(actualFile)//pointing the writer to the actual file
