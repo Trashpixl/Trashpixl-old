@@ -33,7 +33,6 @@ class FirstToFinish (plugin: Zero?) : Listener { // the implements for the liste
                             val reader = Scanner(actualFile)
                             val data = reader.nextLine()
                             actualdata = data.toInt()
-                            //System.out.println(data_final_string);
                             reader.close()
 
                         } catch (e: IOException) {

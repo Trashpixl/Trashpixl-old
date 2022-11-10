@@ -31,7 +31,6 @@ init { //the constructor of this handler
                     val reader = Scanner(actualFile)
                     val data = reader.nextLine()
                     actualdata = data.toInt()
-                    //System.out.println(data_final_string);
                     reader.close()
 
                 } catch (e: IOException) {
@@ -49,17 +48,11 @@ init { //the constructor of this handler
 
 
                 e.player.sendMessage("$name  died an you all won this match")//send the message of who won the match
-
-
-                //some code here
-
                 if (e.player.killer is Player) {//checking if the entity killer is player
                     //some code here
                     val nameKiller: String =
                         e.player.name//name killer saving the name of the killer to display it in the chat
                     e.player.sendMessage(nameKiller + "kill is team mate")// says who kill who
-                    //Thread.sleep(10000)//waiting 10 sec before sending it
-                    //Bukkit.dispatchCommand(e.player, "/server lobby")//sending the player to the lobby
 
                 }
                 try {
