@@ -3,6 +3,9 @@ version: '1.0-SNAPSHOT'
 main: zero.zero.Zero
 api-version: 1.19
 commands:
+  onCommandStore:
+    description: command for the store
+    usage: /<command>
   onCommandPvpBow:
     description: command for pvpbow
     usage: /<command>
