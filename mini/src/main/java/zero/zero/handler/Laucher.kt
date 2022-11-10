@@ -60,21 +60,21 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                                 }
                             }
                         }
-                            if (ev.clickedBlock!!.type == Material.YELLOW_TERRACOTTA) {
-                                if (p.location.world.name.endsWith("lobby_server")) {
-                                    for (p2 in Bukkit.getServer().onlinePlayers) {
-                                        if (p2.location.world.name.endsWith("lobby_server")) {
-                                            Bukkit.dispatchCommand(p2, "function server:tp_world_server")  
+                            if (ev.clickedBlock!!.type == Material.YELLOW_TERRACOTTA) {//check if the block is yellow terracotta
+                                if (p.location.world.name.endsWith("lobby_server")) {//check if they ar ein the lobby
+                                    for (p2 in Bukkit.getServer().onlinePlayers) {//get all the online player
+                                        if (p2.location.world.name.endsWith("lobby_server")) {//check if they are in the lobby
+                                            Bukkit.dispatchCommand(p2, "function server:tp_world_server") //tp the one that are in it 
                                         }
                                         Bukkit.dispatchCommand(p, "oncommandbridge")//dispatchCommand for bridge
                                     }
                                 }
                             }
-                                if (ev.clickedBlock!!.type == Material.LIME_TERRACOTTA) {
-                                    if (p.location.world.name.endsWith("lobby_server")) {
-                                        for (p2 in Bukkit.getServer().onlinePlayers) {
-                                            if (p2.location.world.name.endsWith("lobby_server")) {
-                                                Bukkit.dispatchCommand(p2, "function server:tp_world_server")
+                                if (ev.clickedBlock!!.type == Material.LIME_TERRACOTTA) {//check if the block is lime terracotta
+                                    if (p.location.world.name.endsWith("lobby_server")) {//check if he is in the lobby
+                                        for (p2 in Bukkit.getServer().onlinePlayers) {//check for all the player
+                                            if (p2.location.world.name.endsWith("lobby_server")) {//they are in the lobby
+                                                Bukkit.dispatchCommand(p2, "function server:tp_world_server")//tp them in the world server
                                             }
                                             Bukkit.dispatchCommand(p, "oncommandparkour")//dispatchCommand for parkour
                                         }
@@ -92,13 +92,13 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                                         //Bukkit.dispatchCommand(p, "oncommanddontdie")//dispatchCommand for dont die
                                     }
                                 }
-                                if (ev.clickedBlock!!.type == Material.LIGHT_GRAY_TERRACOTTA) {
-                                    if (p.location.world.name.endsWith("lobby_server")) {
-                                        for (p2 in Bukkit.getServer().onlinePlayers) {
-                                            if (p2.location.world.name.endsWith("lobby_server")) {
-                                                Bukkit.dispatchCommand(p2, "function server:tp_world_server")
+                                if (ev.clickedBlock!!.type == Material.LIGHT_GRAY_TERRACOTTA) {//check if the block is light gray terracotta
+                                    if (p.location.world.name.endsWith("lobby_server")) {//check if the sender is in the lobby
+                                        for (p2 in Bukkit.getServer().onlinePlayers) {//getting all the online player
+                                            if (p2.location.world.name.endsWith("lobby_server")) {//checking if they are in the lobby
+                                                Bukkit.dispatchCommand(p2, "function server:tp_world_server")//tp them the mini game world
                                             }
-                                            Bukkit.dispatchCommand(p, "oncommandpvpknockback")//dispatchCommand for parkour
+                                            Bukkit.dispatchCommand(p, "oncommandpvpknockback")//dispatchCommand for pvp knock back
                                         }
                                     }
                                 }
@@ -114,11 +114,11 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                                             //Bukkit.dispatchCommand(p, "oncommandclimbfast")// dispatchCommand for climb fast
                                         }
                                     }
-                                    if (ev.clickedBlock!!.type == Material.BLUE_TERRACOTTA) {
-                                        if (p.location.world.name.endsWith("lobby_server")) {
-                                            for (p2 in Bukkit.getServer().onlinePlayers) {
-                                                if (p2.location.world.name.endsWith("lobby_server")) {
-                                                    Bukkit.dispatchCommand(p2, "function server:tp_world_server")
+                                    if (ev.clickedBlock!!.type == Material.BLUE_TERRACOTTA) {//check if the block is blue terracotta
+                                        if (p.location.world.name.endsWith("lobby_server")) {//check if the sender is in the lobby
+                                            for (p2 in Bukkit.getServer().onlinePlayers) {//get all the online player
+                                                if (p2.location.world.name.endsWith("lobby_server")) {//check if they are in the lobby
+                                                    Bukkit.dispatchCommand(p2, "function server:tp_world_server")//tp them in the mini game world
                                                 }
                                                 Bukkit.dispatchCommand(p, "oncommandcpstest")//dispatchCommand for parkour
                                             }
@@ -196,12 +196,11 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                                                 //Bukkit.dispatchCommand(p, "oncommandtag")//dispatchCommand for tag
                                             }
                                         }
-                                        if (ev.clickedBlock!!.type == Material.BLACK_CONCRETE) {
-                                            if (p.location.world.name.endsWith("lobby_server")) {
-                                                Bukkit.dispatchCommand(p, "function server:tp_world_server")
-                                                for (p2 in Bukkit.getServer().onlinePlayers) {
-                                                    if (p2.location.world.name.endsWith("lobby_server")) {
-                                                        Bukkit.dispatchCommand(p2, "function server:tp_world_server")
+                                        if (ev.clickedBlock!!.type == Material.BLACK_CONCRETE) {//check if the block is black concrete
+                                            if (p.location.world.name.endsWith("lobby_server")) {//check if the sender is in the lobby
+                                                for (p2 in Bukkit.getServer().onlinePlayers) {//get all the player in the server
+                                                    if (p2.location.world.name.endsWith("lobby_server")) {//check if they are in the lobby
+                                                        Bukkit.dispatchCommand(p2, "function server:tp_world_server")//tp them in the world server
                                                     }
                                                 }
                                                 Bukkit.dispatchCommand(p, "oncommandtnt")//dispatchCommand for tnt race
