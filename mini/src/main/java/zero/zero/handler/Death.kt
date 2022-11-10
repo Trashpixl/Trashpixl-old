@@ -38,7 +38,7 @@ init { //the constructor of this handler
         } catch (e: IOException) {// catching the exeption
             throw RuntimeException(e)// trowing it again
         }
-        if (actualdata == 1 || actualdata == 5 || actualdata == 3) {// check if the data that we found corespound to the one reqiere to start the hamdler
+        if (actualdata == 1 || actualdata == 5 || actualdata == 3 || actualdata == 6 {// check if the data that we found corespound to the one reqiere to start the hamdler
             val name: String = e.player.name//name variable to store the player name
             if (e.player.location.world.name.endsWith("world")) {// check if the player location is in the right world
                 e.player.sendMessage("$name  died an you all won this match")//send the message of who won the match
