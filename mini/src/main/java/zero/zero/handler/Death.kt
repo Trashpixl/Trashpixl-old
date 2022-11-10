@@ -24,48 +24,46 @@ init { //the constructor of this handler
         val fileName = "Minigame.txt"// creating the file name var 
         val actualFile = File(fileName)// creating the file 
         var actualdata = 0// creating the actual data var
-        try {
-            if (actualFile.exists() && actualFile.isFile) {
+        try {// trying the code
+            if (actualFile.exists() && actualFile.isFile) {//checking if actual file is a file 
                 try {
-                    val reader = Scanner(actualFile)
-                    val data = reader.nextLine()
-                    actualdata = data.toInt()
-                    reader.close()
-                } catch (e: IOException) {
-                    throw RuntimeException(e)
+                    val reader = Scanner(actualFile)//creating the scanner
+                    val data = reader.nextLine()// reading the first line
+                    actualdata = data.toInt()// converting the data to an int
+                    reader.close()// closing the reader
+                } catch (e: IOException) {// catching the exeption 
+                    throw RuntimeException(e)// trowing the exeption
                 }
             }
-        } catch (e: IOException) {
-            throw RuntimeException(e)
+        } catch (e: IOException) {// catching the exeption
+            throw RuntimeException(e)// trowing it again
         }
-        if (actualdata == 1 || actualdata == 5 || actualdata == 3) {
+        if (actualdata == 1 || actualdata == 5 || actualdata == 3) {// check if the data that we found corespound to the one reqiere to start the hamdler
             val name: String = e.player.name//name variable to store the player name
-            if (e.player.location.world.name.endsWith("world")) {
+            if (e.player.location.world.name.endsWith("world")) {// check if the player location is in the right world
                 e.player.sendMessage("$name  died an you all won this match")//send the message of who won the match
                 if (e.player.killer is Player) {//checking if the entity killer is player
-                    //some code here
-                    val nameKiller: String =
-                        e.player.name//name killer saving the name of the killer to display it in the chat
+                    val nameKiller: String = e.player.name//name killer saving the name of the killer to display it in the chat
                     e.player.sendMessage(nameKiller + "kill is team mate")// says who kill who
                 }
-                try {
-                    if (actualFile.exists() && actualFile.isFile) {
-                        val dataToWrite = "0"
+                try {// trying the code
+                    if (actualFile.exists() && actualFile.isFile) {// checking if the file exist
+                        val dataToWrite = "0"// creating the data to write var
                         val myWriter: FileWriter //create the file writer
-                        try {
+                        try {//trying the code
                             myWriter = FileWriter(actualFile)//pointing the writer to the actual file
                             myWriter.write(dataToWrite)//writing the data to the file
                             myWriter.close()//closing the writer
-                        } catch (e: IOException) {
-                            throw java.lang.RuntimeException(e)
+                        } catch (e: IOException) {// catching the exeption
+                            throw RuntimeException(e)// trowing the exeption
                         }
                     }
-                } catch (e: IOException) {
-                    throw java.lang.RuntimeException(e)
+                } catch (e: IOException) {//catching the exeption
+                    throw RuntimeException(e)// throwing the exeption 
                 }
-                for (p in getServer().onlinePlayers) {
-                    if (p.location.world.name.endsWith("world")) {
-                        Bukkit.dispatchCommand(p, "function server:tp_lobby")
+                for (p in getServer().onlinePlayers) {// geting all the player in the server
+                    if (p.location.world.name.endsWith("world")) {// checking their world
+                        Bukkit.dispatchCommand(p, "function server:tp_lobby")// if they are in the right world tp them in the lobby
                     }
                 }
 
