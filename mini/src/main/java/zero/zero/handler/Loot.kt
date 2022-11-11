@@ -82,10 +82,10 @@ class Loot (plugin: Zero?) : Listener {//creating the class
                                             p.inventory.setItem((1..36).random(), item2)//same as below
                                         } else {
                                             if (kit == 6) {//checking if kit equal 6
-                                                val item1 = ItemStack(Material.CHAINMAIL_LEGGINGS)
-                                                val item2 = ItemStack(Material.STICK)
-                                                p.inventory.setItem((1..36).random(), item1)
-                                                p.inventory.setItem((1..36).random(), item2)
+                                                val item1 = ItemStack(Material.CHAINMAIL_LEGGINGS)//"" w/ chainmail leggins
+                                                val item2 = ItemStack(Material.STICK)//"" w/ stick
+                                                p.inventory.setItem((1..36).random(), item1)//put it in a random inv slot
+                                                p.inventory.setItem((1..36).random(), item2)//same as below
                                             }
 
                                         }
