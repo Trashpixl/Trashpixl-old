@@ -67,19 +67,19 @@ class Loot (plugin: Zero?) : Listener {//creating the class
                                     val item1 = ItemStack(Material.WOODEN_AXE)//"" w/ wooden axe
                                     val item2 = ItemStack(Material.LEATHER_BOOTS)//"" w/ leather boot
                                     p.inventory.setItem((1..36).random(), item1)//put it in random inv slot
-                                    p.inventory.setItem((1..36).random(), item2)//smae as below
+                                    p.inventory.setItem((1..36).random(), item2)//same as below
                                 } else {
                                     if (kit == 4) {//checking if kit equal 4
                                         val item1 = ItemStack(Material.GOLDEN_CHESTPLATE)//"" w/ golden chestplate
                                         val item2 = ItemStack(Material.WOODEN_SWORD)//"" w/ wooden sword
-                                        p.inventory.setItem((1..36).random(), item1)
-                                        p.inventory.setItem((1..36).random(), item2)
+                                        p.inventory.setItem((1..36).random(), item1)//put in a random inv slot
+                                        p.inventory.setItem((1..36).random(), item2)//same as below
                                     } else {
                                         if (kit == 5) {//checking if kit equal 5
-                                            val item1 = ItemStack(Material.IRON_BOOTS)
-                                            val item2 = ItemStack(Material.LEATHER_HELMET)
-                                            p.inventory.setItem((1..36).random(), item1)
-                                            p.inventory.setItem((1..36).random(), item2)
+                                            val item1 = ItemStack(Material.IRON_BOOTS)//"" w/ iron boots
+                                            val item2 = ItemStack(Material.LEATHER_HELMET)//"" w/ leather helmet
+                                            p.inventory.setItem((1..36).random(), item1)//put it in a random inv slot 
+                                            p.inventory.setItem((1..36).random(), item2)//same as below
                                         } else {
                                             if (kit == 6) {//checking if kit equal 6
                                                 val item1 = ItemStack(Material.CHAINMAIL_LEGGINGS)
