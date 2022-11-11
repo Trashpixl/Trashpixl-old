@@ -26,7 +26,7 @@ class Zero : JavaPlugin() {
         Punch(this)// init the punch handler
 
         logger.info("starting the plugin")//say that it's starting the plugin
-
+       
         this.getCommand("onCommandStore")?.setExecutor(OnCommandStore())// init the command for the Store 
         this.getCommand("onCommandPvp")?.setExecutor(OnCommandPvp())// init the command for the pvp game
         this.getCommand("onCommandTnt")?.setExecutor(OnCommandTnt())// init the command for capture the flag
