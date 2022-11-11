@@ -1,20 +1,15 @@
+package zero.zero.command //link the package to the code
 
-package zero.zero.command
-
-import org.bukkit.Bukkit.getServer
-import org.bukkit.Location
-import org.bukkit.World
-import org.bukkit.command.Command
+import org.bukkit.Bukkit.getServer //import the getserver class
+import org.bukkit.Location //import the location to get the player world
+import org.bukkit.World //get the world libe
+import org.bukkit.command.Command //to send a command
 import org.bukkit.command.CommandExecutor
-import org.bukkit.command.CommandSender
-import java.io.File
-import java.io.FileWriter
-import java.io.IOException
-import java.lang.RuntimeException
-
-//the package for this project
-
-
+import org.bukkit.command.CommandSender //import this to get the player
+import java.io.File //import that to link the file
+import java.io.FileWriter //to write the file
+import java.io.IOException //import ioexeption
+import java.lang.RuntimeException //import the runtime exeption
 
 class OnCommandLabi : CommandExecutor {// creating the class death and implementing the listener
     
@@ -24,13 +19,11 @@ class OnCommandLabi : CommandExecutor {// creating the class death and implement
 
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
-        val fileName = "Minigame.txt"
-        val actualFile = File(fileName)
-        val x = 284.5
-        val y = -60.0
-        val z = 284.5
-
-        
+        val fileName = "Minigame.txt"//create the file name val
+        val actualFile = File(fileName)//create the file ref
+        val x = 284.5//the x coord of the game
+        val y = -60.0//the y coord of the game
+        val z = 284.5//the z coord of the game
 
         for (p in getServer().onlinePlayers) {
             //println(p.name)

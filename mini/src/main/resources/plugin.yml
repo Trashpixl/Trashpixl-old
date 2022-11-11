@@ -3,6 +3,12 @@ version: '${project.version}'
 main: zero.zero.Zero
 api-version: 1.19
 commands:
+  onCommandLabi:
+    description: command for labi
+    usage: /<command>
+  onCommandBridgeRace:
+    description: command for bridge race
+    usage: /<command>
   onCommandStore:
     description: command for the store
     usage: /<command>
@@ -37,44 +43,44 @@ commands:
       description: command for chaise musical
       usage: /<command>
   onCommandClimbFast:
-      description: command for
+      description: command for climb fast
       usage: /<command>
   onCommandCpsTest:
-    description: command for
+    description: command for cps text
     usage: /<command>
   onCommandDodgeBall:
-    description: command for
+    description: command for dodgeball
     usage: /<command>
   onCommandElytraRace:
-    description: command for
+    description: command for the elytra race
     usage: /<command>
   onCommandFallTrap:
-    description: command for
+    description: command for fall trap
     usage: /<command>
   onCommandFindMe:
-    description: command for
+    description: command for find me aka cherche et trouve
     usage: /<command>
   onCommandFireTrap:
-    description: command for
+    description: command for fire trap
     usage: /<command>
   onCommandHideAndSeek:
-    description: command for
+    description: command for hide and seek
     usage: /<command>
   onCommandHorseRace:
-    description: command for
+    description: command for the horse race
     usage: /<command>
   onCommandMlg:
-    description: command for
+    description: command for the mlg survival
     usage: /<command>
   onCommandRockPaperCisor:
-    description: command for
+    description: command for rock paper cisor
     usage: /<command>
   onCommandSkywars:
-    description: command for
+    description: command for skywars
     usage: /<command>
   onCommandSwimFast:
-    description: command for
+    description: command for swim fast
     usage: /<command>
   onCommandTag:
-    description: command for
+    description: command for the tag game
     usage: /<command>
