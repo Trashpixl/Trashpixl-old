@@ -44,10 +44,10 @@ class Loot (plugin: Zero?) : Listener {//creating the class
 
                 if (actualdata == 3) {//check if the data equals 3
                     val p = e.player//creating the player variable
-
+                    p.sendMessage("hello")
                     if (p.location.world.name.endsWith("world")) {//check if the player is in the right world
 
-
+                        p.sendMessage("hello2")
                         val kit = (1..6).random()//creating the random val between 1 and 6
                         if (kit == 1) {//checking if kit equals 1
                             val item1 = ItemStack(Material.IRON_SWORD, 1)//creating an item stack with an iron sword inside

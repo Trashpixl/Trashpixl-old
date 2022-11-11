@@ -21,8 +21,8 @@ class OnCommandPvpLoot : CommandExecutor {// creating the class death and implem
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
         val fileName = "Minigame.txt"
         val actualFile = File(fileName)
-        val x = 122.0
-        val y = -60.0
+        val x = 121.3
+        val y = -59.0
         val z = 258.3
 
         for (p in getServer().onlinePlayers) {
