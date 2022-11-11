@@ -51,7 +51,6 @@ class Loot (plugin: Zero?) : Listener {//creating the class
                             val item2 = ItemStack(Material.GOLDEN_APPLE, (1..64).random())//creating an item stack with a random amount of golden apple in it 
                             p.inventory.setItem((1..36).random(), item1)//puting it in an random inventory slot
                             p.inventory.setItem((1..36).random(), item2)//same as below
-
                         } else {
                             if (kit == 2) {//checking if kit equals 2
                                 val item1 = ItemStack(Material.DIAMOND_CHESTPLATE, 1)//"" w/ diamond chest plate
