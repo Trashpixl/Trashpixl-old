@@ -21,7 +21,7 @@ class Loot (plugin: Zero?) : Listener {//creating the class
     }
     @EventHandler //say that it is an event handler
     fun buttonHandler(e: PlayerInteractEvent) { //describes what the event is
-        if (e.action == Action.LEFT_CLICK_BLOCK) { //check if the action is physical
+        if (e.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
             if (e.clickedBlock!!.type == Material.STONE_BUTTON) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 val fileName = "Minigame.txt"//creating the file name variable
                 val actualFile = File(fileName)//creating the file var
@@ -44,10 +44,7 @@ class Loot (plugin: Zero?) : Listener {//creating the class
 
                 if (actualdata == 3) {//check if the data equals 3
                     val p = e.player//creating the player variable
-                    p.sendMessage("hello")
                     if (p.location.world.name.endsWith("world")) {//check if the player is in the right world
-
-                        p.sendMessage("hello2")
                         val kit = (1..6).random()//creating the random val between 1 and 6
                         if (kit == 1) {//checking if kit equals 1
                             val item1 = ItemStack(Material.IRON_SWORD, 1)//creating an item stack with an iron sword inside
@@ -92,21 +89,6 @@ class Loot (plugin: Zero?) : Listener {//creating the class
                                     }
                                 }
                             }
-                        }
-                        try {
-                            if (actualFile.exists() && actualFile.isFile) {//checking if actual file exist
-                                val dataToWrite = "0"//creting the data to write var
-                                val myWriter: FileWriter //create the file writer
-                                try {
-                                    myWriter = FileWriter(actualFile)//pointing the writer to the actual file
-                                    myWriter.write(dataToWrite)//writing the data to the file
-                                    myWriter.close()//closing the writer
-                                } catch (e: IOException) {//catching the exeption
-                                    throw java.lang.RuntimeException(e)//and throwing it
-                                }
-                            }
-                        } catch (e: IOException) {//catching the exeption
-                            throw java.lang.RuntimeException(e)//and throwing it
                         }
                     }
                 }
