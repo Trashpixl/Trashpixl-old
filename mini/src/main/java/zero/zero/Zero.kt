@@ -1,11 +1,13 @@
-package zero.zero// the package of this project bob
+package zero.zero // the package of this project
 
 import org.bukkit.plugin.java.JavaPlugin
-import zero.zero.command.*// importing all the command
-import zero.zero.handler.*//importing all the handler 
-import java.io.File// importing java file class for writing the file
-import java.io.FileWriter// importing the file writer
-import java.io.IOException// importing the io exeption class
+import zero.zero.command.* //importing all the command
+import zero.zero.handler.* //importing all the handler 
+import zero.zero.command.store.* //import all the class in store
+import zero.zero.handler.store.* //import all the handler related to store
+import java.io.File //importing java file class for writing the file
+import java.io.FileWriter //importing the file writer
+import java.io.IOException //importing the io exeption class
 
 
 
@@ -14,6 +16,8 @@ class Zero : JavaPlugin() {
      override fun onEnable() {// plugin startup logic
         val fileName = "Minigame.txt"// creating the file name variable
         val actualFile = File(fileName)// creating the file variable
+        val fileName2 = "Store.txt"
+        val actualFile2 = File(fileName2)
 
         Death(this)// init the death handler
         RaceTimer(this)// init the race timer handler
@@ -63,6 +67,27 @@ class Zero : JavaPlugin() {
                         myWriter = FileWriter(actualFile)//pointing the writer to the actual file
                         myWriter.write(dataToWrite)//writing the data to the file
                         myWriter.close()//closing the writer
+                    } catch (e: IOException) {//catching the exeption 
+                        throw RuntimeException(e)// throwing it the hardest we can so it wont come back
+                    }
+                } else {
+                    println("something went wrong while creating the file") //says that something went from while creating the file
+                }
+            }
+        }
+        catch (e: IOException) { //catching the exception
+            throw RuntimeException(e) //create the actual error message
+        }
+        try {//trying the following code
+            if (actualFile2.exists() && actualFile2.isFile) {// check if the file exist
+            } else {
+                if (actualFile2.createNewFile()) { //creating the new file
+                    val dataToWrite2 = "0"// creating the data to write var
+                    val myWriter2: FileWriter //create the file writer
+                    try {// trying the following code
+                        myWriter2 = FileWriter(actualFile2)//pointing the writer to the actual file
+                        myWriter2.write(dataToWrite2)//writing the data to the file
+                        myWriter2.close()//closing the writer
                     } catch (e: IOException) {//catching the exeption 
                         throw RuntimeException(e)// throwing it the hardest we can so it wont come back
                     }
