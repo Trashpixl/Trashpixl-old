@@ -27,7 +27,7 @@ class OnCommandStore: CommandExecutor {// creating the class death and implement
                 var item4:ItemStack = ItemStack(Material.REDSTONE, 1)
                 var item5:ItemStack = ItemStack(Material.IRON_CHESTPLATE, 1)
                 var item6:ItemStack = ItemStack(Material.RED_TULIP, 1)
-                var item7:ItemStack = ItemStack(Material.BUCKET, 1)
+                var item7:ItemStack = ItemStack(Material.GLASS_BOTTLE, 1)
                 p.inventory.setItem(0, item0)
                 p.inventory.setItem(1, item1)
                 p.inventory.setItem(2, item2)

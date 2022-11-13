@@ -28,7 +28,15 @@ class Zero : JavaPlugin() {
         Laucher(this)// init the laucher handler
         FirstToFinish(this)// init the first to finish handler
         Punch(this)// init the punch handler
-
+        Exit(this)
+        Tool(this)
+        Food(this)
+        Block(this)
+        Small(this)
+        Armor(this)
+        Deco(this)
+        Potion(this)
+               
         logger.info("starting the plugin")//say that it's starting the plugin
        
         this.getCommand("onCommandStore")?.setExecutor(OnCommandStore())// init the command for the Store 
@@ -58,7 +66,7 @@ class Zero : JavaPlugin() {
         this.getCommand("onCommandBridgeRace")?.setExecutor(OnCommandBridgeRace())// init the command for the tag
         this.getCommand("onCommandLabi")?.setExecutor(OnCommandLabi())// init the command for the tag
         try {//trying the following code
-            if (actualFile.exists() && actualFile.isFile) {// check if the file exist
+            if (actualFile.exists() && actualFile.isFile) {// check if the file existlachancethierry6@gmail.com
             } else {
                 if (actualFile.createNewFile()) { //creating the new file
                     val dataToWrite = "0"// creating the data to write var
