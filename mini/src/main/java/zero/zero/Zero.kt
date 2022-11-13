@@ -4,7 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin
 import zero.zero.command.* //importing all the command
 import zero.zero.handler.* //importing all the handler 
 import zero.zero.command.store.* //import all the class in store
-import zero.zero.handler.store.* //import all the handler related to store
+import zero.zero.handler.shop.* //import all the handler related to store
 import java.io.File //importing java file class for writing the file
 import java.io.FileWriter //importing the file writer
 import java.io.IOException //importing the io exeption class
