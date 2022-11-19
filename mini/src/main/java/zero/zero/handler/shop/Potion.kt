@@ -23,7 +23,7 @@ class Potion (plugin: Zero?) : Listener {//creating the class
     fun buttonHandler(e: PlayerInteractEvent) { //describes what the event is
         if (e.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
             if (e.clickedBlock!!.type == Material.GLASS_BOTTLE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
-               
+               print("potion")
                         
             }
         }
