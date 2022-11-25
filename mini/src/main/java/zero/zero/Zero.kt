@@ -8,6 +8,7 @@ import zero.zero.command.* // importing all the command
 import zero.zero.command.store.* // import all the class in store
 import zero.zero.handler.* // importing all the handler
 import zero.zero.handler.shop.* // import all the handler related to store
+import java.util.* // importing all the java util class
 
 class Zero : JavaPlugin() {
     // creating the main class
@@ -37,9 +38,28 @@ class Zero : JavaPlugin() {
         Potion(this)
 
         logger.info("starting the plugin") // say that it's starting the plugin
-
+        val fileName3 = "Server.txt"// creating the file name var 
+        val actualFile3 = File(fileName3)// creating the file 
+        var Serv = 0// creating the actual data var
+        try {// trying the code
+            if (actualFile3.exists() && actualFile3.isFile) {//checking if actual file is a file 
+                try {
+                    val reader3 = Scanner(actualFile3)//creating the scanner
+                    val data3 = reader3.nextLine()// reading the first line
+                    Serv = data3.toInt()// converting the data to an int
+                    reader3.close()// closing the reader
+                } catch (e: IOException) {// catching the exeption 
+                    throw RuntimeException(e)// trowing the exeption
+                }
+            }
+        } catch (e: IOException) {// catching the exeption
+            throw RuntimeException(e)// trowing it again
+        }
+        if(Serv == 2){
         this.getCommand("onCommandStore")
                 ?.setExecutor(OnCommandStore()) // init the command for the Store
+        }
+         if(Serv == 1){       
         this.getCommand("onCommandPvp")
                 ?.setExecutor(OnCommandPvp()) // init the command for the pvp game
         this.getCommand("onCommandTnt")
@@ -89,6 +109,7 @@ class Zero : JavaPlugin() {
                 ?.setExecutor(OnCommandBridgeRace()) // init the command for the tag
         this.getCommand("onCommandLabi")
                 ?.setExecutor(OnCommandLabi()) // init the command for the tag
+         }
         try { // trying the following code
             if (actualFile.exists() && actualFile.isFile
             ) { // check if the file existlachancethierry6@gmail.com
