@@ -44,7 +44,26 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
             if (ev.clickedBlock!!.type == Material.WHITE_TERRACOTTA) { //compare what the player sept on to white terracotta and is required a non-nullable
                for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
                             Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
-                        }
+               }
+                            val fileName2 = "S:\\Mini.txt"// creating the file name var 
+                            val actualFile2 = File(fileName2)// creating the file 
+                            
+                            try {// trying the code
+                                if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
+                                    val dataToWrite = "1"// creating the data to write var
+                                    val myWriter: FileWriter //create the file writer
+                                    try {//trying the code
+                                        myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
+                                        myWriter.write(dataToWrite)//writing the data to the file
+                                        myWriter.close()//closing the writer
+                                    } catch (e: IOException) {// catching the exeption
+                                        throw RuntimeException(e)// trowing the exeption
+                                    }
+                                }
+                            } catch (e: IOException) {//catching the exeption
+                                throw RuntimeException(e)// throwing the exeption 
+                            }
+                        
                         //Bukkit.dispatchCommand(p, "oncommandpvp")//dispatchCommand for parkour
                     }
                 
@@ -52,6 +71,24 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                 if (ev.clickedBlock!!.type == Material.ORANGE_TERRACOTTA) {//if the block is orange terracotta
                     for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
                         Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
+                    }
+                    val fileName2 = "S:\\Mini.txt"// creating the file name var 
+                    val actualFile2 = File(fileName2)// creating the file 
+                    
+                    try {// trying the code
+                        if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
+                            val dataToWrite = "2"// creating the data to write var
+                            val myWriter: FileWriter //create the file writer
+                            try {//trying the code
+                                myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
+                                myWriter.write(dataToWrite)//writing the data to the file
+                                myWriter.close()//closing the writer
+                            } catch (e: IOException) {// catching the exeption
+                                throw RuntimeException(e)// trowing the exeption
+                            }
+                        }
+                    } catch (e: IOException) {//catching the exeption
+                        throw RuntimeException(e)// throwing the exeption 
                     }
                             //Bukkit.dispatchCommand(p, "oncommandpvpsumo")//dispatchCommand for parkour
                         }
@@ -61,6 +98,24 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                         for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
                             Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
                         }
+                        val fileName2 = "S:\\Mini.txt"// creating the file name var 
+                        val actualFile2 = File(fileName2)// creating the file 
+                        
+                        try {// trying the code
+                            if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
+                                val dataToWrite = "3"// creating the data to write var
+                                val myWriter: FileWriter //create the file writer
+                                try {//trying the code
+                                    myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
+                                    myWriter.write(dataToWrite)//writing the data to the file
+                                    myWriter.close()//closing the writer
+                                } catch (e: IOException) {// catching the exeption
+                                    throw RuntimeException(e)// trowing the exeption
+                                }
+                            }
+                        } catch (e: IOException) {//catching the exeption
+                            throw RuntimeException(e)// throwing the exeption 
+                        }
                                 //Bukkit.dispatchCommand(p, "oncommandpvpbow")//dispatchCommand for parkour
                             
                         }
@@ -68,6 +123,24 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                         if (ev.clickedBlock!!.type == Material.LIGHT_BLUE_TERRACOTTA) {//check if the block is light blue terracotta
                             for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
                                 Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
+                            }
+                            val fileName2 = "S:\\Mini.txt"// creating the file name var 
+                            val actualFile2 = File(fileName2)// creating the file 
+                            
+                            try {// trying the code
+                                if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
+                                    val dataToWrite = "4"// creating the data to write var
+                                    val myWriter: FileWriter //create the file writer
+                                    try {//trying the code
+                                        myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
+                                        myWriter.write(dataToWrite)//writing the data to the file
+                                        myWriter.close()//closing the writer
+                                    } catch (e: IOException) {// catching the exeption
+                                        throw RuntimeException(e)// trowing the exeption
+                                    }
+                                }
+                            } catch (e: IOException) {//catching the exeption
+                                throw RuntimeException(e)// throwing the exeption 
                             }
                                    // Bukkit.dispatchCommand(p, "oncommandpvploot")//dispatchCommand for parkour
                                 }
@@ -77,12 +150,48 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                                 for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
                                     Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
                                 }
+                                val fileName2 = "S:\\Mini.txt"// creating the file name var 
+                                val actualFile2 = File(fileName2)// creating the file 
+                                
+                                try {// trying the code
+                                    if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
+                                        val dataToWrite = "5"// creating the data to write var
+                                        val myWriter: FileWriter //create the file writer
+                                        try {//trying the code
+                                            myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
+                                            myWriter.write(dataToWrite)//writing the data to the file
+                                            myWriter.close()//closing the writer
+                                        } catch (e: IOException) {// catching the exeption
+                                            throw RuntimeException(e)// trowing the exeption
+                                        }
+                                    }
+                                } catch (e: IOException) {//catching the exeption
+                                    throw RuntimeException(e)// throwing the exeption 
+                                }
                                        // Bukkit.dispatchCommand(p, "oncommandbridge")//dispatchCommand for bridge
                                     }
                                 
                                 if (ev.clickedBlock!!.type == Material.LIME_TERRACOTTA) {//check if the block is lime terracotta
                                     for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
                                         Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
+                                    }
+                                    val fileName2 = "S:\\Mini.txt"// creating the file name var 
+                                    val actualFile2 = File(fileName2)// creating the file 
+                                    
+                                    try {// trying the code
+                                        if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
+                                            val dataToWrite = "6"// creating the data to write var
+                                            val myWriter: FileWriter //create the file writer
+                                            try {//trying the code
+                                                myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
+                                                myWriter.write(dataToWrite)//writing the data to the file
+                                                myWriter.close()//closing the writer
+                                            } catch (e: IOException) {// catching the exeption
+                                                throw RuntimeException(e)// trowing the exeption
+                                            }
+                                        }
+                                    } catch (e: IOException) {//catching the exeption
+                                        throw RuntimeException(e)// throwing the exeption 
                                     }
                                            // Bukkit.dispatchCommand(p, "oncommandparkour")//dispatchCommand for parkour
                                         
@@ -104,6 +213,24 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                                     for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
                                         Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
                                     }
+                                    val fileName2 = "S:\\Mini.txt"// creating the file name var 
+                                    val actualFile2 = File(fileName2)// creating the file 
+                                    
+                                    try {// trying the code
+                                        if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
+                                            val dataToWrite = "7"// creating the data to write var
+                                            val myWriter: FileWriter //create the file writer
+                                            try {//trying the code
+                                                myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
+                                                myWriter.write(dataToWrite)//writing the data to the file
+                                                myWriter.close()//closing the writer
+                                            } catch (e: IOException) {// catching the exeption
+                                                throw RuntimeException(e)// trowing the exeption
+                                            }
+                                        }
+                                    } catch (e: IOException) {//catching the exeption
+                                        throw RuntimeException(e)// throwing the exeption 
+                                    }
                                             //Bukkit.dispatchCommand(p, "oncommandpvpknockback")//dispatchCommand for pvp knock back
                                        
                                 }/* 
@@ -123,6 +250,24 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                                     if (ev.clickedBlock!!.type == Material.BLUE_TERRACOTTA) {//check if the block is blue terracotta
                                         for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
                                             Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
+                                        }
+                                        val fileName2 = "S:\\Mini.txt"// creating the file name var 
+                                        val actualFile2 = File(fileName2)// creating the file 
+                                        
+                                        try {// trying the code
+                                            if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
+                                                val dataToWrite = "8"// creating the data to write var
+                                                val myWriter: FileWriter //create the file writer
+                                                try {//trying the code
+                                                    myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
+                                                    myWriter.write(dataToWrite)//writing the data to the file
+                                                    myWriter.close()//closing the writer
+                                                } catch (e: IOException) {// catching the exeption
+                                                    throw RuntimeException(e)// trowing the exeption
+                                                }
+                                            }
+                                        } catch (e: IOException) {//catching the exeption
+                                            throw RuntimeException(e)// throwing the exeption 
                                         }
                                                // Bukkit.dispatchCommand(p, "oncommandcpstest")//dispatchCommand for parkour
                                            
@@ -204,11 +349,30 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                                             for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
                                                 Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
                                             }
+                                            val fileName2 = "S:\\Mini.txt"// creating the file name var 
+                                            val actualFile2 = File(fileName2)// creating the file 
+                                            
+                                            try {// trying the code
+                                                if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
+                                                    val dataToWrite = "9"// creating the data to write var
+                                                    val myWriter: FileWriter //create the file writer
+                                                    try {//trying the code
+                                                        myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
+                                                        myWriter.write(dataToWrite)//writing the data to the file
+                                                        myWriter.close()//closing the writer
+                                                    } catch (e: IOException) {// catching the exeption
+                                                        throw RuntimeException(e)// trowing the exeption
+                                                    }
+                                                }
+                                            } catch (e: IOException) {//catching the exeption
+                                                throw RuntimeException(e)// throwing the exeption 
+                                            }
                                                 }
                                                // Bukkit.dispatchCommand(p, "oncommandtnt")//dispatchCommand for tnt race
                                             
                                         
                                     }
+                                   
                                 }
                              }
                             }

@@ -17,6 +17,7 @@ class Zero : JavaPlugin() {
         val fileName2 = "Store.txt"
         val actualFile2 = File(fileName2)
 
+        LauncherJoin(this)
         Death(this) // init the death handler
         RaceTimer(this) // init the race timer handler
         Loot(this) // init the loot handler
