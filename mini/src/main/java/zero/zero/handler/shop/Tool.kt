@@ -23,9 +23,28 @@ class Tool (plugin: Zero?) : Listener {//creating the class
     fun buttonHandler(e: PlayerInteractEvent) { //describes what the event is
         if (e.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
             if (e.clickedBlock!!.type == Material.IRON_SWORD) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
+                val fileName = "Server.txt"// creating the file name var 
+                val actualFile = File(fileName)// creating the file 
+                var Serv = 0// creating the actual data var
+                try {// trying the code
+                    if (actualFile.exists() && actualFile.isFile) {//checking if actual file is a file 
+                        try {
+                            val reader = Scanner(actualFile)//creating the scanner
+                            val data = reader.nextLine()// reading the first line
+                            Serv = data.toInt()// converting the data to an int
+                            reader.close()// closing the reader
+                        } catch (e: IOException) {// catching the exeption 
+                            throw RuntimeException(e)// trowing the exeption
+                        }
+                    }
+                } catch (e: IOException) {// catching the exeption
+                    throw RuntimeException(e)// trowing it again
+                }
+                if(Serv == 2){
                print("tool")
                         
             }
         }
     }
+}
 }

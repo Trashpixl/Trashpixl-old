@@ -129,6 +129,7 @@ class Zero : JavaPlugin() {
         } catch (e: IOException) { // catching the exception
             throw RuntimeException(e) // create the actual error message
         }
+        
     }
     override fun onDisable() {
         // Plugin shutdown logic

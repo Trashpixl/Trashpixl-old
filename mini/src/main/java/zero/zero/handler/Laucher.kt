@@ -8,6 +8,10 @@ import org.bukkit.event.Listener //importing the event listenner class
 import org.bukkit.event.block.Action //importing the block action class to get if they set on a block
 import org.bukkit.event.player.PlayerInteractEvent //importing the player interacte event to get if they click on something
 import zero.zero.Zero //importing zero
+import java.io.File// importing the java file var
+import java.io.FileWriter// importing the filewriter
+import java.io.IOException// imprting the io exeption
+import java.util.*// importing all the java util class
 
 
 class Laucher(plugin: Zero?) : Listener {// creating the class and extending it with the main class and implement the listener
@@ -19,67 +23,70 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
     @EventHandler// define that it is an event handler
     fun buttonHandler(ev: PlayerInteractEvent) { //describes what the event is
         if (ev.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
-            val p = ev.player// creating the p variable and assigne the player to it 
+            val fileName = "Server.txt"// creating the file name var 
+                val actualFile = File(fileName)// creating the file 
+                var Serv = 0// creating the actual data var
+                try {// trying the code
+                    if (actualFile.exists() && actualFile.isFile) {//checking if actual file is a file 
+                        try {
+                            val reader = Scanner(actualFile)//creating the scanner
+                            val data = reader.nextLine()// reading the first line
+                            Serv = data.toInt()// converting the data to an int
+                            reader.close()// closing the reader
+                        } catch (e: IOException) {// catching the exeption 
+                            throw RuntimeException(e)// trowing the exeption
+                        }
+                    }
+                } catch (e: IOException) {// catching the exeption
+                    throw RuntimeException(e)// trowing it again
+                }
+                if(Serv == 2){
             if (ev.clickedBlock!!.type == Material.WHITE_TERRACOTTA) { //compare what the player sept on to white terracotta and is required a non-nullable
-                if (p.location.world.name.endsWith("lobby_server")) {// checking if the player is in the lobby
-                    for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
-                        if (p2.location.world.name.endsWith("lobby_server")) {// checking if they are in the lobby
-                            Bukkit.dispatchCommand(p2, "function server:tp_world_server")// tp to the world server
+               for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
+                            Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
                         }
-                        Bukkit.dispatchCommand(p, "oncommandpvp")//dispatchCommand for parkour
+                        //Bukkit.dispatchCommand(p, "oncommandpvp")//dispatchCommand for parkour
                     }
-                }
-            }
+                
+            
                 if (ev.clickedBlock!!.type == Material.ORANGE_TERRACOTTA) {//if the block is orange terracotta
-                    if (p.location.world.name.endsWith("lobby_server")) {//check if he is in the lobby
-                        for (p2 in Bukkit.getServer().onlinePlayers) {//take all the online player
-                            if (p2.location.world.name.endsWith("lobby_server")) {//check if they are in the lobby
-                                Bukkit.dispatchCommand(p2, "function server:tp_world_server")// tp them in the main world
-                            }
-                            Bukkit.dispatchCommand(p, "oncommandpvpsumo")//dispatchCommand for parkour
-                        }
+                    for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
+                        Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
                     }
-                }
+                            //Bukkit.dispatchCommand(p, "oncommandpvpsumo")//dispatchCommand for parkour
+                        }
+                    
+                
                     if (ev.clickedBlock!!.type == Material.MAGENTA_TERRACOTTA) {//check if the block is magenta terracotta
-                        if (p.location.world.name.endsWith("lobby_server")) {//check if the caller is in the lobby
-                            for (p2 in Bukkit.getServer().onlinePlayers) {//get all the online player
-                                if (p2.location.world.name.endsWith("lobby_server")) {//check if they are in the lobby
-                                    Bukkit.dispatchCommand(p2, "function server:tp_world_server")// tp them if they are
-                                }
-                                Bukkit.dispatchCommand(p, "oncommandpvpbow")//dispatchCommand for parkour
-                            }
+                        for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
+                            Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
                         }
-                    }
+                                //Bukkit.dispatchCommand(p, "oncommandpvpbow")//dispatchCommand for parkour
+                            
+                        }
+                    
                         if (ev.clickedBlock!!.type == Material.LIGHT_BLUE_TERRACOTTA) {//check if the block is light blue terracotta
-                            if (p.location.world.name.endsWith("lobby_server")) {//check if the sender is in the lobby
-                                for (p2 in Bukkit.getServer().onlinePlayers) {//get all the online player
-                                    if (p2.location.world.name.endsWith("lobby_server")) {//check if they are in the lobby
-                                        Bukkit.dispatchCommand(p2, "function server:tp_world_server")//tp the player in the game world if they are
-                                    }
-                                    Bukkit.dispatchCommand(p, "oncommandpvploot")//dispatchCommand for parkour
-                                }
+                            for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
+                                Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
                             }
-                        }
+                                   // Bukkit.dispatchCommand(p, "oncommandpvploot")//dispatchCommand for parkour
+                                }
+                            
+                        
                             if (ev.clickedBlock!!.type == Material.YELLOW_TERRACOTTA) {//check if the block is yellow terracotta
-                                if (p.location.world.name.endsWith("lobby_server")) {//check if they ar ein the lobby
-                                    for (p2 in Bukkit.getServer().onlinePlayers) {//get all the online player
-                                        if (p2.location.world.name.endsWith("lobby_server")) {//check if they are in the lobby
-                                            Bukkit.dispatchCommand(p2, "function server:tp_world_server") //tp the one that are in it 
-                                        }
-                                        Bukkit.dispatchCommand(p, "oncommandbridge")//dispatchCommand for bridge
-                                    }
+                                for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
+                                    Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
                                 }
-                            }
+                                       // Bukkit.dispatchCommand(p, "oncommandbridge")//dispatchCommand for bridge
+                                    }
+                                
                                 if (ev.clickedBlock!!.type == Material.LIME_TERRACOTTA) {//check if the block is lime terracotta
-                                    if (p.location.world.name.endsWith("lobby_server")) {//check if he is in the lobby
-                                        for (p2 in Bukkit.getServer().onlinePlayers) {//check for all the player
-                                            if (p2.location.world.name.endsWith("lobby_server")) {//they are in the lobby
-                                                Bukkit.dispatchCommand(p2, "function server:tp_world_server")//tp them in the world server
-                                            }
-                                            Bukkit.dispatchCommand(p, "oncommandparkour")//dispatchCommand for parkour
-                                        }
+                                    for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
+                                        Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
                                     }
-                                }
+                                           // Bukkit.dispatchCommand(p, "oncommandparkour")//dispatchCommand for parkour
+                                        
+                                }/* 
                                 if (ev.clickedBlock!!.type == Material.PINK_TERRACOTTA) {
                                     if (p.location.world.name.endsWith("lobby_server")) {
                                         p.sendMessage("not available yet")
@@ -92,16 +99,14 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                                         //Bukkit.dispatchCommand(p, "oncommanddontdie")//dispatchCommand for dont die
                                     }
                                 }
+                                */
                                 if (ev.clickedBlock!!.type == Material.LIGHT_GRAY_TERRACOTTA) {//check if the block is light gray terracotta
-                                    if (p.location.world.name.endsWith("lobby_server")) {//check if the sender is in the lobby
-                                        for (p2 in Bukkit.getServer().onlinePlayers) {//getting all the online player
-                                            if (p2.location.world.name.endsWith("lobby_server")) {//checking if they are in the lobby
-                                                Bukkit.dispatchCommand(p2, "function server:tp_world_server")//tp them the mini game world
-                                            }
-                                            Bukkit.dispatchCommand(p, "oncommandpvpknockback")//dispatchCommand for pvp knock back
-                                        }
+                                    for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
+                                        Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
                                     }
-                                }
+                                            //Bukkit.dispatchCommand(p, "oncommandpvpknockback")//dispatchCommand for pvp knock back
+                                       
+                                }/* 
                                     if (ev.clickedBlock!!.type == Material.CYAN_TERRACOTTA) {
                                         if (p.location.world.name.endsWith("lobby_server")) {
                                             p.sendMessage("not available yet")
@@ -114,16 +119,14 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                                             //Bukkit.dispatchCommand(p, "oncommandclimbfast")// dispatchCommand for climb fast
                                         }
                                     }
+                                    */
                                     if (ev.clickedBlock!!.type == Material.BLUE_TERRACOTTA) {//check if the block is blue terracotta
-                                        if (p.location.world.name.endsWith("lobby_server")) {//check if the sender is in the lobby
-                                            for (p2 in Bukkit.getServer().onlinePlayers) {//get all the online player
-                                                if (p2.location.world.name.endsWith("lobby_server")) {//check if they are in the lobby
-                                                    Bukkit.dispatchCommand(p2, "function server:tp_world_server")//tp them in the mini game world
-                                                }
-                                                Bukkit.dispatchCommand(p, "oncommandcpstest")//dispatchCommand for parkour
-                                            }
+                                        for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
+                                            Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
                                         }
-                                    }
+                                               // Bukkit.dispatchCommand(p, "oncommandcpstest")//dispatchCommand for parkour
+                                           
+                                    }/* 
                                         if (ev.clickedBlock!!.type == Material.BROWN_TERRACOTTA) {
                                             if (p.location.world.name.endsWith("lobby_server")) {
                                                 p.sendMessage("not available yet")
@@ -196,18 +199,18 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                                                 //Bukkit.dispatchCommand(p, "oncommandtag")//dispatchCommand for tag
                                             }
                                         }
+                                        */
                                         if (ev.clickedBlock!!.type == Material.BLACK_CONCRETE) {//check if the block is black concrete
-                                            if (p.location.world.name.endsWith("lobby_server")) {//check if the sender is in the lobby
-                                                for (p2 in Bukkit.getServer().onlinePlayers) {//get all the player in the server
-                                                    if (p2.location.world.name.endsWith("lobby_server")) {//check if they are in the lobby
-                                                        Bukkit.dispatchCommand(p2, "function server:tp_world_server")//tp them in the world server
-                                                    }
-                                                }
-                                                Bukkit.dispatchCommand(p, "oncommandtnt")//dispatchCommand for tnt race
+                                            for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
+                                                Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
                                             }
-                                        }
+                                                }
+                                               // Bukkit.dispatchCommand(p, "oncommandtnt")//dispatchCommand for tnt race
+                                            
+                                        
                                     }
                                 }
+                             }
                             }
 
 

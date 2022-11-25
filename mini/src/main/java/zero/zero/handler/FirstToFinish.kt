@@ -41,12 +41,29 @@ class FirstToFinish (plugin: Zero?) : Listener { // the implements for the liste
                 }
                 val p = e.player //create the local player id
                 if (actualdata == 4 || actualdata == 5) {// checking if the number in the file corepond to the number require to start the exeption
-                    if (p.location.world.name.endsWith("world")) {// checking if the player is in the right world
+                    val fileName2 = "Server.txt"// creating the file name var 
+                val actualFile2 = File(fileName2)// creating the file 
+                var Serv = 0// creating the actual data var
+                try {// trying the code
+                    if (actualFile2.exists() && actualFile2.isFile) {//checking if actual file is a file 
+                        try {
+                            val reader2 = Scanner(actualFile2)//creating the scanner
+                            val data2 = reader2.nextLine()// reading the first line
+                            Serv = data2.toInt()// converting the data to an int
+                            reader2.close()// closing the reader
+                        } catch (e: IOException) {// catching the exeption 
+                            throw RuntimeException(e)// trowing the exeption
+                        }
+                    }
+                } catch (e: IOException) {// catching the exeption
+                    throw RuntimeException(e)// trowing it again
+                }
+                if(Serv == 1){
                         p.sendMessage(p.name + " won the race")// sending the won message 
                         for (p2 in Bukkit.getServer().onlinePlayers) {// geting all online player
-                            if (p2.location.world.name.endsWith("world")) {// checking their world
-                                Bukkit.dispatchCommand(p2, "function server:tp_lobby")// tp them in the lobby 
-                            }
+                           
+                                Bukkit.dispatchCommand(p2, "server lobby")// tp them in the lobby 
+                            
                         }
                         try {// trying the following code
                             if (actualFile.exists() && actualFile.isFile) {// checking if the file exist

@@ -8,6 +8,11 @@ import org.bukkit.event.Listener //import all the listener
 import org.bukkit.event.block.Action //import the action related to the block
 import org.bukkit.event.player.PlayerInteractEvent //import the action related to the player
 import zero.zero.Zero //import zero
+import java.io.File// importing the java file var
+import java.io.FileWriter// importing the filewriter
+import java.io.IOException// imprting the io exeption
+import java.util.*// importing all the java util class
+
 
 class PlateHandler (plugin: Zero?) : Listener { // the implements for the listener
 
@@ -20,9 +25,26 @@ class PlateHandler (plugin: Zero?) : Listener { // the implements for the listen
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
             if (ev.clickedBlock!!.type == Material.STONE_PRESSURE_PLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 val p = ev.player //create the local player id
-                if(p.location.world.name.endsWith("main_server")){//check if the player is in the lobby
+                val fileName = "Server.txt"// creating the file name var 
+                val actualFile = File(fileName)// creating the file 
+                var Serv = 0// creating the actual data var
+                try {// trying the code
+                    if (actualFile.exists() && actualFile.isFile) {//checking if actual file is a file 
+                        try {
+                            val reader = Scanner(actualFile)//creating the scanner
+                            val data = reader.nextLine()// reading the first line
+                            Serv = data.toInt()// converting the data to an int
+                            reader.close()// closing the reader
+                        } catch (e: IOException) {// catching the exeption 
+                            throw RuntimeException(e)// trowing the exeption
+                        }
+                    }
+                } catch (e: IOException) {// catching the exeption
+                    throw RuntimeException(e)// trowing it again
+                }
+                if(Serv == 0){
                     
-                    Bukkit.dispatchCommand(p, "function server:tp_lobby") //dispatch the command to the player so he tp itself
+                    Bukkit.dispatchCommand(p, "server lobby") //dispatch the command to the player so he tp itself
                 }
             }
         }

@@ -44,7 +44,24 @@ class Loot (plugin: Zero?) : Listener {//creating the class
 
                 if (actualdata == 3) {//check if the data equals 3
                     val p = e.player//creating the player variable
-                    if (p.location.world.name.endsWith("world")) {//check if the player is in the right world
+                    val fileName2 = "Server.txt"// creating the file name var 
+                val actualFile2 = File(fileName2)// creating the file 
+                var Serv = 0// creating the actual data var
+                try {// trying the code
+                    if (actualFile2.exists() && actualFile2.isFile) {//checking if actual file is a file 
+                        try {
+                            val reader2 = Scanner(actualFile2)//creating the scanner
+                            val data2 = reader2.nextLine()// reading the first line
+                            Serv = data2.toInt()// converting the data to an int
+                            reader2.close()// closing the reader
+                        } catch (e: IOException) {// catching the exeption 
+                            throw RuntimeException(e)// trowing the exeption
+                        }
+                    }
+                } catch (e: IOException) {// catching the exeption
+                    throw RuntimeException(e)// trowing it again
+                }
+                if(Serv == 1){
                         val kit = (1..6).random()//creating the random val between 1 and 6
                         if (kit == 1) {//checking if kit equals 1
                             val item1 = ItemStack(Material.IRON_SWORD, 1)//creating an item stack with an iron sword inside
