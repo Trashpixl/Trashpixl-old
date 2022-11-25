@@ -53,35 +53,36 @@ class LauncherJoin (plugin: Zero?) : Listener { // the implements for the listen
                                 reader2.close()// closing the reader
                                 if(Mini == 1){
                                     print("mini 1!!")
+                                    Bukkit.dispatchCommand(p, "oncommandpvp")//dispatchCommand for parkour
                                 }
                                 if(Mini == 2){
-                                    
+                                    Bukkit.dispatchCommand(p, "oncommandpvpsumo")//dispatchCommand for parkour
                                 }
                                 if(Mini == 3){
-                                    
+                                    Bukkit.dispatchCommand(p, "oncommandpvpbow")//dispatchCommand for parkour
                                 }
                                 if(Mini == 4){
-                                    
+                                    Bukkit.dispatchCommand(p, "oncommandpvploot")//dispatchCommand for parkour
                                 }
                                 if(Mini == 5){
-                                    
+                                    Bukkit.dispatchCommand(p, "oncommandbridge")//dispatchCommand for bridge
                                 }
                                 if(Mini == 6){
-                                    
+                                    Bukkit.dispatchCommand(p, "oncommandparkour")//dispatchCommand for parkour
                                 }
                                 if(Mini == 7){
-                                    
+                                    Bukkit.dispatchCommand(p, "oncommandpvpknockback")//dispatchCommand for pvp knock back
                                 }
                                 if(Mini == 8){
-                                    
+                                    Bukkit.dispatchCommand(p, "oncommandcpstest")//dispatchCommand for parkour
                                 }
                                 if(Mini == 9){
-                                    
+                                    Bukkit.dispatchCommand(p, "oncommandtnt")//dispatchCommand for tnt race
                                 }
                                 if(Mini == 10){
                                    
                                 } 
-                                val dataToWrite = "0"// creating the data to write var
+                        val dataToWrite = "0"// creating the data to write var
                         val myWriter: FileWriter //create the file writer
                         try {//trying the code
                             myWriter = FileWriter(actualFile2)//pointing the writer to the actual file

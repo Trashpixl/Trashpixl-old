@@ -26,7 +26,7 @@ class OnCommandBridgeRace : CommandExecutor {// creating the class death and imp
         val z = 265.3//the z coord of the game
 
         for (p in getServer().onlinePlayers) {//get all the online player
-            if(p.location.world.name.endsWith("world")){//check if they are in the right world
+           
                 val item1 = ItemStack(Material.BLACK_WOOL, 64)//create the item stack with 64 black wool inside
                 p.health = 20.0//set the health to 20
                 val w: World = p.world//create the world var 
@@ -34,7 +34,7 @@ class OnCommandBridgeRace : CommandExecutor {// creating the class death and imp
                 p.teleport(to)//tp the player
                 p.inventory.clear()//clear their inventory
                 p.inventory.setItem(1, item1)//give them the wool
-            }
+            
         }
 
         try{//trying the code

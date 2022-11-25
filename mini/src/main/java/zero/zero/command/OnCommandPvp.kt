@@ -32,7 +32,7 @@ class OnCommandPvp : CommandExecutor {// creating the class death and implementi
         val z = 279.0
 
         for (p in getServer().onlinePlayers) {
-            if(p.location.world.name.endsWith("world")){
+            
             p.health = 20.0
             val w: World = p.world
             val to = Location(w, x, y, z)//move before for
@@ -40,7 +40,7 @@ class OnCommandPvp : CommandExecutor {// creating the class death and implementi
             p.teleport(to)
             p.inventory.clear()
             p.inventory.setItemInMainHand(item)
-            }
+            
 
         }
         try{

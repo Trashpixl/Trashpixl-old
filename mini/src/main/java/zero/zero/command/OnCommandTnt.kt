@@ -33,8 +33,7 @@ class OnCommandTnt : CommandExecutor {// creating the class death and implementi
 
         for (p in getServer().onlinePlayers) {
 
-            if (p.location.world.name.endsWith("world")) {
-
+            
                 p.health = 20.0
                 val w: World = p.world
                 val to = Location(w, x, y, z)//move before for
@@ -42,7 +41,7 @@ class OnCommandTnt : CommandExecutor {// creating the class death and implementi
                 p.inventory.clear()
 
 
-            }
+            
         }
         try{
             if(actualFile.exists() && actualFile.isFile){
