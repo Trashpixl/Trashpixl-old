@@ -40,7 +40,7 @@ class Block (plugin: Zero?) : Listener {//creating the class
                 } catch (e: IOException) {// catching the exeption
                     throw RuntimeException(e)// trowing it again
                 }
-                if(Serv == 2){
+                if(Serv == 0){
                print("block")
                         
             }

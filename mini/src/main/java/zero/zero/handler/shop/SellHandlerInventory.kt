@@ -47,7 +47,7 @@ class SellHandlerInventory(plugin: Zero?) : Listener {
                 } catch (e: IOException) {// catching the exeption
                     throw RuntimeException(e)// trowing it again
                 }
-                if(Serv == 2){
+                if(Serv == 0){
                     while (index < 36) { //repeat for all the inventory slot
                         item = inv.getItem(index)
                         if (item != null) { //check if there is an item

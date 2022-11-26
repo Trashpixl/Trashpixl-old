@@ -55,7 +55,7 @@ class Zero : JavaPlugin() {
         } catch (e: IOException) {// catching the exeption
             throw RuntimeException(e)// trowing it again
         }
-        if(Serv == 2){
+        if(Serv == 0){
         this.getCommand("onCommandStore")
                 ?.setExecutor(OnCommandStore()) // init the command for the Store
         }
