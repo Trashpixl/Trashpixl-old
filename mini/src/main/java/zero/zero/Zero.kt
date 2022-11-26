@@ -5,9 +5,9 @@ import java.io.FileWriter // importing the file writer
 import java.io.IOException // importing the io exeption class
 import org.bukkit.plugin.java.JavaPlugin
 import zero.zero.command.* // importing all the command
-import zero.zero.command.store.* // import all the class in store
+//import zero.zero.command.store.* // import all the class in store
 import zero.zero.handler.* // importing all the handler
-import zero.zero.handler.shop.* // import all the handler related to store
+//import zero.zero.handler.shop.* // import all the handler related to store
 import java.util.* // importing all the java util class
 
 class Zero : JavaPlugin() {
@@ -15,27 +15,27 @@ class Zero : JavaPlugin() {
     override fun onEnable() { // plugin startup logic
         val fileName = "Minigame.txt" // creating the file name variable
         val actualFile = File(fileName) // creating the file variable
-        val fileName2 = "Store.txt"
-        val actualFile2 = File(fileName2)
+        //val fileName2 = "Store.txt"
+        //val actualFile2 = File(fileName2)
 
         LauncherJoin(this)
         Death(this) // init the death handler
         RaceTimer(this) // init the race timer handler
         Loot(this) // init the loot handler
-        SellHandlerInventory(this) // init the sell handler
+        //SellHandlerInventory(this) // init the sell handler
         PlateHandler(this) // init the plate handler
         WoodPlateHandler(this) // init the wood plate handler
         Laucher(this) // init the laucher handler
         FirstToFinish(this) // init the first to finish handler
         Punch(this) // init the punch handler
-        Exit(this)
+        /*Exit(this)
         Tool(this)
         Food(this)
         Block(this)
         Small(this)
         Armor(this)
         Deco(this)
-        Potion(this)
+        Potion(this)*/
 
         logger.info("starting the plugin") // say that it's starting the plugin
         val fileName3 = "Server.txt"// creating the file name var 
@@ -56,8 +56,7 @@ class Zero : JavaPlugin() {
             throw RuntimeException(e)// trowing it again
         }
         if(Serv == 0){
-        this.getCommand("onCommandStore")
-                ?.setExecutor(OnCommandStore()) // init the command for the Store
+        
         }
          if(Serv == 1){       
         this.getCommand("onCommandPvp")
@@ -131,7 +130,7 @@ class Zero : JavaPlugin() {
         } catch (e: IOException) { // catching the exception
             throw RuntimeException(e) // create the actual error message
         }
-        try { // trying the following code
+        /*try { // trying the following code
             if (actualFile2.exists() && actualFile2.isFile) { // check if the file exist
             } else {
                 if (actualFile2.createNewFile()) { // creating the new file
@@ -150,7 +149,7 @@ class Zero : JavaPlugin() {
             }
         } catch (e: IOException) { // catching the exception
             throw RuntimeException(e) // create the actual error message
-        }
+        }*/
         
     }
     override fun onDisable() {
