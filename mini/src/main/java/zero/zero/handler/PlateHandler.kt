@@ -8,10 +8,10 @@ import org.bukkit.event.Listener //import all the listener
 import org.bukkit.event.block.Action //import the action related to the block
 import org.bukkit.event.player.PlayerInteractEvent //import the action related to the player
 import zero.zero.Zero //import zero
-import java.io.File// importing the java file var
-import java.io.FileWriter// importing the filewriter
-import java.io.IOException// imprting the io exeption
-import java.util.*// importing all the java util class
+import java.io.File //importing the java file var
+import java.io.FileWriter //importing the filewriter
+import java.io.IOException //imprting the io exeption
+import java.util.* //importing all the java util class
 
 
 class PlateHandler (plugin: Zero?) : Listener { // the implements for the listener

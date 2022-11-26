@@ -9,10 +9,10 @@ import org.bukkit.event.Listener //import the listener class
 import org.bukkit.event.block.Action //import all the action for block
 import org.bukkit.event.player.PlayerInteractEvent //import the player event
 import zero.zero.Zero //import zero
-import java.io.File// importing the java file var
-import java.io.FileWriter// importing the filewriter
-import java.io.IOException// imprting the io exeption
-import java.util.*// importing all the java util class
+import java.io.File //importing the java file var
+import java.io.FileWriter //importing the filewriter
+import java.io.IOException //imprting the io exeption
+import java.util.* //importing all the java util class
 
 class WoodPlateHandler(plugin: Zero?) : Listener {//create the class and implement the listener
 
