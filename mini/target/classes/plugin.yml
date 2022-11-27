@@ -9,9 +9,6 @@ commands:
   onCommandBridgeRace:
     description: command for bridge race
     usage: /<command>
-  onCommandStore:
-    description: command for the store
-    usage: /<command>
   onCommandPvpBow:
     description: command for pvpbow
     usage: /<command>
