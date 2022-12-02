@@ -1,4 +1,5 @@
-package zero.zero.handler //the package for this project
+package zero.zero.useless.shop //the package for this project
+
 
 
 import org.bukkit.Bukkit //importing bukkit
@@ -15,15 +16,14 @@ import java.io.IOException //importing the ioexeption class
 import java.util.* //importing all the java utils class
 
 
-class Armor (plugin: Zero?) : Listener {//creating the class 
+class Potion (plugin: Zero?) : Listener {//creating the class 
     init { //the constructor of this handler
         Bukkit.getPluginManager().registerEvents(this, plugin!!)//init the plugin
     }
     @EventHandler //say that it is an event handler
     fun buttonHandler(e: PlayerInteractEvent) { //describes what the event is
         if (e.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
-            if (e.clickedBlock!!.type == Material.IRON_CHESTPLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
-                val p = e.player
+            if (e.clickedBlock!!.type == Material.GLASS_BOTTLE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 val fileName = "Server.txt"// creating the file name var 
                 val actualFile = File(fileName)// creating the file 
                 var Serv = 0// creating the actual data var
@@ -42,25 +42,11 @@ class Armor (plugin: Zero?) : Listener {//creating the class
                     throw RuntimeException(e)// trowing it again
                 }
                 if(Serv == 0){
-               print("armor")
-               var item0:ItemStack = ItemStack(Material.IRON_BOOTS, 1)
-                var item1:ItemStack = ItemStack(Material.IRON_HELMET, 1)
-                var item2:ItemStack = ItemStack(Material.IRON_LEGGINGS, 1)
-                var item3:ItemStack = ItemStack(Material.IRON_CHESTPLATE, 1)
-                var item4:ItemStack = ItemStack(Material.BLAZE_ROD, 1)
-                var item5:ItemStack = ItemStack(Material.IRON_CHESTPLATE, 1)
-                var item6:ItemStack = ItemStack(Material.BARRIER, 1)
-                p.inventory.setItem(0, item4)
-                p.inventory.setItem(1, item0)
-                p.inventory.setItem(2, item1)
-                p.inventory.setItem(3, item2)
-                p.inventory.setItem(4, item3)
-                p.inventory.setItem(5, item5)
-                p.inventory.setItem(6, item4)
-                p.inventory.setItem(7, item6)
+               print("potion")
                         
             }
         }
     }
 }
+
 }

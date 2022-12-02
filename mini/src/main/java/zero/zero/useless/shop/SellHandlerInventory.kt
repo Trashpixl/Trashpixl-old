@@ -1,4 +1,5 @@
-package zero.zero.handler //the package for this project
+package zero.zero.useless.shop //the package for this project
+
 //the import for this project
 
 import org.bukkit.Bukkit //import for the bukkit plugin base model

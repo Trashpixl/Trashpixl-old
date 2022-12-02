@@ -1,4 +1,5 @@
-package zero.zero.handler //the package for this project
+package zero.zero.useless.shop //the package for this project
+
 
 
 import org.bukkit.Bukkit //importing bukkit
@@ -15,14 +16,14 @@ import java.io.IOException //importing the ioexeption class
 import java.util.* //importing all the java utils class
 
 
-class Exit (plugin: Zero?) : Listener {//creating the class 
+class Deco (plugin: Zero?) : Listener {//creating the class 
     init { //the constructor of this handler
         Bukkit.getPluginManager().registerEvents(this, plugin!!)//init the plugin
     }
     @EventHandler //say that it is an event handler
     fun buttonHandler(e: PlayerInteractEvent) { //describes what the event is
         if (e.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
-            if (e.clickedBlock!!.type == Material.BARRIER) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
+            if (e.clickedBlock!!.type == Material.RED_TULIP) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 val fileName = "Server.txt"// creating the file name var 
                 val actualFile = File(fileName)// creating the file 
                 var Serv = 0// creating the actual data var
@@ -41,8 +42,7 @@ class Exit (plugin: Zero?) : Listener {//creating the class
                     throw RuntimeException(e)// trowing it again
                 }
                 if(Serv == 0){
-                    print("exit")
-               
+               print("deco")
                         
             }
         }
