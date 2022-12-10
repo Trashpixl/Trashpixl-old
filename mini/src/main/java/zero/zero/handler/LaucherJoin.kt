@@ -96,6 +96,9 @@ class LauncherJoin (plugin: Zero?) : Listener { // the implements for the listen
                                 throw RuntimeException(e)// trowing the exeption
                             }
                         }
+                        else{
+                            p.sendMessage("check the file path big")
+                        }
                     } catch (e: IOException) {// catching the exeption
                         throw RuntimeException(e)// trowing it again
                     }

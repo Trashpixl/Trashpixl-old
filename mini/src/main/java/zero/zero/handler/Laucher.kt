@@ -30,7 +30,7 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
     @EventHandler// define that it is an event handler
     fun buttonHandler(ev: PlayerInteractEvent) { //describes what the event is
         if (ev.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
-            ev.player.sendMessage("click")
+          
             val fileName = "Server.txt"// creating the file name var 
                 val actualFile = File(fileName)// creating the file 
                 var Serv = 0// creating the actual data var
@@ -54,13 +54,13 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                     throw RuntimeException(e)// trowing it again
                 }
                 if(Serv == 2){
-                    ev.player.sendMessage("=2")
+                    
             if (ev.clickedBlock!!.type == Material.WHITE_TERRACOTTA) { //compare what the player sept on to white terracotta and is required a non-nullable
-                ev.player.sendMessage("test")
+                
 
                for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
                
-               
+                p2.sendMessage("run command /server mini")
                             
                }
                             val fileName2 = "S:\\Mini.txt"// creating the file name var 
@@ -88,7 +88,7 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
             
                 if (ev.clickedBlock!!.type == Material.ORANGE_TERRACOTTA) {//if the block is orange terracotta
                     for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
-                        Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
+                        p2.sendMessage("run command /server mini")
                     }
                     val fileName2 = "S:\\Mini.txt"// creating the file name var 
                     val actualFile2 = File(fileName2)// creating the file 
@@ -114,7 +114,7 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                 
                     if (ev.clickedBlock!!.type == Material.MAGENTA_TERRACOTTA) {//check if the block is magenta terracotta
                         for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
-                            Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
+                            p2.sendMessage("run command /server mini")
                         }
                         val fileName2 = "S:\\Mini.txt"// creating the file name var 
                         val actualFile2 = File(fileName2)// creating the file 
@@ -140,7 +140,7 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                     
                         if (ev.clickedBlock!!.type == Material.LIGHT_BLUE_TERRACOTTA) {//check if the block is light blue terracotta
                             for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
-                                Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
+                                p2.sendMessage("run command /server mini")
                             }
                             val fileName2 = "S:\\Mini.txt"// creating the file name var 
                             val actualFile2 = File(fileName2)// creating the file 
@@ -166,7 +166,7 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                         
                             if (ev.clickedBlock!!.type == Material.YELLOW_TERRACOTTA) {//check if the block is yellow terracotta
                                 for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
-                                    Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
+                                    p2.sendMessage("run command /server mini")
                                 }
                                 val fileName2 = "S:\\Mini.txt"// creating the file name var 
                                 val actualFile2 = File(fileName2)// creating the file 
@@ -191,7 +191,7 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                                 
                                 if (ev.clickedBlock!!.type == Material.LIME_TERRACOTTA) {//check if the block is lime terracotta
                                     for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
-                                        Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
+                                        p2.sendMessage("run command /server mini")
                                     }
                                     val fileName2 = "S:\\Mini.txt"// creating the file name var 
                                     val actualFile2 = File(fileName2)// creating the file 
@@ -229,7 +229,7 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                                 */
                                 if (ev.clickedBlock!!.type == Material.LIGHT_GRAY_TERRACOTTA) {//check if the block is light gray terracotta
                                     for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
-                                        Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
+                                        p2.sendMessage("run command /server mini")
                                     }
                                     val fileName2 = "S:\\Mini.txt"// creating the file name var 
                                     val actualFile2 = File(fileName2)// creating the file 
@@ -267,7 +267,7 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                                     */
                                     if (ev.clickedBlock!!.type == Material.BLUE_TERRACOTTA) {//check if the block is blue terracotta
                                         for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
-                                            Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
+                                            p2.sendMessage("run command /server mini")
                                         }
                                         val fileName2 = "S:\\Mini.txt"// creating the file name var 
                                         val actualFile2 = File(fileName2)// creating the file 
@@ -365,7 +365,7 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                                         */
                                         if (ev.clickedBlock!!.type == Material.BLACK_CONCRETE) {//check if the block is black concrete
                                             for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
-                                                Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
+                                                p2.sendMessage("run command /server mini")
                                             }
                                             val fileName2 = "S:\\Mini.txt"// creating the file name var 
                                             val actualFile2 = File(fileName2)// creating the file 
