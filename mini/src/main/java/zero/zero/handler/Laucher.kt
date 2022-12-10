@@ -7,11 +7,18 @@ import org.bukkit.event.EventHandler //importing the event handler class
 import org.bukkit.event.Listener //importing the event listenner class
 import org.bukkit.event.block.Action //importing the block action class to get if they set on a block
 import org.bukkit.event.player.PlayerInteractEvent //importing the player interacte event to get if they click on something
+import org.bukkit.command.ProxiedCommandSender
 import zero.zero.Zero //importing zero
 import java.io.File// importing the java file var
 import java.io.FileWriter// importing the filewriter
 import java.io.IOException// imprting the io exeption
+import java.io.ByteArrayOutputStream
+import java.io.DataOutputStream
 import java.util.*// importing all the java util class
+
+
+import com.google.common.io.ByteArrayDataOutput;
+import com.google.common.io.ByteStreams;
 
 
 class Laucher(plugin: Zero?) : Listener {// creating the class and extending it with the main class and implement the listener
@@ -23,7 +30,7 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
     @EventHandler// define that it is an event handler
     fun buttonHandler(ev: PlayerInteractEvent) { //describes what the event is
         if (ev.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
-            print("click")
+            ev.player.sendMessage("click")
             val fileName = "Server.txt"// creating the file name var 
                 val actualFile = File(fileName)// creating the file 
                 var Serv = 0// creating the actual data var
@@ -32,22 +39,29 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                         try {
                             val reader = Scanner(actualFile)//creating the scanner
                             val data = reader.nextLine()// reading the first line
+                            ev.player.sendMessage(data)
                             Serv = data.toInt()// converting the data to an int
                             reader.close()// closing the reader
                         } catch (e: IOException) {// catching the exeption 
                             throw RuntimeException(e)// trowing the exeption
                         }
                     }
+                    else{
+                        ev.player.sendMessage("check the fucking filename dumb ass")
+                    }
+                    
                 } catch (e: IOException) {// catching the exeption
                     throw RuntimeException(e)// trowing it again
                 }
                 if(Serv == 2){
-                    print("=2")
+                    ev.player.sendMessage("=2")
             if (ev.clickedBlock!!.type == Material.WHITE_TERRACOTTA) { //compare what the player sept on to white terracotta and is required a non-nullable
-                print("test")
+                ev.player.sendMessage("test")
 
                for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
-                            Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
+               
+               
+                            
                }
                             val fileName2 = "S:\\Mini.txt"// creating the file name var 
                             val actualFile2 = File(fileName2)// creating the file 

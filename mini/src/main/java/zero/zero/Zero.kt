@@ -4,6 +4,7 @@ import java.io.File // importing java file class for writing the file
 import java.io.FileWriter // importing the file writer
 import java.io.IOException // importing the io exeption class
 import org.bukkit.plugin.java.JavaPlugin
+import org.bukkit.entity.Player
 import zero.zero.command.* // importing all the command
 //import zero.zero.command.store.* // import all the class in store
 import zero.zero.handler.* // importing all the handler
@@ -13,11 +14,12 @@ import java.util.* // importing all the java util class
 class Zero : JavaPlugin() {
     // creating the main class
     override fun onEnable() { // plugin startup logic
+        getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
         val fileName = "Minigame.txt" // creating the file name variable
         val actualFile = File(fileName) // creating the file variable
         //val fileName2 = "Store.txt"
         //val actualFile2 = File(fileName2)
-        print("good jar")
+        logger.info("good jar ") // say that it's starting the plugin
         LauncherJoin(this)
         Death(this) // init the death handler
         RaceTimer(this) // init the race timer handler
@@ -59,7 +61,8 @@ class Zero : JavaPlugin() {
         if(Serv == 0){
         
         }
-         if(Serv == 1){       
+         if(Serv == 1){   
+                 
         this.getCommand("onCommandPvp")
                 ?.setExecutor(OnCommandPvp()) // init the command for the pvp game
         this.getCommand("onCommandTnt")
@@ -155,5 +158,8 @@ class Zero : JavaPlugin() {
     }
     override fun onDisable() {
         // Plugin shutdown logic
+        this.getServer().getMessenger().unregisterOutgoingPluginChannel(this);
+        this.getServer().getMessenger().unregisterIncomingPluginChannel(this);
     }
+    
 }
