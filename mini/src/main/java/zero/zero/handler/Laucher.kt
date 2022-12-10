@@ -23,6 +23,7 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
     @EventHandler// define that it is an event handler
     fun buttonHandler(ev: PlayerInteractEvent) { //describes what the event is
         if (ev.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
+            print("click")
             val fileName = "Server.txt"// creating the file name var 
                 val actualFile = File(fileName)// creating the file 
                 var Serv = 0// creating the actual data var
@@ -41,7 +42,10 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                     throw RuntimeException(e)// trowing it again
                 }
                 if(Serv == 2){
+                    print("=2")
             if (ev.clickedBlock!!.type == Material.WHITE_TERRACOTTA) { //compare what the player sept on to white terracotta and is required a non-nullable
+                print("test")
+
                for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
                             Bukkit.dispatchCommand(p2, "server mini")// tp to the world server
                }

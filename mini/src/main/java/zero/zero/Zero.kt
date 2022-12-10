@@ -17,7 +17,7 @@ class Zero : JavaPlugin() {
         val actualFile = File(fileName) // creating the file variable
         //val fileName2 = "Store.txt"
         //val actualFile2 = File(fileName2)
-
+        print("good jar")
         LauncherJoin(this)
         Death(this) // init the death handler
         RaceTimer(this) // init the race timer handler
@@ -28,6 +28,7 @@ class Zero : JavaPlugin() {
         Laucher(this) // init the laucher handler
         FirstToFinish(this) // init the first to finish handler
         Punch(this) // init the punch handler
+        Laucher(this)
         /*Exit(this)
         Tool(this)
         Food(this)
