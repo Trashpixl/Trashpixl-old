@@ -23,6 +23,7 @@ class LauncherJoin (plugin: Zero?) : Listener { // the implements for the listen
     @EventHandler
     fun pressurePlateHandler(ev: PlayerJoinEvent) { //describes what the event is
                 val p = ev.player //create the local player id
+                //p.connect("mini")
                 val fileName = "Server.txt"// creating the file name var 
                 val actualFile = File(fileName)// creating the file 
                 var Serv = 0// creating the actual data var
@@ -86,11 +87,13 @@ class LauncherJoin (plugin: Zero?) : Listener { // the implements for the listen
                             p.sendMessage("check the file path big")
                         }
                 }
-                catch (e: IOException) {// catching the exeption
-                    throw RuntimeException(e)// trowing it again
-                }
             }
-            
+        }
+        catch(e: IOException) {// catching the exeption
+            throw RuntimeException(e)// trowing it again
         }
     }
+}
+}
+
    
