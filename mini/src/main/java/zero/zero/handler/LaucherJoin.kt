@@ -83,17 +83,18 @@ class LauncherJoin (plugin: Zero?) : Listener { // the implements for the listen
                                 if(Mini == 10){
                                    
                                 } 
-                        else{
-                            p.sendMessage("check the file path big")
-                        }
+                            }
+                                catch(e: IOException) {// catching the exeption
+                                    throw RuntimeException(e)// trowing it again
+                                }
                 }
             }
+            catch(e: IOException) {// catching the exeption
+                throw RuntimeException(e)// trowing it again
+            }
         }
-        catch(e: IOException) {// catching the exeption
-            throw RuntimeException(e)// trowing it again
-        }
+        
     }
-}
 }
 
    
