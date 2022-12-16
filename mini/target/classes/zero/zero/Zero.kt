@@ -14,6 +14,8 @@ import java.util.* // importing all the java util class
 class Zero : JavaPlugin() {
     // creating the main class
     override fun onEnable() { // plugin startup logic
+        server.messenger.registerOutgoingPluginChannel(this, "BungeeCord")
+
         getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
         val fileName = "Minigame.txt" // creating the file name variable
         val actualFile = File(fileName) // creating the file variable

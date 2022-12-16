@@ -61,6 +61,11 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
                
                 p2.sendMessage("run command /server mini")
+                val out = ByteArrayDataOutput()
+                out.writeUTF("Connect")
+                out.writeUTF("server")
+                p2.sendPluginMessage(main, "BungeeCord", out.toByteArray())
+
                             
                }
                             val fileName2 = "S:\\Mini.txt"// creating the file name var 
