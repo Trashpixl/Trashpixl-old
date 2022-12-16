@@ -15,10 +15,9 @@ import java.io.IOException// imprting the io exeption
 import java.io.ByteArrayOutputStream
 import java.io.DataOutputStream
 import java.util.*// importing all the java util class
+import com.google.common.io.ByteArrayDataOutput
+import com.google.common.io.ByteStreams
 
-
-import com.google.common.io.ByteArrayDataOutput;
-import com.google.common.io.ByteStreams;
 
 
 class Laucher(plugin: Zero?) : Listener {// creating the class and extending it with the main class and implement the listener
@@ -61,11 +60,10 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                for (p2 in Bukkit.getServer().onlinePlayers) {//taking all the player 
                
                 p2.sendMessage("run command /server mini")
-                val out = ByteArrayDataOutput()
+                val out = ByteStreams.newDataOutput()
                 out.writeUTF("Connect")
-                out.writeUTF("server")
-                p2.sendPluginMessage(main, "BungeeCord", out.toByteArray())
-
+                out.writeUTF("mini")
+                p2.sendPluginMessage(Zero(), "BungeeCord", out.toByteArray())
                             
                }
                             val fileName2 = "S:\\Mini.txt"// creating the file name var 
