@@ -8,6 +8,7 @@ import org.bukkit.event.Listener //importing the event listenner class
 import org.bukkit.event.block.Action //importing the block action class to get if they set on a block
 import org.bukkit.event.player.PlayerInteractEvent //importing the player interacte event to get if they click on something
 import org.bukkit.command.ProxiedCommandSender
+import org.bukkit.plugin.java.JavaPlugin
 import zero.zero.Zero //importing zero
 import java.io.File// importing the java file var
 import java.io.FileWriter// importing the filewriter
@@ -20,14 +21,15 @@ import com.google.common.io.ByteStreams
 
 
 
-class Laucher(plugin: Zero?) : Listener {// creating the class and extending it with the main class and implement the listener
+class Laucher(plugin: Zero?, main:JavaPlugin) : Listener {// creating the class and extending it with the main class and implement the listener
     // the implements for the listener
+    public var mainPlugin = main
     init { //the constructor of this handler
         Bukkit.getPluginManager().registerEvents(this, plugin!!)//init the handler
     }
     
     @EventHandler// define that it is an event handler
-    fun buttonHandler(ev: PlayerInteractEvent) { //describes what the event is
+    fun buttonHandler(ev: PlayerInteractEvent ) { //describes what the event is
         if (ev.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
           
             val fileName = "Server.txt"// creating the file name var 
@@ -63,7 +65,7 @@ class Laucher(plugin: Zero?) : Listener {// creating the class and extending it 
                 val out = ByteStreams.newDataOutput()
                 out.writeUTF("Connect")
                 out.writeUTF("mini")
-                p2.sendPluginMessage(Zero(), "BungeeCord", out.toByteArray())
+                p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
                             
                }
                             val fileName2 = "S:\\Mini.txt"// creating the file name var 
