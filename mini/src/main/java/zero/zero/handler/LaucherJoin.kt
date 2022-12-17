@@ -83,11 +83,14 @@ class LauncherJoin (plugin: Zero?) : Listener { // the implements for the listen
                                 if(Mini == 10){
                                    
                                 } 
+                                else{p.sendMessage("equal nothing")}
                             }
+                            
                                 catch(e: IOException) {// catching the exeption
                                     throw RuntimeException(e)// trowing it again
                                 }
                 }
+                else{p.sendMessage("exist")}
             }
             catch(e: IOException) {// catching the exeption
                 throw RuntimeException(e)// trowing it again
