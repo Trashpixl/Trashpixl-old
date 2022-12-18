@@ -7,15 +7,17 @@ import org.bukkit.event.EventHandler //import the event handler
 import org.bukkit.event.Listener //import all the listener
 import org.bukkit.event.block.Action //import the action related to the block
 import org.bukkit.event.player.PlayerInteractEvent //import the action related to the player
+import org.bukkit.plugin.java.JavaPlugin
 import zero.zero.Zero //import zero
 import java.io.File //importing the java file var
 import java.io.FileWriter //importing the filewriter
 import java.io.IOException //imprting the io exeption
 import java.util.* //importing all the java util class
+import com.google.common.io.ByteStreams
 
 
-class PlateHandler (plugin: Zero?) : Listener { // the implements for the listener
-
+class PlateHandler (plugin: Zero?, main:JavaPlugin) : Listener { // the implements for the listener
+val mainPlugin = main
     init { //the constructor of this handler
         Bukkit.getPluginManager().registerEvents(this, plugin!!)//init the plugin
     }
@@ -44,7 +46,10 @@ class PlateHandler (plugin: Zero?) : Listener { // the implements for the listen
                 }
                 if(Serv == 0){
                     
-                    Bukkit.dispatchCommand(p, "server lobby") //dispatch the command to the player so he tp itself
+                    val out = ByteStreams.newDataOutput()
+                    out.writeUTF("Connect")
+                    out.writeUTF("mini")
+                    p.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
                 }
             }
         }

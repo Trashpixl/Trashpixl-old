@@ -7,14 +7,17 @@ import org.bukkit.entity.Player// importing the player enttity
 import org.bukkit.event.EventHandler// importing the event handler
 import org.bukkit.event.Listener// impoting the litsener
 import org.bukkit.event.entity.PlayerDeathEvent// importing the player death event
+import org.bukkit.plugin.java.JavaPlugin
 import zero.zero.Zero// impoting the whole package
 import java.io.File// importing the java file var
 import java.io.FileWriter// importing the filewriter
 import java.io.IOException// imprting the io exeption
 import java.util.*// importing all the java util class
+import com.google.common.io.ByteStreams
 
 
-class Death(plugin: Zero?) : Listener {// creating the class death and implementing the listener
+class Death(plugin: Zero?, main:JavaPlugin) : Listener {// creating the class death and implementing the listener
+    val mainPlugin = main
 // the implements for the listener
 init { //the constructor of this handler
     Bukkit.getPluginManager().registerEvents(this, plugin!!)//linking it to the main code
@@ -80,7 +83,11 @@ init { //the constructor of this handler
                 }
                 for (p in getServer().onlinePlayers) {// geting all the player in the server
                    
-                        Bukkit.dispatchCommand(p, "server lobby")// if they are in the right world tp them in the lobby
+                        //Bukkit.dispatchCommand(p, "server lobby")// if they are in the right world tp them in the lobby
+                        val out = ByteStreams.newDataOutput()
+                        out.writeUTF("Connect")
+                        out.writeUTF("mini")
+                        p.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
                     
                 }
 

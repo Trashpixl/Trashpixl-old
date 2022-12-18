@@ -23,11 +23,11 @@ class Zero : JavaPlugin() {
         //val actualFile2 = File(fileName2)
         logger.info("good jar ") // say that it's starting the plugin
         LauncherJoin(this)
-        Death(this) // init the death handler
+        Death(this, this) // init the death handler
         RaceTimer(this) // init the race timer handler
         Loot(this) // init the loot handler
         //SellHandlerInventory(this) // init the sell handler
-        PlateHandler(this) // init the plate handler
+        PlateHandler(this, this) // init the plate handler
         WoodPlateHandler(this) // init the wood plate handler
         Laucher(this, this) // init the laucher handler
         FirstToFinish(this) // init the first to finish handler
