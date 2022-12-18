@@ -53,7 +53,6 @@ class LauncherJoin (plugin: Zero?) : Listener { // the implements for the listen
                                 Mini = data2.toInt()// converting the data to an int
                                 reader2.close()// closing the reader
                                 if(Mini == 1){
-                                    print("mini 1!!")
                                     Bukkit.dispatchCommand(p, "oncommandpvp")//dispatchCommand for parkour
                                 }
                                 if(Mini == 2){
