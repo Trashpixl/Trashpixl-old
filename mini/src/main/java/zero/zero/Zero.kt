@@ -29,10 +29,10 @@ class Zero : JavaPlugin() {
         //SellHandlerInventory(this) // init the sell handler
         PlateHandler(this) // init the plate handler
         WoodPlateHandler(this) // init the wood plate handler
-        Laucher(this) // init the laucher handler
+        Laucher(this, this) // init the laucher handler
         FirstToFinish(this) // init the first to finish handler
         Punch(this) // init the punch handler
-        Laucher(this)
+        
         /*Exit(this)
         Tool(this)
         Food(this)
