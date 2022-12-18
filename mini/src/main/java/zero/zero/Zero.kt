@@ -21,7 +21,7 @@ class Zero : JavaPlugin() {
         //val fileName2 = "Store.txt"
         //val actualFile2 = File(fileName2)
         logger.info("good jar ") //say that it's starting the plugin
-        LauncherJoin(this)
+        LauncherJoin(this) //init the launcher
         Death(this, this) //init the death handler
         RaceTimer(this) //init the race timer handler
         Loot(this) //init the loot handler
@@ -59,10 +59,10 @@ class Zero : JavaPlugin() {
         } catch (e: IOException) {//catching the exeption
             throw RuntimeException(e)//trowing it again
         }
-        if(Serv == 0){
+        if(Serv == 0){ //check if server equals 0
         
         }
-         if(Serv == 1){   
+         if(Serv == 1){ //check if server equal 1
                  
         this.getCommand("onCommandPvp")
                 ?.setExecutor(OnCommandPvp()) //init the command for the pvp game
@@ -115,8 +115,7 @@ class Zero : JavaPlugin() {
                 ?.setExecutor(OnCommandLabi()) //init the command for the tag
          }
         try { //trying the following code
-            if (actualFile.exists() && actualFile.isFile
-            ) { //check if the file existlachancethierry6@gmail.com
+            if (actualFile.exists() && actualFile.isFile) { //check if the file exist
             } else {
                 if (actualFile.createNewFile()) { //creating the new file
                     val dataToWrite = "0" //creating the data to write var
@@ -159,8 +158,8 @@ class Zero : JavaPlugin() {
     }
     override fun onDisable() {
         //Plugin shutdown logic
-        this.getServer().getMessenger().unregisterOutgoingPluginChannel(this)
-        this.getServer().getMessenger().unregisterIncomingPluginChannel(this)
+        this.getServer().getMessenger().unregisterOutgoingPluginChannel(this) //unregister the chanel
+        this.getServer().getMessenger().unregisterIncomingPluginChannel(this) //unregister the chanel
     }
     
 }
