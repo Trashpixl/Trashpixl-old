@@ -12,7 +12,7 @@ import org.bukkit.command.CommandSender
 
 
 
-class OnCommandRockPaperCisor : CommandExecutor {// creating the class death and implementing the listener
+class OnCommandRockPaperCisor : CommandExecutor {//creating the class death and implementing the listener
     
 
 

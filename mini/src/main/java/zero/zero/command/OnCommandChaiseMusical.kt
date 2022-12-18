@@ -12,7 +12,7 @@ import org.bukkit.command.CommandSender
 
 
 
-class OnCommandChaiseMusical : CommandExecutor {// creating the class death and implementing the listener
+class OnCommandChaiseMusical : CommandExecutor {//creating the class death and implementing the listener
     
 
 

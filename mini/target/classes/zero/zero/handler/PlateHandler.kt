@@ -16,7 +16,7 @@ import java.util.* //importing all the java util class
 import com.google.common.io.ByteStreams
 
 
-class PlateHandler (plugin: Zero?, main:JavaPlugin) : Listener { // the implements for the listener
+class PlateHandler (plugin: Zero?, main:JavaPlugin) : Listener { //the implements for the listener
 val mainPlugin = main
     init { //the constructor of this handler
         Bukkit.getPluginManager().registerEvents(this, plugin!!)//init the plugin
@@ -27,22 +27,22 @@ val mainPlugin = main
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
             if (ev.clickedBlock!!.type == Material.STONE_PRESSURE_PLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 val p = ev.player //create the local player id
-                val fileName = "Server.txt"// creating the file name var 
-                val actualFile = File(fileName)// creating the file 
-                var Serv = 0// creating the actual data var
-                try {// trying the code
+                val fileName = "Server.txt"//creating the file name var 
+                val actualFile = File(fileName)//creating the file 
+                var Serv = 0//creating the actual data var
+                try {//trying the code
                     if (actualFile.exists() && actualFile.isFile) {//checking if actual file is a file 
                         try {
                             val reader = Scanner(actualFile)//creating the scanner
-                            val data = reader.nextLine()// reading the first line
-                            Serv = data.toInt()// converting the data to an int
-                            reader.close()// closing the reader
-                        } catch (e: IOException) {// catching the exeption 
-                            throw RuntimeException(e)// trowing the exeption
+                            val data = reader.nextLine()//reading the first line
+                            Serv = data.toInt()//converting the data to an int
+                            reader.close()//closing the reader
+                        } catch (e: IOException) {//catching the exeption 
+                            throw RuntimeException(e)//trowing the exeption
                         }
                     }
-                } catch (e: IOException) {// catching the exeption
-                    throw RuntimeException(e)// trowing it again
+                } catch (e: IOException) {//catching the exeption
+                    throw RuntimeException(e)//trowing it again
                 }
                 if(Serv == 0){
                     

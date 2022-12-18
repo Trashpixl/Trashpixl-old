@@ -25,22 +25,22 @@ class Armor (plugin: Zero?) : Listener {//creating the class
         if (e.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
             if (e.clickedBlock!!.type == Material.IRON_CHESTPLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 val p = e.player
-                val fileName = "Server.txt"// creating the file name var 
-                val actualFile = File(fileName)// creating the file 
-                var Serv = 0// creating the actual data var
-                try {// trying the code
+                val fileName = "Server.txt"//creating the file name var 
+                val actualFile = File(fileName)//creating the file 
+                var Serv = 0//creating the actual data var
+                try {//trying the code
                     if (actualFile.exists() && actualFile.isFile) {//checking if actual file is a file 
                         try {
                             val reader = Scanner(actualFile)//creating the scanner
-                            val data = reader.nextLine()// reading the first line
-                            Serv = data.toInt()// converting the data to an int
-                            reader.close()// closing the reader
-                        } catch (e: IOException) {// catching the exeption 
-                            throw RuntimeException(e)// trowing the exeption
+                            val data = reader.nextLine()//reading the first line
+                            Serv = data.toInt()//converting the data to an int
+                            reader.close()//closing the reader
+                        } catch (e: IOException) {//catching the exeption 
+                            throw RuntimeException(e)//trowing the exeption
                         }
                     }
-                } catch (e: IOException) {// catching the exeption
-                    throw RuntimeException(e)// trowing it again
+                } catch (e: IOException) {//catching the exeption
+                    throw RuntimeException(e)//trowing it again
                 }
                 if(Serv == 0){
                print("armor")

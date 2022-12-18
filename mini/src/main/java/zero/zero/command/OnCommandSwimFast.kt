@@ -12,7 +12,7 @@ import org.bukkit.command.CommandSender
 
 
 
-class OnCommandSwimFast : CommandExecutor {// creating the class death and implementing the listener
+class OnCommandSwimFast : CommandExecutor {//creating the class death and implementing the listener
     
 
 

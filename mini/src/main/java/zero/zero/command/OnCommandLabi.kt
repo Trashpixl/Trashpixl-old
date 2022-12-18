@@ -11,7 +11,7 @@ import java.io.FileWriter //to write the file
 import java.io.IOException //import ioexeption
 import java.lang.RuntimeException //import the runtime exeption
 
-class OnCommandLabi : CommandExecutor {// creating the class death and implementing the listener
+class OnCommandLabi : CommandExecutor {//creating the class death and implementing the listener
     
 
 

@@ -10,19 +10,19 @@ import org.bukkit.event.player.PlayerInteractEvent //importing the player intera
 import org.bukkit.command.ProxiedCommandSender
 import org.bukkit.plugin.java.JavaPlugin
 import zero.zero.Zero //importing zero
-import java.io.File// importing the java file var
-import java.io.FileWriter// importing the filewriter
-import java.io.IOException// imprting the io exeption
+import java.io.File//importing the java file var
+import java.io.FileWriter//importing the filewriter
+import java.io.IOException//imprting the io exeption
 import java.io.ByteArrayOutputStream
 import java.io.DataOutputStream
-import java.util.*// importing all the java util class
+import java.util.*//importing all the java util class
 import com.google.common.io.ByteArrayDataOutput
 import com.google.common.io.ByteStreams
 
 
 
-class Laucher(plugin: Zero?, main:JavaPlugin) : Listener {// creating the class and extending it with the main class and implement the listener
-    // the implements for the listener
+class Laucher(plugin: Zero?, main:JavaPlugin) : Listener {//creating the class and extending it with the main class and implement the listener
+    //the implements for the listener
     public var mainPlugin = main
     init { //the constructor of this handler
         Bukkit.getPluginManager().registerEvents(this, plugin!!)//init the handler
@@ -32,24 +32,24 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener {// creating the class 
     fun buttonHandler(ev: PlayerInteractEvent ) { //describes what the event is
         if (ev.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
           
-            val fileName = "Server.txt"// creating the file name var 
-                val actualFile = File(fileName)// creating the file 
-                var Serv = 0// creating the actual data var
-                try {// trying the code
+            val fileName = "Server.txt"//creating the file name var 
+                val actualFile = File(fileName)//creating the file 
+                var Serv = 0//creating the actual data var
+                try {//trying the code
                     if (actualFile.exists() && actualFile.isFile) {//checking if actual file is a file 
                         try {
                             val reader = Scanner(actualFile)//creating the scanner
-                            val data = reader.nextLine()// reading the first line
-                            Serv = data.toInt()// converting the data to an int
-                            reader.close()// closing the reader
-                        } catch (e: IOException) {// catching the exeption 
-                            throw RuntimeException(e)// trowing the exeption
+                            val data = reader.nextLine()//reading the first line
+                            Serv = data.toInt()//converting the data to an int
+                            reader.close()//closing the reader
+                        } catch (e: IOException) {//catching the exeption 
+                            throw RuntimeException(e)//trowing the exeption
                         }
                     }
                     
                     
-                } catch (e: IOException) {// catching the exeption
-                    throw RuntimeException(e)// trowing it again
+                } catch (e: IOException) {//catching the exeption
+                    throw RuntimeException(e)//trowing it again
                 }
                 if(Serv == 2){
                     
@@ -64,23 +64,23 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener {// creating the class 
                 p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
                             
                }
-                            val fileName2 = "S:\\Mini.txt"// creating the file name var 
-                            val actualFile2 = File(fileName2)// creating the file 
+                            val fileName2 = "S:\\Mini.txt"//creating the file name var 
+                            val actualFile2 = File(fileName2)//creating the file 
                             
-                            try {// trying the code
-                                if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
-                                    val dataToWrite = "1"// creating the data to write var
+                            try {//trying the code
+                                if (actualFile2.exists() && actualFile2.isFile) {//checking if the file exist
+                                    val dataToWrite = "1"//creating the data to write var
                                     val myWriter: FileWriter //create the file writer
                                     try {//trying the code
                                         myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
                                         myWriter.write(dataToWrite)//writing the data to the file
                                         myWriter.close()//closing the writer
-                                    } catch (e: IOException) {// catching the exeption
-                                        throw RuntimeException(e)// trowing the exeption
+                                    } catch (e: IOException) {//catching the exeption
+                                        throw RuntimeException(e)//trowing the exeption
                                     }
                                 }
                             } catch (e: IOException) {//catching the exeption
-                                throw RuntimeException(e)// throwing the exeption 
+                                throw RuntimeException(e)//throwing the exeption 
                             }
                         
                         //Bukkit.dispatchCommand(p, "oncommandpvp")//dispatchCommand for parkour
@@ -95,23 +95,23 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener {// creating the class 
                         out.writeUTF("mini")
                         p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
                     }
-                    val fileName2 = "S:\\Mini.txt"// creating the file name var 
-                    val actualFile2 = File(fileName2)// creating the file 
+                    val fileName2 = "S:\\Mini.txt"//creating the file name var 
+                    val actualFile2 = File(fileName2)//creating the file 
                     
-                    try {// trying the code
-                        if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
-                            val dataToWrite = "2"// creating the data to write var
+                    try {//trying the code
+                        if (actualFile2.exists() && actualFile2.isFile) {//checking if the file exist
+                            val dataToWrite = "2"//creating the data to write var
                             val myWriter: FileWriter //create the file writer
                             try {//trying the code
                                 myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
                                 myWriter.write(dataToWrite)//writing the data to the file
                                 myWriter.close()//closing the writer
-                            } catch (e: IOException) {// catching the exeption
-                                throw RuntimeException(e)// trowing the exeption
+                            } catch (e: IOException) {//catching the exeption
+                                throw RuntimeException(e)//trowing the exeption
                             }
                         }
                     } catch (e: IOException) {//catching the exeption
-                        throw RuntimeException(e)// throwing the exeption 
+                        throw RuntimeException(e)//throwing the exeption 
                     }
                             //Bukkit.dispatchCommand(p, "oncommandpvpsumo")//dispatchCommand for parkour
                         }
@@ -124,23 +124,23 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener {// creating the class 
                             out.writeUTF("mini")
                             p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
                         }
-                        val fileName2 = "S:\\Mini.txt"// creating the file name var 
-                        val actualFile2 = File(fileName2)// creating the file 
+                        val fileName2 = "S:\\Mini.txt"//creating the file name var 
+                        val actualFile2 = File(fileName2)//creating the file 
                         
-                        try {// trying the code
-                            if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
-                                val dataToWrite = "3"// creating the data to write var
+                        try {//trying the code
+                            if (actualFile2.exists() && actualFile2.isFile) {//checking if the file exist
+                                val dataToWrite = "3"//creating the data to write var
                                 val myWriter: FileWriter //create the file writer
                                 try {//trying the code
                                     myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
                                     myWriter.write(dataToWrite)//writing the data to the file
                                     myWriter.close()//closing the writer
-                                } catch (e: IOException) {// catching the exeption
-                                    throw RuntimeException(e)// trowing the exeption
+                                } catch (e: IOException) {//catching the exeption
+                                    throw RuntimeException(e)//trowing the exeption
                                 }
                             }
                         } catch (e: IOException) {//catching the exeption
-                            throw RuntimeException(e)// throwing the exeption 
+                            throw RuntimeException(e)//throwing the exeption 
                         }
                                 //Bukkit.dispatchCommand(p, "oncommandpvpbow")//dispatchCommand for parkour
                             
@@ -153,25 +153,25 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener {// creating the class 
                                 out.writeUTF("mini")
                                 p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
                             }
-                            val fileName2 = "S:\\Mini.txt"// creating the file name var 
-                            val actualFile2 = File(fileName2)// creating the file 
+                            val fileName2 = "S:\\Mini.txt"//creating the file name var 
+                            val actualFile2 = File(fileName2)//creating the file 
                             
-                            try {// trying the code
-                                if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
-                                    val dataToWrite = "4"// creating the data to write var
+                            try {//trying the code
+                                if (actualFile2.exists() && actualFile2.isFile) {//checking if the file exist
+                                    val dataToWrite = "4"//creating the data to write var
                                     val myWriter: FileWriter //create the file writer
                                     try {//trying the code
                                         myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
                                         myWriter.write(dataToWrite)//writing the data to the file
                                         myWriter.close()//closing the writer
-                                    } catch (e: IOException) {// catching the exeption
-                                        throw RuntimeException(e)// trowing the exeption
+                                    } catch (e: IOException) {//catching the exeption
+                                        throw RuntimeException(e)//trowing the exeption
                                     }
                                 }
                             } catch (e: IOException) {//catching the exeption
-                                throw RuntimeException(e)// throwing the exeption 
+                                throw RuntimeException(e)//throwing the exeption 
                             }
-                                   // Bukkit.dispatchCommand(p, "oncommandpvploot")//dispatchCommand for parkour
+                                   //Bukkit.dispatchCommand(p, "oncommandpvploot")//dispatchCommand for parkour
                                 }
                             
                         
@@ -182,25 +182,25 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener {// creating the class 
                                     out.writeUTF("mini")
                                     p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
                                 }
-                                val fileName2 = "S:\\Mini.txt"// creating the file name var 
-                                val actualFile2 = File(fileName2)// creating the file 
+                                val fileName2 = "S:\\Mini.txt"//creating the file name var 
+                                val actualFile2 = File(fileName2)//creating the file 
                                 
-                                try {// trying the code
-                                    if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
-                                        val dataToWrite = "5"// creating the data to write var
+                                try {//trying the code
+                                    if (actualFile2.exists() && actualFile2.isFile) {//checking if the file exist
+                                        val dataToWrite = "5"//creating the data to write var
                                         val myWriter: FileWriter //create the file writer
                                         try {//trying the code
                                             myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
                                             myWriter.write(dataToWrite)//writing the data to the file
                                             myWriter.close()//closing the writer
-                                        } catch (e: IOException) {// catching the exeption
-                                            throw RuntimeException(e)// trowing the exeption
+                                        } catch (e: IOException) {//catching the exeption
+                                            throw RuntimeException(e)//trowing the exeption
                                         }
                                     }
                                 } catch (e: IOException) {//catching the exeption
-                                    throw RuntimeException(e)// throwing the exeption 
+                                    throw RuntimeException(e)//throwing the exeption 
                                 }
-                                       // Bukkit.dispatchCommand(p, "oncommandbridge")//dispatchCommand for bridge
+                                       //Bukkit.dispatchCommand(p, "oncommandbridge")//dispatchCommand for bridge
                                     }
                                 
                                 if (ev.clickedBlock!!.type == Material.LIME_TERRACOTTA) {//check if the block is lime terracotta
@@ -210,25 +210,25 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener {// creating the class 
                                         out.writeUTF("mini")
                                         p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
                                     }
-                                    val fileName2 = "S:\\Mini.txt"// creating the file name var 
-                                    val actualFile2 = File(fileName2)// creating the file 
+                                    val fileName2 = "S:\\Mini.txt"//creating the file name var 
+                                    val actualFile2 = File(fileName2)//creating the file 
                                     
-                                    try {// trying the code
-                                        if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
-                                            val dataToWrite = "6"// creating the data to write var
+                                    try {//trying the code
+                                        if (actualFile2.exists() && actualFile2.isFile) {//checking if the file exist
+                                            val dataToWrite = "6"//creating the data to write var
                                             val myWriter: FileWriter //create the file writer
                                             try {//trying the code
                                                 myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
                                                 myWriter.write(dataToWrite)//writing the data to the file
                                                 myWriter.close()//closing the writer
-                                            } catch (e: IOException) {// catching the exeption
-                                                throw RuntimeException(e)// trowing the exeption
+                                            } catch (e: IOException) {//catching the exeption
+                                                throw RuntimeException(e)//trowing the exeption
                                             }
                                         }
                                     } catch (e: IOException) {//catching the exeption
-                                        throw RuntimeException(e)// throwing the exeption 
+                                        throw RuntimeException(e)//throwing the exeption 
                                     }
-                                           // Bukkit.dispatchCommand(p, "oncommandparkour")//dispatchCommand for parkour
+                                           //Bukkit.dispatchCommand(p, "oncommandparkour")//dispatchCommand for parkour
                                         
                                 }/* 
                                 if (ev.clickedBlock!!.type == Material.PINK_TERRACOTTA) {
@@ -251,23 +251,23 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener {// creating the class 
                                         out.writeUTF("mini")
                                         p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
                                     }
-                                    val fileName2 = "S:\\Mini.txt"// creating the file name var 
-                                    val actualFile2 = File(fileName2)// creating the file 
+                                    val fileName2 = "S:\\Mini.txt"//creating the file name var 
+                                    val actualFile2 = File(fileName2)//creating the file 
                                     
-                                    try {// trying the code
-                                        if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
-                                            val dataToWrite = "7"// creating the data to write var
+                                    try {//trying the code
+                                        if (actualFile2.exists() && actualFile2.isFile) {//checking if the file exist
+                                            val dataToWrite = "7"//creating the data to write var
                                             val myWriter: FileWriter //create the file writer
                                             try {//trying the code
                                                 myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
                                                 myWriter.write(dataToWrite)//writing the data to the file
                                                 myWriter.close()//closing the writer
-                                            } catch (e: IOException) {// catching the exeption
-                                                throw RuntimeException(e)// trowing the exeption
+                                            } catch (e: IOException) {//catching the exeption
+                                                throw RuntimeException(e)//trowing the exeption
                                             }
                                         }
                                     } catch (e: IOException) {//catching the exeption
-                                        throw RuntimeException(e)// throwing the exeption 
+                                        throw RuntimeException(e)//throwing the exeption 
                                     }
                                             //Bukkit.dispatchCommand(p, "oncommandpvpknockback")//dispatchCommand for pvp knock back
                                        
@@ -281,7 +281,7 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener {// creating the class 
                                     if (ev.clickedBlock!!.type == Material.PURPLE_TERRACOTTA) {
                                         if (p.location.world.name.endsWith("lobby_server")) {
                                             p.sendMessage("not available yet")
-                                            //Bukkit.dispatchCommand(p, "oncommandclimbfast")// dispatchCommand for climb fast
+                                            //Bukkit.dispatchCommand(p, "oncommandclimbfast")//dispatchCommand for climb fast
                                         }
                                     }
                                     */
@@ -292,25 +292,25 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener {// creating the class 
                                             out.writeUTF("mini")
                                             p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
                                         }
-                                        val fileName2 = "S:\\Mini.txt"// creating the file name var 
-                                        val actualFile2 = File(fileName2)// creating the file 
+                                        val fileName2 = "S:\\Mini.txt"//creating the file name var 
+                                        val actualFile2 = File(fileName2)//creating the file 
                                         
-                                        try {// trying the code
-                                            if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
-                                                val dataToWrite = "8"// creating the data to write var
+                                        try {//trying the code
+                                            if (actualFile2.exists() && actualFile2.isFile) {//checking if the file exist
+                                                val dataToWrite = "8"//creating the data to write var
                                                 val myWriter: FileWriter //create the file writer
                                                 try {//trying the code
                                                     myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
                                                     myWriter.write(dataToWrite)//writing the data to the file
                                                     myWriter.close()//closing the writer
-                                                } catch (e: IOException) {// catching the exeption
-                                                    throw RuntimeException(e)// trowing the exeption
+                                                } catch (e: IOException) {//catching the exeption
+                                                    throw RuntimeException(e)//trowing the exeption
                                                 }
                                             }
                                         } catch (e: IOException) {//catching the exeption
-                                            throw RuntimeException(e)// throwing the exeption 
+                                            throw RuntimeException(e)//throwing the exeption 
                                         }
-                                               // Bukkit.dispatchCommand(p, "oncommandcpstest")//dispatchCommand for parkour
+                                               //Bukkit.dispatchCommand(p, "oncommandcpstest")//dispatchCommand for parkour
                                            
                                     }/* 
                                         if (ev.clickedBlock!!.type == Material.BROWN_TERRACOTTA) {
@@ -346,7 +346,7 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener {// creating the class 
                                         if (ev.clickedBlock!!.type == Material.STONE_STAIRS) {
                                             if (p.location.world.name.endsWith("lobby_server")) {
                                                 p.sendMessage("not available yet")
-                                               // Bukkit.dispatchCommand(p, "oncommandhideandseek")//dispatchCommand for hide and seek
+                                               //Bukkit.dispatchCommand(p, "oncommandhideandseek")//dispatchCommand for hide and seek
                                             }
                                         }
                                         if (ev.clickedBlock!!.type == Material.STONE_STAIRS) {
@@ -370,7 +370,7 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener {// creating the class 
                                         if (ev.clickedBlock!!.type == Material.STONE_STAIRS) {
                                             if (p.location.world.name.endsWith("lobby_server")) {
                                                 p.sendMessage("not available yet")
-                                               // Bukkit.dispatchCommand(p, "oncommandskywars")//dispatchCommand for skywars
+                                               //Bukkit.dispatchCommand(p, "oncommandskywars")//dispatchCommand for skywars
                                             }
                                         }
                                         if (ev.clickedBlock!!.type == Material.STONE_STAIRS) {
@@ -393,26 +393,26 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener {// creating the class 
                                                 out.writeUTF("mini")
                                                 p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
                                             }
-                                            val fileName2 = "S:\\Mini.txt"// creating the file name var 
-                                            val actualFile2 = File(fileName2)// creating the file 
+                                            val fileName2 = "S:\\Mini.txt"//creating the file name var 
+                                            val actualFile2 = File(fileName2)//creating the file 
                                             
-                                            try {// trying the code
-                                                if (actualFile2.exists() && actualFile2.isFile) {// checking if the file exist
-                                                    val dataToWrite = "9"// creating the data to write var
+                                            try {//trying the code
+                                                if (actualFile2.exists() && actualFile2.isFile) {//checking if the file exist
+                                                    val dataToWrite = "9"//creating the data to write var
                                                     val myWriter: FileWriter //create the file writer
                                                     try {//trying the code
                                                         myWriter = FileWriter(actualFile2)//pointing the writer to the actual file
                                                         myWriter.write(dataToWrite)//writing the data to the file
                                                         myWriter.close()//closing the writer
-                                                    } catch (e: IOException) {// catching the exeption
-                                                        throw RuntimeException(e)// trowing the exeption
+                                                    } catch (e: IOException) {//catching the exeption
+                                                        throw RuntimeException(e)//trowing the exeption
                                                     }
                                                 }
                                             } catch (e: IOException) {//catching the exeption
-                                                throw RuntimeException(e)// throwing the exeption 
+                                                throw RuntimeException(e)//throwing the exeption 
                                             }
                                                 }
-                                               // Bukkit.dispatchCommand(p, "oncommandtnt")//dispatchCommand for tnt race
+                                               //Bukkit.dispatchCommand(p, "oncommandtnt")//dispatchCommand for tnt race
                                             
                                         
                                     }

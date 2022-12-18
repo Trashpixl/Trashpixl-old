@@ -31,22 +31,22 @@ class SellHandlerInventory(plugin: Zero?) : Listener {
         val actualFile = File(fileName)//create the file
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
             if (ev.clickedBlock!!.type == Material.BIRCH_PRESSURE_PLATE) { //check the material of what the player step on
-                val fileName2 = "Server.txt"// creating the file name var 
-                val actualFile2 = File(fileName2)// creating the file 
-                var Serv = 0// creating the actual data var
-                try {// trying the code
+                val fileName2 = "Server.txt"//creating the file name var 
+                val actualFile2 = File(fileName2)//creating the file 
+                var Serv = 0//creating the actual data var
+                try {//trying the code
                     if (actualFile2.exists() && actualFile2.isFile) {//checking if actual file is a file 
                         try {
                             val reader2 = Scanner(actualFile2)//creating the scanner
-                            val data2 = reader2.nextLine()// reading the first line
-                            Serv = data2.toInt()// converting the data to an int
-                            reader2.close()// closing the reader
-                        } catch (e: IOException) {// catching the exeption 
-                            throw RuntimeException(e)// trowing the exeption
+                            val data2 = reader2.nextLine()//reading the first line
+                            Serv = data2.toInt()//converting the data to an int
+                            reader2.close()//closing the reader
+                        } catch (e: IOException) {//catching the exeption 
+                            throw RuntimeException(e)//trowing the exeption
                         }
                     }
-                } catch (e: IOException) {// catching the exeption
-                    throw RuntimeException(e)// trowing it again
+                } catch (e: IOException) {//catching the exeption
+                    throw RuntimeException(e)//trowing it again
                 }
                 if(Serv == 0){
                     while (index < 36) { //repeat for all the inventory slot

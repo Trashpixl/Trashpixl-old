@@ -15,7 +15,7 @@ import java.lang.RuntimeException
 
 
 
-class OnCommandParkour : CommandExecutor {// creating the class death and implementing the listener
+class OnCommandParkour : CommandExecutor {//creating the class death and implementing the listener
     
 
 

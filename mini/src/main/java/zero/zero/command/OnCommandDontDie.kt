@@ -11,7 +11,7 @@ import org.bukkit.command.CommandSender
 
 
 
-class OnCommandDontDie : CommandExecutor {// creating the class death and implementing the listener
+class OnCommandDontDie : CommandExecutor {//creating the class death and implementing the listener
     
 
 

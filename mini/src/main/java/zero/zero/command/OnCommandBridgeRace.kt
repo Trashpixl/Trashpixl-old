@@ -14,7 +14,7 @@ import java.io.IOException //importing the ioexeption class
 import java.lang.RuntimeException //importing the runtime exeption class
 
 
-class OnCommandBridgeRace : CommandExecutor {// creating the class death and implementing the listener
+class OnCommandBridgeRace : CommandExecutor {//creating the class death and implementing the listener
     
 
 

@@ -12,7 +12,7 @@ import org.bukkit.command.CommandSender
 
 
 
-class OnCommandTag : CommandExecutor {// creating the class death and implementing the listener
+class OnCommandTag : CommandExecutor {//creating the class death and implementing the listener
     
 
 

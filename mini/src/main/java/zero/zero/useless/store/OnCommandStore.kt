@@ -14,7 +14,7 @@ import org.bukkit.Bukkit.getServer
 
 
 
-class OnCommandStore: CommandExecutor {// creating the class death and implementing the listener
+class OnCommandStore: CommandExecutor {//creating the class death and implementing the listener
     
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {

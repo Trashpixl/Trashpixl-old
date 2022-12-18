@@ -12,7 +12,7 @@ import org.bukkit.command.CommandSender
 
 
 
-class OnCommandHideAndSeek : CommandExecutor {// creating the class death and implementing the listener
+class OnCommandHideAndSeek : CommandExecutor {//creating the class death and implementing the listener
     
 
 

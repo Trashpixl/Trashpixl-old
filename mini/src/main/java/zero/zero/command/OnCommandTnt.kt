@@ -17,7 +17,7 @@ import java.lang.RuntimeException
 //the package for this project
 
 
-class OnCommandTnt : CommandExecutor {// creating the class death and implementing the listener
+class OnCommandTnt : CommandExecutor {//creating the class death and implementing the listener
 
 
 

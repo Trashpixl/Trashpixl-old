@@ -15,7 +15,7 @@ import java.lang.RuntimeException
 
 
 
-class OnCommandPvpKnockBack : CommandExecutor {// creating the class death and implementing the listener
+class OnCommandPvpKnockBack : CommandExecutor {//creating the class death and implementing the listener
     
 
 

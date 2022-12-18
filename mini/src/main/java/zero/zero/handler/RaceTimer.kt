@@ -18,9 +18,9 @@ import java.util.* //importing all java util
 
 
 class RaceTimer (plugin: Zero?) : Listener {
-    // the implements for the listener
+    //the implements for the listener
     init { //the constructor of this event
-        Bukkit.getPluginManager().registerEvents(this, plugin!!)// init the handler
+        Bukkit.getPluginManager().registerEvents(this, plugin!!)//init the handler
     }
     @EventHandler
     fun pressurePlateHandler(e: PlayerInteractEvent) { //describes what the event is

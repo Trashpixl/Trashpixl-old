@@ -15,7 +15,7 @@ import java.lang.RuntimeException
 
 
 
-class OnCommandPvpLoot : CommandExecutor {// creating the class death and implementing the listener
+class OnCommandPvpLoot : CommandExecutor {//creating the class death and implementing the listener
     
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
