@@ -11,7 +11,7 @@ import java.io.FileWriter //to write the file
 import java.io.IOException //import ioexeption
 import java.lang.RuntimeException //import the runtime exeption
 
-class OnCommandLabi : CommandExecutor {//creating the class death and implementing the listener
+class OnCommandLabi : CommandExecutor { //creating the class death and implementing the listener
     
 
 
@@ -19,11 +19,11 @@ class OnCommandLabi : CommandExecutor {//creating the class death and implementi
 
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
-        val fileName = "Minigame.txt"//create the file name val
-        val actualFile = File(fileName)//create the file ref
-        val x = 284.5//the x coord of the game
-        val y = -60.0//the y coord of the game
-        val z = 284.5//the z coord of the game
+        val fileName = "Minigame.txt" //create the file name val
+        val actualFile = File(fileName) //create the file ref
+        val x = 284.5 //the x coord of the game
+        val y = -60.0 //the y coord of the game
+        val z = 284.5 //the z coord of the game
 
         for (p in getServer().onlinePlayers) {
             //println(p.name)
@@ -31,7 +31,7 @@ class OnCommandLabi : CommandExecutor {//creating the class death and implementi
             
             p.health = 20.0
             val w: World = p.world
-            val to = Location(w, x, y, z)//move before for
+            val to = Location(w, x, y, z) //move before for
             p.teleport(to)
             p.inventory.clear()
             
@@ -43,9 +43,9 @@ class OnCommandLabi : CommandExecutor {//creating the class death and implementi
                 val dataToWrite = "4"
                 val myWriter: FileWriter //create the file writer
                 try {
-                    myWriter = FileWriter(actualFile)//pointing the writer to the actual file
-                    myWriter.write(dataToWrite)//writing the data to the file
-                    myWriter.close()//closing the writer
+                    myWriter = FileWriter(actualFile) //pointing the writer to the actual file
+                    myWriter.write(dataToWrite) //writing the data to the file
+                    myWriter.close() //closing the writer
                 } catch (e: IOException) {
                     throw RuntimeException(e)
                 }

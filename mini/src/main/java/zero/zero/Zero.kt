@@ -6,9 +6,9 @@ import java.io.IOException //importing the io exeption class
 import org.bukkit.plugin.java.JavaPlugin
 import org.bukkit.entity.Player
 import zero.zero.command.* //importing all the command
-//import zero.zero.command.store.* //import all the class in store
+ //import zero.zero.command.store.* //import all the class in store
 import zero.zero.handler.* //importing all the handler
-//import zero.zero.handler.shop.* //import all the handler related to store
+ //import zero.zero.handler.shop.* //import all the handler related to store
 import java.util.* //importing all the java util class
 
 class Zero : JavaPlugin() {
@@ -42,22 +42,22 @@ class Zero : JavaPlugin() {
         Potion(this)*/
 
         logger.info("starting the plugin") //say that it's starting the plugin
-        val fileName3 = "Server.txt"//creating the file name var 
-        val actualFile3 = File(fileName3)//creating the file 
-        var Serv = 0//creating the actual data var
-        try {//trying the code
-            if (actualFile3.exists() && actualFile3.isFile) {//checking if actual file is a file 
+        val fileName3 = "Server.txt" //creating the file name var 
+        val actualFile3 = File(fileName3) //creating the file 
+        var Serv = 0 //creating the actual data var
+        try { //trying the code
+            if (actualFile3.exists() && actualFile3.isFile) { //checking if actual file is a file 
                 try {
-                    val reader3 = Scanner(actualFile3)//creating the scanner
-                    val data3 = reader3.nextLine()//reading the first line
-                    Serv = data3.toInt()//converting the data to an int
-                    reader3.close()//closing the reader
-                } catch (e: IOException) {//catching the exeption 
-                    throw RuntimeException(e)//trowing the exeption
+                    val reader3 = Scanner(actualFile3) //creating the scanner
+                    val data3 = reader3.nextLine() //reading the first line
+                    Serv = data3.toInt() //converting the data to an int
+                    reader3.close() //closing the reader
+                } catch (e: IOException) { //catching the exeption 
+                    throw RuntimeException(e) //trowing the exeption
                 }
             }
-        } catch (e: IOException) {//catching the exeption
-            throw RuntimeException(e)//trowing it again
+        } catch (e: IOException) { //catching the exeption
+            throw RuntimeException(e) //trowing it again
         }
         if(Serv == 0){ //check if server equals 0
         

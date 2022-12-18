@@ -16,31 +16,31 @@ import java.io.IOException //importing the ioexeption class
 import java.util.* //importing all the java utils class
 
 
-class Armor (plugin: Zero?) : Listener {//creating the class 
+class Armor (plugin: Zero?) : Listener { //creating the class 
     init { //the constructor of this handler
-        Bukkit.getPluginManager().registerEvents(this, plugin!!)//init the plugin
+        Bukkit.getPluginManager().registerEvents(this, plugin!!) //init the plugin
     }
     @EventHandler //say that it is an event handler
     fun buttonHandler(e: PlayerInteractEvent) { //describes what the event is
         if (e.action == Action.RIGHT_CLICK_BLOCK) { //check if the action is physical
             if (e.clickedBlock!!.type == Material.IRON_CHESTPLATE) { //compare what the player sept on to a stone pressure plate and is required a non-nullable
                 val p = e.player
-                val fileName = "Server.txt"//creating the file name var 
-                val actualFile = File(fileName)//creating the file 
-                var Serv = 0//creating the actual data var
-                try {//trying the code
-                    if (actualFile.exists() && actualFile.isFile) {//checking if actual file is a file 
+                val fileName = "Server.txt" //creating the file name var 
+                val actualFile = File(fileName) //creating the file 
+                var Serv = 0 //creating the actual data var
+                try { //trying the code
+                    if (actualFile.exists() && actualFile.isFile) { //checking if actual file is a file 
                         try {
-                            val reader = Scanner(actualFile)//creating the scanner
-                            val data = reader.nextLine()//reading the first line
-                            Serv = data.toInt()//converting the data to an int
-                            reader.close()//closing the reader
-                        } catch (e: IOException) {//catching the exeption 
-                            throw RuntimeException(e)//trowing the exeption
+                            val reader = Scanner(actualFile) //creating the scanner
+                            val data = reader.nextLine() //reading the first line
+                            Serv = data.toInt() //converting the data to an int
+                            reader.close() //closing the reader
+                        } catch (e: IOException) { //catching the exeption 
+                            throw RuntimeException(e) //trowing the exeption
                         }
                     }
-                } catch (e: IOException) {//catching the exeption
-                    throw RuntimeException(e)//trowing it again
+                } catch (e: IOException) { //catching the exeption
+                    throw RuntimeException(e) //trowing it again
                 }
                 if(Serv == 0){
                print("armor")

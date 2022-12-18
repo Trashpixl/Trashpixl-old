@@ -14,10 +14,10 @@ import java.io.IOException
 import java.lang.RuntimeException
 
 
-//the package for this project
+ //the package for this project
 
 
-class OnCommandTnt : CommandExecutor {//creating the class death and implementing the listener
+class OnCommandTnt : CommandExecutor { //creating the class death and implementing the listener
 
 
 
@@ -36,7 +36,7 @@ class OnCommandTnt : CommandExecutor {//creating the class death and implementin
             
                 p.health = 20.0
                 val w: World = p.world
-                val to = Location(w, x, y, z)//move before for
+                val to = Location(w, x, y, z) //move before for
                 p.teleport(to)
                 p.inventory.clear()
 
@@ -48,9 +48,9 @@ class OnCommandTnt : CommandExecutor {//creating the class death and implementin
                 val dataToWrite = "1"
                 val myWriter: FileWriter //create the file writer
                 try {
-                    myWriter = FileWriter(actualFile)//pointing the writer to the actual file
-                    myWriter.write(dataToWrite)//writing the data to the file
-                    myWriter.close()//closing the writer
+                    myWriter = FileWriter(actualFile) //pointing the writer to the actual file
+                    myWriter.write(dataToWrite) //writing the data to the file
+                    myWriter.close() //closing the writer
                 } catch (e: IOException) {
                     throw RuntimeException(e)
                 }

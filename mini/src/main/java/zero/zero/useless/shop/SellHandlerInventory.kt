@@ -1,6 +1,6 @@
 package zero.zero.useless.shop //the package for this project
 
-//the import for this project
+ //the import for this project
 
 import org.bukkit.Bukkit //import for the bukkit plugin base model
 import org.bukkit.Material //import all the material
@@ -27,26 +27,26 @@ class SellHandlerInventory(plugin: Zero?) : Listener {
         var item: ItemStack? //create the variable item ad assign it to the inventory slot index
         val name = p.name //get the name of the player
         var howMany = 0 //save how many item there is in the inventory
-        val fileName = "$name.txt"//create file name
-        val actualFile = File(fileName)//create the file
+        val fileName = "$name.txt" //create file name
+        val actualFile = File(fileName) //create the file
         if (ev.action == Action.PHYSICAL) { //check if the action is physical
             if (ev.clickedBlock!!.type == Material.BIRCH_PRESSURE_PLATE) { //check the material of what the player step on
-                val fileName2 = "Server.txt"//creating the file name var 
-                val actualFile2 = File(fileName2)//creating the file 
-                var Serv = 0//creating the actual data var
-                try {//trying the code
-                    if (actualFile2.exists() && actualFile2.isFile) {//checking if actual file is a file 
+                val fileName2 = "Server.txt" //creating the file name var 
+                val actualFile2 = File(fileName2) //creating the file 
+                var Serv = 0 //creating the actual data var
+                try { //trying the code
+                    if (actualFile2.exists() && actualFile2.isFile) { //checking if actual file is a file 
                         try {
-                            val reader2 = Scanner(actualFile2)//creating the scanner
-                            val data2 = reader2.nextLine()//reading the first line
-                            Serv = data2.toInt()//converting the data to an int
-                            reader2.close()//closing the reader
-                        } catch (e: IOException) {//catching the exeption 
-                            throw RuntimeException(e)//trowing the exeption
+                            val reader2 = Scanner(actualFile2) //creating the scanner
+                            val data2 = reader2.nextLine() //reading the first line
+                            Serv = data2.toInt() //converting the data to an int
+                            reader2.close() //closing the reader
+                        } catch (e: IOException) { //catching the exeption 
+                            throw RuntimeException(e) //trowing the exeption
                         }
                     }
-                } catch (e: IOException) {//catching the exeption
-                    throw RuntimeException(e)//trowing it again
+                } catch (e: IOException) { //catching the exeption
+                    throw RuntimeException(e) //trowing it again
                 }
                 if(Serv == 0){
                     while (index < 36) { //repeat for all the inventory slot
@@ -63,14 +63,14 @@ class SellHandlerInventory(plugin: Zero?) : Listener {
                                         p.inventory.setItem(index, null) //reset the player inventory at a given slot
                             }
                             else{
-                                if(Objects.requireNonNull(item).type == Material.AIR ||//removing all air material
-                                        Objects.requireNonNull(item).type == Material.CAVE_AIR ||//removing cave air material
-                                        Objects.requireNonNull(item).type == Material.VOID_AIR){//removing void air material
+                                if(Objects.requireNonNull(item).type == Material.AIR || //removing all air material
+                                        Objects.requireNonNull(item).type == Material.CAVE_AIR || //removing cave air material
+                                        Objects.requireNonNull(item).type == Material.VOID_AIR){ //removing void air material
 
                                     p.inventory.setItem(index, null) //reset the player inventory at a given slot
                                 }
                                 else{
-                                    if(Objects.requireNonNull(item).type == Material.DIAMOND_PICKAXE ||//adding pickaxe, axe, sword, armor,shovel ect to the list of thing to not remove from the inventory
+                                    if(Objects.requireNonNull(item).type == Material.DIAMOND_PICKAXE || //adding pickaxe, axe, sword, armor,shovel ect to the list of thing to not remove from the inventory
                                             Objects.requireNonNull(item).type == Material.GOLDEN_PICKAXE ||
                                             Objects.requireNonNull(item).type == Material.IRON_PICKAXE ||
                                             Objects.requireNonNull(item).type == Material.STONE_PICKAXE ||
@@ -142,31 +142,31 @@ class SellHandlerInventory(plugin: Zero?) : Listener {
 
                     p.updateInventory() //apply the change to the player inventory
                     try { //begin the try for the following code
-                        if (actualFile.exists() && actualFile.isFile) {//check if the file exist and is a file
-                            try {//trying the following code
-                                val reader = Scanner(actualFile)//create the reader
-                                val data = reader.nextLine()//take the first line
-                                val dataInt = data.toInt()//convert it to int
-                                val dataFinal = howMany + dataInt//add it to howmany
-                                val dataFinalString = dataFinal.toString()//convert it to a string
-                                reader.close()//close the reader
-                                val writer = PrintWriter(actualFile)//create the writer
-                                writer.print(dataFinalString)//write the data
-                                writer.close()//close the writer
-                            } catch (e: FileNotFoundException) {//catch the exeption
-                                throw RuntimeException(e)//throw it away
+                        if (actualFile.exists() && actualFile.isFile) { //check if the file exist and is a file
+                            try { //trying the following code
+                                val reader = Scanner(actualFile) //create the reader
+                                val data = reader.nextLine() //take the first line
+                                val dataInt = data.toInt() //convert it to int
+                                val dataFinal = howMany + dataInt //add it to howmany
+                                val dataFinalString = dataFinal.toString() //convert it to a string
+                                reader.close() //close the reader
+                                val writer = PrintWriter(actualFile) //create the writer
+                                writer.print(dataFinalString) //write the data
+                                writer.close() //close the writer
+                            } catch (e: FileNotFoundException) { //catch the exeption
+                                throw RuntimeException(e) //throw it away
                             }
 
                         } else {
                             if (actualFile.createNewFile()) { //creating the new file
-                                val dataToWrite = howMany.toString()//convert it to string
-                                val myWriter: FileWriter//create the file writer
-                                try {//try the code
-                                    myWriter = FileWriter(actualFile)//pointing the writer to the actual file
-                                    myWriter.write(dataToWrite)//writing the data to the file
-                                    myWriter.close()//closing the writer
-                                } catch (e: IOException) {//catch the exeption
-                                    throw RuntimeException(e)//throw it away
+                                val dataToWrite = howMany.toString() //convert it to string
+                                val myWriter: FileWriter //create the file writer
+                                try { //try the code
+                                    myWriter = FileWriter(actualFile) //pointing the writer to the actual file
+                                    myWriter.write(dataToWrite) //writing the data to the file
+                                    myWriter.close() //closing the writer
+                                } catch (e: IOException) { //catch the exeption
+                                    throw RuntimeException(e) //throw it away
                                 }
                             } else {
                                 println("something went wrong while creating the file") //says that something went from while creating the file

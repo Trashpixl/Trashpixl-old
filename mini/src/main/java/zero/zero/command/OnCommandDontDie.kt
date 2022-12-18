@@ -7,11 +7,11 @@ import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 
-//the package for this project
+ //the package for this project
 
 
 
-class OnCommandDontDie : CommandExecutor {//creating the class death and implementing the listener
+class OnCommandDontDie : CommandExecutor { //creating the class death and implementing the listener
     
 
 
@@ -29,7 +29,7 @@ class OnCommandDontDie : CommandExecutor {//creating the class death and impleme
             if(p.world.environment == World.Environment.NORMAL){
             p.health = 20.0
             val w: World = p.world
-            val to = Location(w, x, y, z)//move before for
+            val to = Location(w, x, y, z) //move before for
             p.teleport(to)
             p.inventory.clear()
             }

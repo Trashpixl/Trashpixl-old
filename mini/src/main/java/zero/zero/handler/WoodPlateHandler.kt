@@ -1,6 +1,6 @@
 package zero.zero.handler //the package for this project
 
-//the import for this project
+ //the import for this project
 import org.bukkit.Bukkit //import bukkit for reference
 import org.bukkit.Location //import the location class
 import org.bukkit.Material //import all the bukkit material
@@ -14,7 +14,7 @@ import java.io.FileWriter //importing the filewriter
 import java.io.IOException //imprting the io exeption
 import java.util.* //importing all the java util class
 
-class WoodPlateHandler(plugin: Zero?) : Listener {//create the class and implement the listener
+class WoodPlateHandler(plugin: Zero?) : Listener { //create the class and implement the listener
 
     init { //the constructor for the handler
         Bukkit.getPluginManager().registerEvents(this, plugin!!) //says that this need the plugin base model
@@ -25,27 +25,27 @@ class WoodPlateHandler(plugin: Zero?) : Listener {//create the class and impleme
         if (ev.action == Action.PHYSICAL) { //check if the action is physical like step on or software like open the inventory
             if (ev.clickedBlock!!.type   == Material.OAK_PRESSURE_PLATE) { //compare the event to an oak pressure plate
                 val p = ev.player //create the local variable player
-                val fileName = "Server.txt"//creating the file name var 
-                val actualFile = File(fileName)//creating the file 
-                var Serv = 0//creating the actual data var
-                try {//trying the code
-                    if (actualFile.exists() && actualFile.isFile) {//checking if actual file is a file 
+                val fileName = "Server.txt" //creating the file name var 
+                val actualFile = File(fileName) //creating the file 
+                var Serv = 0 //creating the actual data var
+                try { //trying the code
+                    if (actualFile.exists() && actualFile.isFile) { //checking if actual file is a file 
                         try {
-                            val reader = Scanner(actualFile)//creating the scanner
-                            val data = reader.nextLine()//reading the first line
-                            Serv = data.toInt()//converting the data to an int
-                            reader.close()//closing the reader
-                        } catch (e: IOException) {//catching the exeption 
-                            throw RuntimeException(e)//trowing the exeption
+                            val reader = Scanner(actualFile) //creating the scanner
+                            val data = reader.nextLine() //reading the first line
+                            Serv = data.toInt() //converting the data to an int
+                            reader.close() //closing the reader
+                        } catch (e: IOException) { //catching the exeption 
+                            throw RuntimeException(e) //trowing the exeption
                         }
                     }
-                } catch (e: IOException) {//catching the exeption
-                    throw RuntimeException(e)//trowing it again
+                } catch (e: IOException) { //catching the exeption
+                    throw RuntimeException(e) //trowing it again
                 }
                 if(Serv == 0){
-                    val to: Location = p.bedSpawnLocation!!//get his bed location
+                    val to: Location = p.bedSpawnLocation!! //get his bed location
 
-                    p.teleport(to)//tp him to his bed
+                    p.teleport(to) //tp him to his bed
                 }
             }
         }

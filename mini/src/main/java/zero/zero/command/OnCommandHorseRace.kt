@@ -8,11 +8,11 @@ import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 
-//the package for this project
+ //the package for this project
 
 
 
-class OnCommandHorseRace : CommandExecutor {//creating the class death and implementing the listener
+class OnCommandHorseRace : CommandExecutor { //creating the class death and implementing the listener
     
 
 
@@ -33,7 +33,7 @@ class OnCommandHorseRace : CommandExecutor {//creating the class death and imple
             
             p.health = 20.0
             val w: World = p.world
-            val to = Location(w, x, y, z)//move before for
+            val to = Location(w, x, y, z) //move before for
             p.teleport(to)
             p.inventory.clear()
             }

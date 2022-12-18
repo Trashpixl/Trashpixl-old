@@ -11,11 +11,11 @@ import java.io.FileWriter
 import java.io.IOException
 import java.lang.RuntimeException
 
-//the package for this project
+ //the package for this project
 
 
 
-class OnCommandPvpSumo : CommandExecutor {//creating the class death and implementing the listener
+class OnCommandPvpSumo : CommandExecutor { //creating the class death and implementing the listener
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
         val fileName = "Minigame.txt"
@@ -29,7 +29,7 @@ class OnCommandPvpSumo : CommandExecutor {//creating the class death and impleme
            
             p.health = 20.0
             val w: World = p.world
-            val to = Location(w, x, y, z)//move before for
+            val to = Location(w, x, y, z) //move before for
             p.teleport(to)
             p.inventory.clear()
             p.sendMessage("hi there")
@@ -40,9 +40,9 @@ class OnCommandPvpSumo : CommandExecutor {//creating the class death and impleme
                 val dataToWrite = "6"
                 val myWriter: FileWriter //create the file writer
                 try {
-                    myWriter = FileWriter(actualFile)//pointing the writer to the actual file
-                    myWriter.write(dataToWrite)//writing the data to the file
-                    myWriter.close()//closing the writer
+                    myWriter = FileWriter(actualFile) //pointing the writer to the actual file
+                    myWriter.write(dataToWrite) //writing the data to the file
+                    myWriter.close() //closing the writer
                 } catch (e: IOException) {
                     throw RuntimeException(e)
                 }
