@@ -23,6 +23,7 @@ class LauncherJoin (plugin: Zero?) : Listener { //the implements for the listene
     @EventHandler
     fun pressurePlateHandler(ev: PlayerJoinEvent) { //describes what the event is
                 val p = ev.player //create the local player id
+                
                 //p.connect("mini")
                 val fileName = "Server.txt" //creating the file name var 
                 val actualFile = File(fileName) //creating the file 

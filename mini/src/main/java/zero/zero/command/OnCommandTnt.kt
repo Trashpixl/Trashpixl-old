@@ -31,33 +31,33 @@ class OnCommandTnt : CommandExecutor { //creating the class death and implementi
         val z = 250.0
 
 
-        for (p in getServer().onlinePlayers) {
+        for (p in getServer().onlinePlayers) { //get all the player in the server
 
             
-                p.health = 20.0
-                val w: World = p.world
-                val to = Location(w, x, y, z) //move before for
-                p.teleport(to)
-                p.inventory.clear()
+                p.health = 20.0 //set the healt to 20
+                val w: World = p.world //get the player world
+                val to = Location(w, x, y, z) //put together all the info
+                p.teleport(to) //tp him
+                p.inventory.clear() //clear his inventory
 
 
             
         }
         try{
-            if(actualFile.exists() && actualFile.isFile){
-                val dataToWrite = "1"
+            if(actualFile.exists() && actualFile.isFile){ //chech if the file exist
+                val dataToWrite = "1" //create the var with the data to write in it 
                 val myWriter: FileWriter //create the file writer
-                try {
+                try { //try the following code
                     myWriter = FileWriter(actualFile) //pointing the writer to the actual file
                     myWriter.write(dataToWrite) //writing the data to the file
                     myWriter.close() //closing the writer
-                } catch (e: IOException) {
-                    throw RuntimeException(e)
+                } catch (e: IOException) { //catch the ioexeption
+                    throw RuntimeException(e) //trow it in the console
                 }
             }
         }
-        catch(e: IOException){
-            throw RuntimeException(e)
+        catch(e: IOException){ //catch the exeption
+            throw RuntimeException(e) //and trow it in the console
         }
 
 
