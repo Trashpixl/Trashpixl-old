@@ -1,5 +1,3 @@
-
-
 package zero.zero.command
 
 import org.bukkit.Bukkit.getServer
@@ -23,8 +21,8 @@ class OnCommandTnt : CommandExecutor { //creating the class death and implementi
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
 
-        val fileName = "Minigame.txt"
-        val actualFile = File(fileName)
+        val fileName = "Minigame.txt" //create a var with the filename in it
+        val actualFile = File(fileName) //create the file reference
 
         val x = 247.0
         val y = -58.0
