@@ -106,6 +106,10 @@ class LauncherJoin (plugin: Zero?) : Listener { //the implements for the listene
             val to = Location(w, x, y, z) //put together all the info
             p.teleport(to) //tp him
         }
+        if(Serv == 3){
+            val to: Location = p.bedSpawnLocation!! //get his bed location
+            p.teleport(to) //tp him to his bed
+        }
         
     }
 }
