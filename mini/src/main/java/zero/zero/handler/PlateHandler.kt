@@ -48,7 +48,14 @@ val mainPlugin = main
                     
                     val out = ByteStreams.newDataOutput()
                     out.writeUTF("Connect")
-                    out.writeUTF("mini")
+                    out.writeUTF("lobby")
+                    p.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
+                }
+                if(Serv == 2){
+                    
+                    val out = ByteStreams.newDataOutput()
+                    out.writeUTF("Connect")
+                    out.writeUTF("main")
                     p.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
                 }
             }
