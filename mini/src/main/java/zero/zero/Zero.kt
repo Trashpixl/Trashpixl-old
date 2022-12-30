@@ -31,6 +31,7 @@ class Zero : JavaPlugin() {
         Laucher(this, this) //init the laucher handler
         FirstToFinish(this) //init the first to finish handler
         Punch(this) //init the punch handler
+        Respawn(this, this)
         
         /*Exit(this)
         Tool(this)

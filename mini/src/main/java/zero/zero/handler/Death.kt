@@ -6,7 +6,7 @@ import org.bukkit.Bukkit.getServer //importing the get server class
 import org.bukkit.entity.Player //importing the player enttity
 import org.bukkit.event.EventHandler //importing the event handler
 import org.bukkit.event.Listener //impoting the litsener
-import org.bukkit.event.entity.PlayerDeathEvent //importing the player death event
+import org.bukkit.event.player.PlayerRespawnEvent
 import org.bukkit.plugin.java.JavaPlugin
 import zero.zero.Zero //impoting the whole package
 import java.io.File //importing the java file var
@@ -23,7 +23,7 @@ init { //the constructor of this handler
     Bukkit.getPluginManager().registerEvents(this, plugin!!) //linking it to the main code
 }
     @EventHandler //says that this is an event handler
-    fun onPlayerDead(e: PlayerDeathEvent) { //creating the on player death event function and importing the death class
+    fun onPlayerDead(e: PlayerRespawnEvent) { //creating the on player death event function and importing the death class
         val fileName = "Minigame.txt" //creating the file name var 
         val actualFile = File(fileName) //creating the file 
         var actualdata = 0 //creating the actual data var
@@ -62,30 +62,32 @@ init { //the constructor of this handler
                     throw RuntimeException(e) //trowing it again
                 }
                 if(Serv == 1){
+                    val out = ByteStreams.newDataOutput()
+                    out.writeUTF("Connect")
+                    out.writeUTF("lobby")
+                    e.player.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
                 playerCount = 0
                 for (p in getServer().onlinePlayers) { //geting all the player in the server
                         playerCount++
                         p.sendMessage("$name  died an is now out of the game") //send the message of who won the match
-                        //Bukkit.dispatchCommand(p, "server lobby") //if they are in the right world tp them in the lobby
-                        if(p.name == name){
-
-                            val out = ByteStreams.newDataOutput()
-                            out.writeUTF("Connect")
-                            out.writeUTF("lobby")
-                            p.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
-                        
-                }
+                        //Bukkit.dispatchCommand(p, "server lobby") //if they are in the right world tp them in the lobby               
             }
             if(playerCount == 1 ){
                 for(p in getServer().onlinePlayers){
                     if(p.name != e.player.name){
-                    p.sendMessage("congradulation you won the match")
+                        p.sendMessage("congradulation you won the match")
                     }
                     else{
-                        p.sendMessage("how did you kill your self")
+                        p.sendMessage("how did you kill yourself")
                     }
+                    val out = ByteStreams.newDataOutput()
+                    out.writeUTF("Connect")
+                    out.writeUTF("lobby")
+                    p.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
                 }
+                //add it here
             } 
+            
         }
     }
 }
