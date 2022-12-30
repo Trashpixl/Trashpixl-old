@@ -27,6 +27,7 @@ init { //the constructor of this handler
         val fileName = "Minigame.txt" //creating the file name var 
         val actualFile = File(fileName) //creating the file 
         var actualdata = 0 //creating the actual data var
+        var playerCount:Int
         try { //trying the code
             if (actualFile.exists() && actualFile.isFile) { //checking if actual file is a file 
                 try {
@@ -60,38 +61,32 @@ init { //the constructor of this handler
                 } catch (e: IOException) { //catching the exeption
                     throw RuntimeException(e) //trowing it again
                 }
-                if(Serv == 0){
-                e.player.sendMessage("$name  died an you all won this match") //send the message of who won the match
-                if (e.player.killer is Player) { //checking if the entity killer is player
-                    val nameKiller: String = e.player.name //name killer saving the name of the killer to display it in the chat
-                    e.player.sendMessage(nameKiller + "kill is team mate") //says who kill who
-                }
-                try { //trying the code
-                    if (actualFile.exists() && actualFile.isFile) { //checking if the file exist
-                        val dataToWrite = "0" //creating the data to write var
-                        val myWriter: FileWriter //create the file writer
-                        try { //trying the code
-                            myWriter = FileWriter(actualFile) //pointing the writer to the actual file
-                            myWriter.write(dataToWrite) //writing the data to the file
-                            myWriter.close() //closing the writer
-                        } catch (e: IOException) { //catching the exeption
-                            throw RuntimeException(e) //trowing the exeption
-                        }
-                    }
-                } catch (e: IOException) { //catching the exeption
-                    throw RuntimeException(e) //throwing the exeption 
-                }
+                if(Serv == 1){
+                playerCount = 0
                 for (p in getServer().onlinePlayers) { //geting all the player in the server
-                   
+                        playerCount++
+                        p.sendMessage("$name  died an is now out of the game") //send the message of who won the match
                         //Bukkit.dispatchCommand(p, "server lobby") //if they are in the right world tp them in the lobby
-                        val out = ByteStreams.newDataOutput()
-                        out.writeUTF("Connect")
-                        out.writeUTF("mini")
-                        p.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
-                    
-                }
+                        if(p.name == name){
 
+                            val out = ByteStreams.newDataOutput()
+                            out.writeUTF("Connect")
+                            out.writeUTF("lobby")
+                            p.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
+                        
+                }
             }
+            if(playerCount == 1 ){
+                for(p in getServer().onlinePlayers){
+                    if(p.name != e.player.name){
+                    p.sendMessage("congradulation you won the match")
+                    }
+                    else{
+                        p.sendMessage("how did you kill your self")
+                    }
+                }
+            } 
         }
     }
+}
 }
