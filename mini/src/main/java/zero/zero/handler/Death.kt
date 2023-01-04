@@ -62,10 +62,10 @@ init { //the constructor of this handler
                     throw RuntimeException(e) //trowing it again
                 }
                 if(Serv == 1){
-                    val out = ByteStreams.newDataOutput()
-                    out.writeUTF("Connect")
-                    out.writeUTF("lobby")
-                    e.player.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
+                    val connect = ByteStreams.newDataOutput()
+                    connect.writeUTF("Connect")
+                    connect.writeUTF("lobby")
+                    e.player.sendPluginMessage(mainPlugin, "BungeeCord", connect.toByteArray())
                 playerCount = 0
                 for (p in getServer().onlinePlayers) { //geting all the player in the server
                         playerCount++
@@ -80,10 +80,10 @@ init { //the constructor of this handler
                     else{
                         p.sendMessage("how did you kill yourself")
                     }
-                    val out = ByteStreams.newDataOutput()
-                    out.writeUTF("Connect")
-                    out.writeUTF("lobby")
-                    p.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
+                    val connect = ByteStreams.newDataOutput()
+                    connect.writeUTF("Connect")
+                    connect.writeUTF("lobby")
+                    p.sendPluginMessage(mainPlugin, "BungeeCord", connect.toByteArray())
                 }
                 //add it here
             } 

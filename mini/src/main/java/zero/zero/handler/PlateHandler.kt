@@ -46,17 +46,17 @@ val mainPlugin = main
                 }
                 if(Serv == 0){
                     
-                    val out = ByteStreams.newDataOutput()
-                    out.writeUTF("Connect")
-                    out.writeUTF("lobby")
-                    p.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
+                    val connect = ByteStreams.newDataOutput()
+                    connect.writeUTF("Connect")
+                    connect.writeUTF("lobby")
+                    p.sendPluginMessage(mainPlugin, "BungeeCord", connect.toByteArray())
                 }
                 if(Serv == 2){
                     
-                    val out = ByteStreams.newDataOutput()
-                    out.writeUTF("Connect")
-                    out.writeUTF("main")
-                    p.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
+                    val connect = ByteStreams.newDataOutput()
+                    connect.writeUTF("Connect")
+                    connect.writeUTF("main")
+                    p.sendPluginMessage(mainPlugin, "BungeeCord", connect.toByteArray())
                 }
             }
         }

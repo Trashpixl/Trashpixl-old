@@ -58,10 +58,10 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener { //creating the class 
                for (p2 in Bukkit.getServer().onlinePlayers) { //taking all the player 
                
                 
-                val out = ByteStreams.newDataOutput()
-                out.writeUTF("Connect")
-                out.writeUTF("mini")
-                p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
+                val connect = ByteStreams.newDataOutput()
+                connect.writeUTF("Connect")
+                connect.writeUTF("mini")
+                p2.sendPluginMessage(mainPlugin, "BungeeCord", connect.toByteArray())
                             
                }
                             val fileName2 = "S:\\Mini.txt" //creating the file name var 
@@ -90,10 +90,10 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener { //creating the class 
                 if (ev.clickedBlock!!.type == Material.ORANGE_TERRACOTTA) { //if the block is orange terracotta
                     for (p2 in Bukkit.getServer().onlinePlayers) { //taking all the player 
                         
-                        val out = ByteStreams.newDataOutput()
-                        out.writeUTF("Connect")
-                        out.writeUTF("mini")
-                        p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
+                        val connect = ByteStreams.newDataOutput()
+                        connect.writeUTF("Connect")
+                        connect.writeUTF("mini")
+                        p2.sendPluginMessage(mainPlugin, "BungeeCord", connect.toByteArray())
                     }
                     val fileName2 = "S:\\Mini.txt" //creating the file name var 
                     val actualFile2 = File(fileName2) //creating the file 
@@ -119,10 +119,10 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener { //creating the class 
                 
                     if (ev.clickedBlock!!.type == Material.MAGENTA_TERRACOTTA) { //check if the block is magenta terracotta
                         for (p2 in Bukkit.getServer().onlinePlayers) { //taking all the player 
-                            val out = ByteStreams.newDataOutput()
-                            out.writeUTF("Connect")
-                            out.writeUTF("mini")
-                            p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
+                            val connect = ByteStreams.newDataOutput()
+                            connect.writeUTF("Connect")
+                            connect.writeUTF("mini")
+                            p2.sendPluginMessage(mainPlugin, "BungeeCord", connect.toByteArray())
                         }
                         val fileName2 = "S:\\Mini.txt" //creating the file name var 
                         val actualFile2 = File(fileName2) //creating the file 
@@ -148,10 +148,10 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener { //creating the class 
                     
                         if (ev.clickedBlock!!.type == Material.LIGHT_BLUE_TERRACOTTA) { //check if the block is light blue terracotta
                             for (p2 in Bukkit.getServer().onlinePlayers) { //taking all the player 
-                                val out = ByteStreams.newDataOutput()
-                                out.writeUTF("Connect")
-                                out.writeUTF("mini")
-                                p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
+                                val connect = ByteStreams.newDataOutput()
+                                connect.writeUTF("Connect")
+                                connect.writeUTF("mini")
+                                p2.sendPluginMessage(mainPlugin, "BungeeCord", connect.toByteArray())
                             }
                             val fileName2 = "S:\\Mini.txt" //creating the file name var 
                             val actualFile2 = File(fileName2) //creating the file 
@@ -177,10 +177,10 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener { //creating the class 
                         
                             if (ev.clickedBlock!!.type == Material.YELLOW_TERRACOTTA) { //check if the block is yellow terracotta
                                 for (p2 in Bukkit.getServer().onlinePlayers) { //taking all the player 
-                                    val out = ByteStreams.newDataOutput()
-                                    out.writeUTF("Connect")
-                                    out.writeUTF("mini")
-                                    p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
+                                    val connect = ByteStreams.newDataOutput()
+                                    connect.writeUTF("Connect")
+                                    connect.writeUTF("mini")
+                                    p2.sendPluginMessage(mainPlugin, "BungeeCord", connect.toByteArray())
                                 }
                                 val fileName2 = "S:\\Mini.txt" //creating the file name var 
                                 val actualFile2 = File(fileName2) //creating the file 
@@ -205,10 +205,10 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener { //creating the class 
                                 
                                 if (ev.clickedBlock!!.type == Material.LIME_TERRACOTTA) { //check if the block is lime terracotta
                                     for (p2 in Bukkit.getServer().onlinePlayers) { //taking all the player 
-                                        val out = ByteStreams.newDataOutput()
-                                        out.writeUTF("Connect")
-                                        out.writeUTF("mini")
-                                        p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
+                                        val connect = ByteStreams.newDataOutput()
+                                        connect.writeUTF("Connect")
+                                        connect.writeUTF("mini")
+                                        p2.sendPluginMessage(mainPlugin, "BungeeCord", connect.toByteArray())
                                     }
                                     val fileName2 = "S:\\Mini.txt" //creating the file name var 
                                     val actualFile2 = File(fileName2) //creating the file 
@@ -246,10 +246,10 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener { //creating the class 
                                 */
                                 if (ev.clickedBlock!!.type == Material.LIGHT_GRAY_TERRACOTTA) { //check if the block is light gray terracotta
                                     for (p2 in Bukkit.getServer().onlinePlayers) { //taking all the player 
-                                        val out = ByteStreams.newDataOutput()
-                                        out.writeUTF("Connect")
-                                        out.writeUTF("mini")
-                                        p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
+                                        val connect = ByteStreams.newDataOutput()
+                                        connect.writeUTF("Connect")
+                                        connect.writeUTF("mini")
+                                        p2.sendPluginMessage(mainPlugin, "BungeeCord", connect.toByteArray())
                                     }
                                     val fileName2 = "S:\\Mini.txt" //creating the file name var 
                                     val actualFile2 = File(fileName2) //creating the file 
@@ -287,10 +287,10 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener { //creating the class 
                                     */
                                     if (ev.clickedBlock!!.type == Material.BLUE_TERRACOTTA) { //check if the block is blue terracotta
                                         for (p2 in Bukkit.getServer().onlinePlayers) { //taking all the player 
-                                            val out = ByteStreams.newDataOutput()
-                                            out.writeUTF("Connect")
-                                            out.writeUTF("mini")
-                                            p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
+                                            val connect = ByteStreams.newDataOutput()
+                                            connect.writeUTF("Connect")
+                                            connect.writeUTF("mini")
+                                            p2.sendPluginMessage(mainPlugin, "BungeeCord", connect.toByteArray())
                                         }
                                         val fileName2 = "S:\\Mini.txt" //creating the file name var 
                                         val actualFile2 = File(fileName2) //creating the file 
@@ -388,10 +388,10 @@ class Laucher(plugin: Zero?, main:JavaPlugin) : Listener { //creating the class 
                                         */
                                         if (ev.clickedBlock!!.type == Material.BLACK_CONCRETE) { //check if the block is black concrete
                                             for (p2 in Bukkit.getServer().onlinePlayers) { //taking all the player 
-                                                val out = ByteStreams.newDataOutput()
-                                                out.writeUTF("Connect")
-                                                out.writeUTF("mini")
-                                                p2.sendPluginMessage(mainPlugin, "BungeeCord", out.toByteArray())
+                                                val connect = ByteStreams.newDataOutput()
+                                                connect.writeUTF("Connect")
+                                                connect.writeUTF("mini")
+                                                p2.sendPluginMessage(mainPlugin, "BungeeCord", connect.toByteArray())
                                             }
                                             val fileName2 = "S:\\Mini.txt" //creating the file name var 
                                             val actualFile2 = File(fileName2) //creating the file 
