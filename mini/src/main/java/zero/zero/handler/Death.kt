@@ -24,6 +24,9 @@ init { //the constructor of this handler
 }
     @EventHandler //says that this is an event handler
     fun onPlayerDead(e: PlayerRespawnEvent) { //creating the on player death event function and importing the death class
+        val connect = ByteStreams.newDataOutput()
+        connect.writeUTF("Connect")
+        connect.writeUTF("lobby")
         val fileName = "Minigame.txt" //creating the file name var 
         val actualFile = File(fileName) //creating the file 
         var actualdata = 0 //creating the actual data var
@@ -62,9 +65,8 @@ init { //the constructor of this handler
                     throw RuntimeException(e) //trowing it again
                 }
                 if(Serv == 1){
-                    val connect = ByteStreams.newDataOutput()
-                    connect.writeUTF("Connect")
-                    connect.writeUTF("lobby")
+                    
+                    
                     e.player.sendPluginMessage(mainPlugin, "BungeeCord", connect.toByteArray())
                 playerCount = 0
                 for (p in getServer().onlinePlayers) { //geting all the player in the server
@@ -80,9 +82,6 @@ init { //the constructor of this handler
                     else{
                         p.sendMessage("how did you kill yourself")
                     }
-                    val connect = ByteStreams.newDataOutput()
-                    connect.writeUTF("Connect")
-                    connect.writeUTF("lobby")
                     p.sendPluginMessage(mainPlugin, "BungeeCord", connect.toByteArray())
                 }
                 //add it here
