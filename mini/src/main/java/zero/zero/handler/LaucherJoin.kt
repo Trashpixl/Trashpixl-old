@@ -68,7 +68,7 @@ class LauncherJoin (plugin: Zero?) : Listener { //the implements for the listene
                                     Bukkit.dispatchCommand(p, "oncommandpvploot") //dispatchCommand for parkour
                                 }
                                 if(Mini == 5){
-                                    Bukkit.dispatchCommand(p, "oncommandbridge") //dispatchCommand for bridge
+                                    Bukkit.dispatchCommand(p, "oncommandbridgerace") //dispatchCommand for bridge
                                 }
                                 if(Mini == 6){
                                     Bukkit.dispatchCommand(p, "oncommandparkour") //dispatchCommand for parkour
@@ -77,7 +77,7 @@ class LauncherJoin (plugin: Zero?) : Listener { //the implements for the listene
                                     Bukkit.dispatchCommand(p, "oncommandpvpknockback") //dispatchCommand for pvp knock back
                                 }
                                 if(Mini == 8){
-                                    Bukkit.dispatchCommand(p, "oncommandcpstest") //dispatchCommand for parkour
+                                    Bukkit.dispatchCommand(p, "oncommandlabi") //dispatchCommand for parkour
                                 }
                                 if(Mini == 9){
                                     Bukkit.dispatchCommand(p, "oncommandtnt") //dispatchCommand for tnt race
