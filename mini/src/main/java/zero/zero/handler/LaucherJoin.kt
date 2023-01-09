@@ -83,7 +83,8 @@ class LauncherJoin (plugin: Zero?) : Listener { //the implements for the listene
                                     Bukkit.dispatchCommand(p, "oncommandtnt") //dispatchCommand for tnt race
                                 }
                                 if(Mini == 10){
-                                   
+                                   //add cps test
+                                   Bukkit.dispatchCommand(p, "oncommandcpstest")
                                 } 
                                 
                             }
