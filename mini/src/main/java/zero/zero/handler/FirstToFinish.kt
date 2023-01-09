@@ -7,13 +7,16 @@ import org.bukkit.event.EventHandler //import the event handler
 import org.bukkit.event.Listener //import all the listener
 import org.bukkit.event.block.Action //import the action related to the block
 import org.bukkit.event.player.PlayerInteractEvent //import the action related to the player
+import org.bukkit.plugin.java.JavaPlugin
 import zero.zero.Zero //importing the zero class
 import java.io.File //importing java file class
 import java.io.FileWriter //importing the file writer class
 import java.io.IOException //importing the io exeption class
 import java.util.* //importing the java util class
+import com.google.common.io.ByteStreams
 
-class FirstToFinish (plugin: Zero?) : Listener { //the implements for the listener
+class FirstToFinish (plugin: Zero?, main:JavaPlugin) : Listener { //the implements for the listener
+    var mainPlugin = main
     init { //the constructor of this handler
         Bukkit.getPluginManager().registerEvents(this, plugin!!) //geting the plugin
     }
@@ -62,8 +65,10 @@ class FirstToFinish (plugin: Zero?) : Listener { //the implements for the listen
                         p.sendMessage(p.name + " won the race") //sending the won message 
                         for (p2 in Bukkit.getServer().onlinePlayers) { //geting all online player
                            //wrong type of tp
-                           
-                                Bukkit.dispatchCommand(p2, "server lobby") //tp them in the lobby 
+                            val connect = ByteStreams.newDataOutput()
+                            connect.writeUTF("Connect")
+                            connect.writeUTF("lobby")
+                            p.sendPluginMessage(mainPlugin, "BungeeCord", connect.toByteArray())
                             
                         }
                         try { //trying the following code

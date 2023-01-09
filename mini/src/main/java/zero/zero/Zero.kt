@@ -29,7 +29,7 @@ class Zero : JavaPlugin() {
         PlateHandler(this, this) //init the plate handler
         WoodPlateHandler(this) //init the wood plate handler
         Laucher(this, this) //init the laucher handler
-        FirstToFinish(this) //init the first to finish handler
+        FirstToFinish(this, this) //init the first to finish handler
         Punch(this) //init the punch handler
         Respawn(this, this)
         
