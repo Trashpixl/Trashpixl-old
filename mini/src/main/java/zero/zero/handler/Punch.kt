@@ -18,6 +18,24 @@ class Punch (plugin: Zero?) : Listener { //the implements for the listener
     }
     @EventHandler //say that it is an event handler
     fun pressurePlateHandler(ev: EntityDamageByEntityEvent) { //describes what the event is
+        val fileName2 = "Server.txt" //creating the file name var 
+        val actualFile2 = File(fileName2) //creating the file 
+        var Serv = 0 //creating the actual data var
+        try { //trying the code
+            if (actualFile2.exists() && actualFile2.isFile) { //checking if actual file is a file 
+                try {
+                    val reader2 = Scanner(actualFile2) //creating the scanner
+                    val data2 = reader2.nextLine() //reading the first line
+                    Serv = data2.toInt() //converting the data to an int
+                    reader2.close() //closing the reader
+                } catch (e: IOException) { //catching the exeption 
+                    throw RuntimeException(e) //trowing the exeption
+                }
+            }
+        } catch (e: IOException) { //catching the exeption
+            throw RuntimeException(e) //trowing it again
+        }
+        if(Serv == 1){
         val fileName = "Minigame.txt" //define the file name
         val actualFile = File(fileName) //create the file reference
         var actualdata = 0 //create the var to store the data of the file
@@ -37,24 +55,7 @@ class Punch (plugin: Zero?) : Listener { //the implements for the listener
         }
         if (actualdata == 6) { //check if the data equal 6 
             if (ev.entity is Player) {
-                val fileName2 = "Server.txt" //creating the file name var 
-                val actualFile2 = File(fileName2) //creating the file 
-                var Serv = 0 //creating the actual data var
-                try { //trying the code
-                    if (actualFile2.exists() && actualFile2.isFile) { //checking if actual file is a file 
-                        try {
-                            val reader2 = Scanner(actualFile2) //creating the scanner
-                            val data2 = reader2.nextLine() //reading the first line
-                            Serv = data2.toInt() //converting the data to an int
-                            reader2.close() //closing the reader
-                        } catch (e: IOException) { //catching the exeption 
-                            throw RuntimeException(e) //trowing the exeption
-                        }
-                    }
-                } catch (e: IOException) { //catching the exeption
-                    throw RuntimeException(e) //trowing it again
-                }
-                if(Serv == 1){
+               
                     if (ev.cause == EntityDamageEvent.DamageCause.ENTITY_ATTACK || ev.cause == EntityDamageEvent.DamageCause.ENTITY_SWEEP_ATTACK ) { //check if the damage is cause by an entity attack or sweep attack
                         (ev.entity as Player).health = 20.0 //set the player health to 20
 
@@ -63,6 +64,9 @@ class Punch (plugin: Zero?) : Listener { //the implements for the listener
                         (ev.entity as Player).health = 0.0 //set the player health to 0
                     }
                 }
+            }
+            if(actualdata == 10){
+             ev.entity.setVelocity(ev.entity.getLocation().getDirection().multiply(2));
             }
         }
     }

@@ -6,6 +6,8 @@ import org.bukkit.World
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
+import org.bukkit.inventory.ItemStack
+import org.bukkit.Material
 import java.io.File
 import java.io.FileWriter
 import java.io.IOException
@@ -16,10 +18,6 @@ import java.lang.RuntimeException
 
 
 class OnCommandPvpKnockBack : CommandExecutor { //creating the class death and implementing the listener
-    
-
-
-    
 
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
@@ -37,11 +35,10 @@ class OnCommandPvpKnockBack : CommandExecutor { //creating the class death and i
             val to = Location(w, x, y, z) //move before for
             p.teleport(to)
             p.inventory.clear()
-
-
-
-            
-            
+            val item1 = ItemStack(Material.ELYTRA, 1) //creating an item stack with an iron sword inside
+            val item2 = ItemStack(Material.STICK, 1) //creating an item stack with a random amount of golden apple in it 
+            p.inventory.setItem(1, item1) //puting it in an random inventory slot
+            p.inventory.setItem(2, item2) //same as below
         }
         
         try{
