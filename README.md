@@ -1,6 +1,1 @@
-this is the code for the mini game server
-0 = death handler
-1 = loot handler
-2 = race timer
-3 =
-4 =
+this is the code for the mini game server and every other server of the trashpixl server network
