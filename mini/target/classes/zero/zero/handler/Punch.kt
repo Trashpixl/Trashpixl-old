@@ -54,11 +54,9 @@ class Punch (plugin: Zero?) : Listener { //the implements for the listener
             throw RuntimeException(e) //throwing it in the trash because no one read it anyways
         }
         if (actualdata == 6) { //check if the data equal 6 
-            if (ev.entity is Player) {
-               
+            if (ev.entity is Player) { 
                     if (ev.cause == EntityDamageEvent.DamageCause.ENTITY_ATTACK || ev.cause == EntityDamageEvent.DamageCause.ENTITY_SWEEP_ATTACK ) { //check if the damage is cause by an entity attack or sweep attack
                         (ev.entity as Player).health = 20.0 //set the player health to 20
-
                     }
                     if(ev.cause == EntityDamageEvent.DamageCause.VOID){ //check if the damage is cause by the void
                         (ev.entity as Player).health = 0.0 //set the player health to 0
