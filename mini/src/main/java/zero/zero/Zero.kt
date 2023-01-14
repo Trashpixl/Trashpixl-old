@@ -23,7 +23,7 @@ class Zero : JavaPlugin() {
                 val actualFile = File(fileName) // creating the file variable
                 // val fileName2 = "Store.txt"
                 // val actualFile2 = File(fileName2)
-                logger.info("good jar ") // say that it's starting the plugin
+                //logger.info("good jar ") // say that it's starting the plugin
                 LauncherJoin(this) // init the launcher
                 Death(this, this) // init the death handler
                 RaceTimer(this) // init the race timer handler
@@ -34,7 +34,7 @@ class Zero : JavaPlugin() {
                 Laucher(this, this) // init the laucher handler
                 FirstToFinish(this, this) // init the first to finish handler
                 Punch(this) // init the punch handler
-                Respawn(this, this)
+                //Respawn(this, this)
 
                 /*Exit(this)
                 Tool(this)

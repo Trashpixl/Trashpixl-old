@@ -20,9 +20,8 @@ class Death(plugin: Zero?, main: JavaPlugin) :
         Bukkit.getPluginManager().registerEvents(this, plugin!!) // linking it to the main code
     }
     @EventHandler // says that this is an event handler
-    fun onPlayerDead(
-            e: PlayerRespawnEvent
-    ) { // creating the on player death event function and importing the death class
+    fun onPlayerDead(e: PlayerRespawnEvent) { 
+        // creating the on player death event function and importing the death class
         val connect = ByteStreams.newDataOutput()
         connect.writeUTF("Connect")
         connect.writeUTF("lobby")
