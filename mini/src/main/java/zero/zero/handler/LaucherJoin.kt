@@ -1,7 +1,9 @@
 package zero.zero.handler //the package for this project
 
 
-import org.bukkit.Bukkit //import all the other class
+
+import org.bukkit.Bukkit //importing bukkit
+import org.bukkit.Bukkit.getServer //importing the get server class
 import org.bukkit.Material //import all the material
 import org.bukkit.event.EventHandler //import the event handler
 import org.bukkit.event.Listener //import all the listener
@@ -25,7 +27,7 @@ class LauncherJoin (plugin: Zero?) : Listener { //the implements for the listene
     @EventHandler
     fun pressurePlateHandler(ev: PlayerJoinEvent) { //describes what the event is
                 val p = ev.player //create the local player id
-                
+                var playerCount = 0
                 //p.connect("mini")
                 val fileName = "Server.txt" //creating the file name var 
                 val actualFile = File(fileName) //creating the file 
@@ -55,6 +57,8 @@ class LauncherJoin (plugin: Zero?) : Listener { //the implements for the listene
                                 val data2 = reader2.nextLine() //reading the first line
                                 Mini = data2.toInt() //converting the data to an int
                                 reader2.close() //closing the reader
+                                for (playerCountloop in getServer().onlinePlayers) {playerCount++}
+                                if(playerCount == 10){
                                 if(Mini == 1){
                                     Bukkit.dispatchCommand(p, "oncommandpvp") //dispatchCommand for parkour
                                 }
@@ -86,6 +90,7 @@ class LauncherJoin (plugin: Zero?) : Listener { //the implements for the listene
                                    //add cps test
                                    Bukkit.dispatchCommand(p, "oncommandcpstest")
                                 } 
+                            }
                                 
                             }
                             
@@ -107,7 +112,7 @@ class LauncherJoin (plugin: Zero?) : Listener { //the implements for the listene
             val to = Location(w, x, y, z) //put together all the info
             p.teleport(to) //tp him
         }
-        if(Serv == 3){
+        if(Serv == 0){
             val to: Location = p.bedSpawnLocation!! //get his bed location
             p.teleport(to) //tp him to his bed
         }
